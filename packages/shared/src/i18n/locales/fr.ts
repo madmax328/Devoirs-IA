@@ -37,6 +37,7 @@ export const fr = {
     maxChildren: "Vous avez atteint le nombre maximum de profils ({{max}}).",
     openChildSpace: "Ouvrir l'espace enfant",
     levelLabel: "Classe",
+    unlockHint: "Pour passer dans l'espace parent, entrez votre mot de passe.",
   },
   child: {
     formTitle: "Nouveau profil enfant",

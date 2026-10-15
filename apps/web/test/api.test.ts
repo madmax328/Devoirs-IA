@@ -225,3 +225,20 @@ describe("inscription", () => {
     expect(consents[0]?.version).toMatch(/^\d{4}-\d{2}-\d{2}$/);
   });
 });
+
+describe("déverrouillage de l'espace parent", () => {
+  it("accepte le bon mot de passe et refuse un mauvais", async () => {
+    const { POST: unlock } = await import("@/app/api/parent/unlock/route");
+    const { headers } = await signUpParent();
+    const ok = await unlock(
+      jsonRequest("/api/parent/unlock", "POST", headers, { password: "motdepasse-solide" }),
+      noCtx,
+    );
+    expect(ok.status).toBe(200);
+    const ko = await unlock(
+      jsonRequest("/api/parent/unlock", "POST", headers, { password: "mauvais" }),
+      noCtx,
+    );
+    expect(ko.status).toBe(401);
+  });
+});

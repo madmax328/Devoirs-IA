@@ -5,6 +5,7 @@ export default defineConfig({
   resolve: { alias: { "@": fileURLToPath(new URL("./src", import.meta.url)) } },
   test: {
     environment: "node",
+    include: ["test/**/*.test.ts"],
     setupFiles: ["./test/setup.ts"],
     // Les tests partagent une base MongoDB : on les exécute l'un après l'autre.
     fileParallelism: false,
