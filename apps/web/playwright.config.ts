@@ -22,6 +22,9 @@ export default defineConfig({
     command: `pnpm exec next start -p ${port}`,
     url: `http://localhost:${port}/api/health`,
     reuseExistingServer: false,
+    // Journal du serveur visible dans la CI (erreurs côté API).
+    stdout: "pipe",
+    stderr: "pipe",
     // IA de démonstration (réponses scriptées) : pas de clé ni de coût pendant les tests.
     env: { BETTER_AUTH_URL: `http://localhost:${port}`, AI_FAKE: "1" },
   },

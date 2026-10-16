@@ -44,7 +44,7 @@ jobs:
       - name: Diagnostic des tests E2E en échec
         if: failure()
         run: |
-          find apps/web/test-results -name error-context.md -print -exec sed -n '/Page snapshot/,/Test source/p' {} \; || true
+          find apps/web/test-results -name error-context.md -print -exec cat {} \; || true
       - uses: actions/upload-artifact@v4
         if: failure()
         with:

@@ -1,5 +1,14 @@
-import { expect, test } from "@playwright/test";
+import { expect, test, type Locator, type Page } from "@playwright/test";
 import { parentWithChildSpace } from "./helpers";
+
+/** Clique et vérifie la réponse de l'API des messages (en cas d'échec, le corps de la réponse apparaît dans le rapport). */
+async function clickAndExpectMessageOk(page: Page, target: Locator): Promise<void> {
+  const [res] = await Promise.all([
+    page.waitForResponse((r) => r.url().includes("/messages") && r.request().method() === "POST"),
+    target.click(),
+  ]);
+  expect(res.status(), await res.text()).toBe(200);
+}
 
 test("aide aux devoirs : énoncé tapé, confirmation, indice, erreur, bonne réponse, récapitulatif", async ({
   page,
@@ -19,7 +28,7 @@ test("aide aux devoirs : énoncé tapé, confirmation, indice, erreur, bonne ré
   await page.getByRole("button", { name: "Oui, c'est parti !" }).click();
   await expect(page.getByText("qu'est-ce qu'on cherche dans cet exercice ?")).toBeVisible();
 
-  await page.getByRole("button", { name: /Un indice/ }).click();
+  await clickAndExpectMessageOk(page, page.getByRole("button", { name: /Un indice/ }));
   await expect(page.getByText(/Petit indice/)).toBeVisible();
 
   await page.getByPlaceholder("Écris ta réponse ou ta question…").fill("je divise par 3 ?");
