@@ -1,0 +1,4 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "echo '>>> ERREUR DE CONFIGURATION VERCEL : dans Settings > Build and Deployment, mettez Root Directory = apps/web et Framework Preset = Next.js, puis redéployez. <<<' && exit 1"
+}
