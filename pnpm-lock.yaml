@@ -158,6 +158,18 @@ importers:
         specifier: ^4.20.0
         version: 4.23.15
 
+  packages/content:
+    dependencies:
+      '@devoirs/pedagogy':
+        specifier: workspace:*
+        version: link:../pedagogy
+      '@devoirs/shared':
+        specifier: workspace:*
+        version: link:../shared
+      zod:
+        specifier: ^4.6.7
+        version: 4.6.7
+
   packages/db:
     dependencies:
       '@devoirs/shared':
@@ -173,6 +185,12 @@ importers:
       tsx:
         specifier: ^4.20.0
         version: 4.23.15
+
+  packages/pedagogy:
+    dependencies:
+      '@devoirs/shared':
+        specifier: workspace:*
+        version: link:../shared
 
   packages/shared:
     dependencies:

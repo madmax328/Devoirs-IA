@@ -1,0 +1,424 @@
+{
+  "exercises": [
+    {
+      "key": "fr-cm2-accord-sv-1",
+      "notionIds": ["fr.cm2.accord-sujet-verbe"],
+      "level": "CM2",
+      "difficulty": 2,
+      "statement": "Complète avec le verbe « jouer » au présent.",
+      "answer": {
+        "type": "FILL_BLANKS",
+        "text": "Les enfants de ma voisine [[1]] dans le jardin.",
+        "blanks": [
+          {
+            "id": "1",
+            "accepted": ["jouent"],
+            "accentSensitive": true
+          }
+        ]
+      },
+      "explanation": "Le sujet est « les enfants de ma voisine » (pluriel), donc le verbe prend -ent : ils jouent.",
+      "hints": [
+        "Cherche qui fait l'action : qui est-ce qui joue ?",
+        "Le sujet n'est pas « ma voisine » : c'est un groupe plus long, au pluriel.",
+        "Exemple : Les amis de mon frère chantent."
+      ]
+    },
+    {
+      "key": "fr-cm2-homophones-1",
+      "notionIds": ["fr.cm2.homophones-base"],
+      "level": "CM2",
+      "difficulty": 1,
+      "statement": "Complète avec « a » ou « à ».",
+      "answer": {
+        "type": "FILL_BLANKS",
+        "text": "Lina [[1]] un chat. Elle va [[2]] l'école.",
+        "blanks": [
+          {
+            "id": "1",
+            "accepted": ["a"],
+            "accentSensitive": true
+          },
+          {
+            "id": "2",
+            "accepted": ["à"],
+            "accentSensitive": true
+          }
+        ]
+      },
+      "explanation": "On peut dire « Lina avait un chat » : c'est le verbe avoir, « a ». On ne peut pas dire « elle va avait l'école » : c'est « à ».",
+      "hints": [
+        "Essaie de remplacer par « avait ».",
+        "Si « avait » fonctionne, c'est le verbe avoir sans accent ; sinon, c'est « à » avec un accent.",
+        "Exemple : Il a froid (il avait froid) ; il pense à toi."
+      ]
+    },
+    {
+      "key": "fr-cm2-passe-compose-1",
+      "notionIds": ["fr.cm2.passe-compose"],
+      "level": "CM2",
+      "difficulty": 2,
+      "statement": "Quelle phrase est correcte ?",
+      "answer": {
+        "type": "MCQ",
+        "choices": ["Hier, il a tombé.", "Hier, il est tombé.", "Hier, il est tomber.", "Hier, il a tomber."],
+        "correct": [1],
+        "multiple": false
+      },
+      "explanation": "« Tomber » se conjugue avec l'auxiliaire être au passé composé, et le participe passé se termine par -é : il est tombé.",
+      "hints": [
+        "Le passé composé = auxiliaire + participe passé.",
+        "Certains verbes de mouvement utilisent « être » ; remplace par un verbe du 3e groupe comme « mordre » pour vérifier la terminaison.",
+        "Exemple : Elle est partie ; il a mangé."
+      ]
+    },
+    {
+      "key": "fr-6e-classes-1",
+      "notionIds": ["fr.6e.classes-grammaticales"],
+      "level": "SIXIEME",
+      "difficulty": 2,
+      "statement": "Associe chaque mot de la phrase « Le vieux chien dort tranquillement » à sa classe grammaticale.",
+      "answer": {
+        "type": "MATCHING",
+        "left": ["vieux", "chien", "dort", "tranquillement"],
+        "right": ["adjectif", "nom", "verbe", "adverbe"],
+        "pairs": [
+          [0, 0],
+          [1, 1],
+          [2, 2],
+          [3, 3]
+        ]
+      },
+      "explanation": "« vieux » précise le nom (adjectif), « chien » est un nom, « dort » est le verbe conjugué, « tranquillement » est un adverbe (il modifie le verbe).",
+      "hints": [
+        "Commence par trouver le verbe conjugué : il change si on met la phrase au passé.",
+        "Un adjectif précise un nom ; un adverbe en -ment précise souvent un verbe.",
+        "Exemple : « Le petit oiseau chante joyeusement »."
+      ]
+    },
+    {
+      "key": "fr-6e-cod-coi-1",
+      "notionIds": ["fr.6e.fonctions-sujet-complements"],
+      "level": "SIXIEME",
+      "difficulty": 3,
+      "statement": "Dans la phrase « Paul prête son vélo à sa sœur », quelle est la fonction de « à sa sœur » ?",
+      "answer": {
+        "type": "MCQ",
+        "choices": ["Sujet", "COD", "COI", "Complément de lieu"],
+        "correct": [2],
+        "multiple": false
+      },
+      "explanation": "On prête quelque chose à quelqu'un : « à sa sœur » répond à la question « à qui ? » après le verbe, c'est un complément d'objet indirect.",
+      "hints": [
+        "Pose une question après le verbe : Paul prête… à qui ?",
+        "Un complément introduit par une préposition (à, de) qui complète le verbe est indirect.",
+        "Exemple : « Je parle à mon ami » : à mon ami est COI."
+      ]
+    },
+    {
+      "key": "fr-6e-passe-simple-1",
+      "notionIds": ["fr.6e.passe-simple"],
+      "level": "SIXIEME",
+      "difficulty": 2,
+      "statement": "Complète avec le verbe « entrer » au passé simple.",
+      "answer": {
+        "type": "FILL_BLANKS",
+        "text": "Soudain, le chevalier [[1]] dans la salle.",
+        "blanks": [
+          {
+            "id": "1",
+            "accepted": ["entra"],
+            "accentSensitive": true
+          }
+        ]
+      },
+      "explanation": "Au passé simple, les verbes en -er se terminent par -a à la 3e personne du singulier : il entra.",
+      "hints": [
+        "Le passé simple s'utilise pour les actions brèves d'un récit.",
+        "Pour les verbes en -er, à la 3e personne du singulier, la terminaison est -a (sans t).",
+        "Exemple : Il marcha, il chanta."
+      ]
+    },
+    {
+      "key": "fr-6e-homophones-1",
+      "notionIds": ["fr.6e.homophones-grammaticaux"],
+      "level": "SIXIEME",
+      "difficulty": 2,
+      "statement": "Complète avec « ces » ou « ses ».",
+      "answer": {
+        "type": "FILL_BLANKS",
+        "text": "Marie range [[1]] affaires. Regarde [[2]] nuages au loin !",
+        "blanks": [
+          {
+            "id": "1",
+            "accepted": ["ses"],
+            "accentSensitive": true
+          },
+          {
+            "id": "2",
+            "accepted": ["ces"],
+            "accentSensitive": true
+          }
+        ]
+      },
+      "explanation": "« ses affaires » : les affaires de Marie (on peut dire « les siennes ») ; « ces nuages » : on les montre (« ces nuages-là »).",
+      "hints": [
+        "Demande-toi : est-ce que cela appartient à quelqu'un, ou est-ce qu'on montre quelque chose ?",
+        "« ses » = les siens, les siennes ; « ces » = ceux-là, celles-là.",
+        "Exemple : Il prend ses clés ; ces fleurs sont belles."
+      ]
+    },
+    {
+      "key": "fr-6e-participe-etre-1",
+      "notionIds": ["fr.6e.accord-participe-etre"],
+      "level": "SIXIEME",
+      "difficulty": 2,
+      "statement": "Complète avec le participe passé de « partir ».",
+      "answer": {
+        "type": "FILL_BLANKS",
+        "text": "Mes cousines sont [[1]] tôt ce matin.",
+        "blanks": [
+          {
+            "id": "1",
+            "accepted": ["parties"],
+            "accentSensitive": true
+          }
+        ]
+      },
+      "explanation": "Avec l'auxiliaire être, le participe passé s'accorde avec le sujet « mes cousines » (féminin pluriel) : parties.",
+      "hints": [
+        "Quel est l'auxiliaire utilisé ?",
+        "Avec être, le participe s'accorde avec le sujet : cherche son genre et son nombre.",
+        "Exemple : Les filles sont arrivées."
+      ]
+    },
+    {
+      "key": "fr-6e-imparfait-ps-1",
+      "notionIds": ["fr.6e.valeurs-imparfait-passe-simple"],
+      "level": "SIXIEME",
+      "difficulty": 3,
+      "statement": "Complète avec l'imparfait ou le passé simple du verbe entre parenthèses.",
+      "answer": {
+        "type": "FILL_BLANKS",
+        "text": "Il [[1]] (faire) nuit et le vent [[2]] (souffler) quand, tout à coup, la porte [[3]] (claquer).",
+        "blanks": [
+          {
+            "id": "1",
+            "accepted": ["faisait"],
+            "accentSensitive": true
+          },
+          {
+            "id": "2",
+            "accepted": ["soufflait"],
+            "accentSensitive": true
+          },
+          {
+            "id": "3",
+            "accepted": ["claqua"],
+            "accentSensitive": true
+          }
+        ]
+      },
+      "explanation": "Les deux premières actions décrivent le décor, elles durent : imparfait. La porte claque soudainement : action brève de premier plan, passé simple.",
+      "hints": [
+        "Repère les actions qui décrivent le décor et celle qui fait avancer l'histoire.",
+        "Le décor est à l'imparfait ; l'action soudaine (« tout à coup ») est au passé simple.",
+        "Exemple : Il pleuvait quand le téléphone sonna."
+      ]
+    },
+    {
+      "key": "fr-5e-participe-avoir-1",
+      "notionIds": ["fr.5e.participe-passe-avoir"],
+      "level": "CINQUIEME",
+      "difficulty": 3,
+      "statement": "Complète avec le participe passé de « manger ».",
+      "answer": {
+        "type": "FILL_BLANKS",
+        "text": "Les pommes que j'ai [[1]] étaient délicieuses.",
+        "blanks": [
+          {
+            "id": "1",
+            "accepted": ["mangées"],
+            "accentSensitive": true
+          }
+        ]
+      },
+      "explanation": "Avec avoir, le participe passé s'accorde avec le COD s'il est placé avant : « que » remplace « les pommes » (féminin pluriel), placé avant le verbe.",
+      "hints": [
+        "Quel est l'auxiliaire ? Avec avoir, on ne regarde pas le sujet.",
+        "Cherche le COD (j'ai mangé quoi ?) et vérifie s'il est placé avant le verbe.",
+        "Exemple : La lettre que j'ai écrite."
+      ]
+    },
+    {
+      "key": "fr-5e-conditionnel-1",
+      "notionIds": ["fr.5e.conditionnel-present"],
+      "level": "CINQUIEME",
+      "difficulty": 2,
+      "statement": "Quelle phrase utilise correctement le conditionnel présent ?",
+      "answer": {
+        "type": "MCQ",
+        "choices": [
+          "Si j'avais le temps, je viendrai.",
+          "Si j'avais le temps, je viendrais.",
+          "Si j'ai le temps, je viendrais.",
+          "Si j'aurais le temps, je viendrais."
+        ],
+        "correct": [1],
+        "multiple": false
+      },
+      "explanation": "Après « si + imparfait », on emploie le conditionnel : je viendrais (terminaison -ais). « Si » n'est jamais suivi du conditionnel.",
+      "hints": [
+        "Regarde le temps du verbe après « si ».",
+        "Si + imparfait → conditionnel ; la terminaison du conditionnel à « je » est -ais.",
+        "Exemple : Si tu voulais, nous partirions."
+      ]
+    },
+    {
+      "key": "fr-5e-complements-1",
+      "notionIds": ["fr.5e.complements-circonstanciels"],
+      "level": "CINQUIEME",
+      "difficulty": 2,
+      "statement": "Dans « Chaque soir, au jardin, Léo lit avec plaisir », associe chaque groupe à sa fonction.",
+      "answer": {
+        "type": "MATCHING",
+        "left": ["chaque soir", "au jardin", "avec plaisir"],
+        "right": [
+          "complément circonstanciel de temps",
+          "complément circonstanciel de lieu",
+          "complément circonstanciel de manière"
+        ],
+        "pairs": [
+          [0, 0],
+          [1, 1],
+          [2, 2]
+        ]
+      },
+      "explanation": "« Chaque soir » répond à « quand ? », « au jardin » à « où ? », « avec plaisir » à « comment ? ».",
+      "hints": [
+        "Ces groupes peuvent être déplacés ou supprimés : ce sont des compléments circonstanciels.",
+        "Pose les questions quand ? où ? comment ?",
+        "Exemple : « Demain, à Paris, nous marcherons vite »."
+      ]
+    },
+    {
+      "key": "fr-4e-relatives-1",
+      "notionIds": ["fr.4e.subordonnees-relatives"],
+      "level": "QUATRIEME",
+      "difficulty": 3,
+      "statement": "Complète avec le bon pronom relatif.",
+      "answer": {
+        "type": "FILL_BLANKS",
+        "text": "Voici le livre [[1]] je t'ai parlé.",
+        "blanks": [
+          {
+            "id": "1",
+            "accepted": ["dont"],
+            "accentSensitive": true
+          }
+        ]
+      },
+      "explanation": "On parle DE quelque chose : « parler de » se construit avec « dont ».",
+      "hints": [
+        "Regarde la construction du verbe : on parle… de quelque chose ou à quelqu'un ?",
+        "Quand le verbe se construit avec « de », le pronom relatif est souvent « dont ».",
+        "Exemple : La ville dont je rêve."
+      ]
+    },
+    {
+      "key": "fr-4e-figures-1",
+      "notionIds": ["fr.4e.figures-de-style"],
+      "level": "QUATRIEME",
+      "difficulty": 2,
+      "statement": "Associe chaque phrase à sa figure de style.",
+      "answer": {
+        "type": "MATCHING",
+        "left": [
+          "Ses yeux brillent comme des étoiles.",
+          "Ses yeux sont des étoiles.",
+          "Le vent hurle dans la nuit."
+        ],
+        "right": ["comparaison", "métaphore", "personnification"],
+        "pairs": [
+          [0, 0],
+          [1, 1],
+          [2, 2]
+        ]
+      },
+      "explanation": "Avec un outil de comparaison (comme), c'est une comparaison ; sans outil, une métaphore ; quand une chose agit comme un humain (hurler), une personnification.",
+      "hints": [
+        "Cherche s'il y a un mot qui sert à comparer.",
+        "Comparaison = avec un outil (comme, tel) ; métaphore = sans outil ; personnification = un objet qui agit comme une personne.",
+        "Exemple : « La lune nous sourit » : personnification."
+      ]
+    },
+    {
+      "key": "fr-4e-subjonctif-1",
+      "notionIds": ["fr.4e.subjonctif-present"],
+      "level": "QUATRIEME",
+      "difficulty": 3,
+      "statement": "Complète avec le verbe « faire » au subjonctif présent.",
+      "answer": {
+        "type": "FILL_BLANKS",
+        "text": "Il faut que tu [[1]] tes devoirs avant de jouer.",
+        "blanks": [
+          {
+            "id": "1",
+            "accepted": ["fasses"],
+            "accentSensitive": true
+          }
+        ]
+      },
+      "explanation": "« Il faut que » est suivi du subjonctif : que je fasse, que tu fasses.",
+      "hints": [
+        "Quel mode suit l'expression « il faut que » ?",
+        "Le subjonctif de « faire » a un radical particulier : fass-.",
+        "Exemple : Il faut que nous fassions attention."
+      ]
+    },
+    {
+      "key": "fr-3e-concession-1",
+      "notionIds": ["fr.3e.circonstancielles-avancees"],
+      "level": "TROISIEME",
+      "difficulty": 3,
+      "statement": "Quelle phrase est correcte ?",
+      "answer": {
+        "type": "MCQ",
+        "choices": [
+          "Bien qu'il est fatigué, il continue.",
+          "Bien qu'il soit fatigué, il continue.",
+          "Bien qu'il sera fatigué, il continue."
+        ],
+        "correct": [1],
+        "multiple": false
+      },
+      "explanation": "« Bien que » exprime la concession et est toujours suivi du subjonctif : bien qu'il soit.",
+      "hints": [
+        "Certaines conjonctions imposent un mode précis.",
+        "« Bien que » est suivi du subjonctif.",
+        "Exemple : Quoiqu'il fasse froid, nous sortons."
+      ]
+    },
+    {
+      "key": "fr-6e-comprendre-1",
+      "notionIds": ["fr.6e.lecture-comprehension-6e"],
+      "level": "SIXIEME",
+      "difficulty": 3,
+      "statement": "Lis ce texte : « Quand Lucas ouvrit la porte, ses mains tremblaient. Il jeta un coup d'œil derrière lui, retint son souffle et entra sans faire de bruit. » Comment se sent Lucas ? Justifie avec un élément du texte.",
+      "answer": {
+        "type": "SHORT_TEXT",
+        "modelAnswer": "Lucas a peur : ses mains tremblent et il retient son souffle.",
+        "criteria": [
+          "Identifie un sentiment de peur ou d'inquiétude",
+          "Cite ou reformule un indice du texte (mains qui tremblent, souffle retenu, regard derrière lui)"
+        ]
+      },
+      "explanation": "Le texte ne dit pas « il a peur », mais les indices le montrent : mains qui tremblent, regard en arrière, souffle retenu.",
+      "hints": [
+        "Le sentiment n'est pas écrit directement : cherche des indices.",
+        "Relève ce que fait le corps de Lucas et ce que cela montre.",
+        "Exemple : « Elle sautait partout en riant » montre qu'elle est joyeuse."
+      ]
+    }
+  ]
+}

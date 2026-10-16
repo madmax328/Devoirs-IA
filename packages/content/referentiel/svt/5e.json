@@ -1,0 +1,33 @@
+{
+  "subject": "SVT",
+  "level": "CINQUIEME",
+  "notions": [
+    {
+      "id": "svt.5e.respiration-digestion",
+      "theme": "Le vivant",
+      "title": "Nutrition : digestion et respiration",
+      "description": "Comprendre comment l'organisme transforme les aliments en nutriments et comment le dioxygène est apporté aux organes.",
+      "prerequisites": ["svt.6e.besoins-plantes"],
+      "commonMistakes": ["Croire que les aliments passent directement dans le sang"],
+      "examples": ["Les nutriments passent dans le sang au niveau de l'intestin grêle."]
+    },
+    {
+      "id": "svt.5e.seismes-volcans",
+      "theme": "La planète Terre",
+      "title": "Séismes et volcans",
+      "description": "Relier séismes et volcans aux mouvements des plaques et connaître les risques et la prévention.",
+      "prerequisites": [],
+      "commonMistakes": ["Croire que les volcans sont répartis au hasard"],
+      "examples": ["La plupart des volcans sont situés aux limites des plaques."]
+    },
+    {
+      "id": "svt.5e.lire-graphique-svt",
+      "theme": "Démarche scientifique",
+      "title": "Lire et exploiter un graphique",
+      "description": "Décrire l'évolution d'une courbe, relever des valeurs et en tirer une conclusion.",
+      "prerequisites": ["ma.6e.donnees-representations"],
+      "commonMistakes": ["Décrire sans donner de valeurs", "Confondre description et explication"],
+      "examples": ["De 0 à 10 min, la fréquence cardiaque augmente de 70 à 120 battements/min."]
+    }
+  ]
+}

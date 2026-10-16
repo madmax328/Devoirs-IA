@@ -1,0 +1,108 @@
+{
+  "subject": "FRANCAIS",
+  "level": "CINQUIEME",
+  "notions": [
+    {
+      "id": "fr.5e.complements-circonstanciels",
+      "theme": "Grammaire",
+      "title": "Les compléments circonstanciels",
+      "description": "Identifier les compléments de temps, lieu, manière, cause, but : ils sont souvent déplaçables et supprimables.",
+      "prerequisites": ["fr.6e.fonctions-sujet-complements"],
+      "commonMistakes": [
+        "Confondre COI et complément de lieu",
+        "Croire qu'un complément circonstanciel n'est jamais en début de phrase"
+      ],
+      "examples": ["Hier (temps), à la plage (lieu), nous avons joué."]
+    },
+    {
+      "id": "fr.5e.attribut-sujet",
+      "theme": "Grammaire",
+      "title": "L'attribut du sujet",
+      "description": "Après un verbe d'état (être, paraître, sembler, devenir, rester…), l'attribut donne une caractéristique du sujet.",
+      "prerequisites": ["fr.6e.fonctions-sujet-complements"],
+      "commonMistakes": ["Prendre l'attribut pour un COD", "Oublier d'accorder l'attribut"],
+      "examples": ["Ces filles semblent fatiguées."]
+    },
+    {
+      "id": "fr.5e.expansions-nom",
+      "theme": "Grammaire",
+      "title": "Les expansions du nom",
+      "description": "Enrichir un nom avec un adjectif épithète, un complément du nom ou une proposition relative.",
+      "prerequisites": ["fr.6e.classes-grammaticales"],
+      "commonMistakes": ["Confondre complément du nom et COI"],
+      "examples": ["une maison (en bois) (que j'aime)"]
+    },
+    {
+      "id": "fr.5e.phrase-simple-complexe",
+      "theme": "Grammaire",
+      "title": "Phrase simple et phrase complexe",
+      "description": "Compter les verbes conjugués pour distinguer phrase simple et complexe ; reconnaître juxtaposition, coordination et subordination.",
+      "prerequisites": ["fr.6e.types-formes-phrases"],
+      "commonMistakes": ["Compter un infinitif comme verbe conjugué"],
+      "examples": ["Il pleut, je reste à la maison (juxtaposition)."]
+    },
+    {
+      "id": "fr.5e.conditionnel-present",
+      "theme": "Conjugaison",
+      "title": "Le conditionnel présent",
+      "description": "Former le conditionnel (radical du futur + terminaisons de l'imparfait) et l'employer pour une hypothèse ou une demande polie.",
+      "prerequisites": ["fr.cm2.imparfait-futur"],
+      "commonMistakes": ["Confondre « je chanterai » (futur) et « je chanterais » (conditionnel)"],
+      "examples": ["Si j'avais le temps, je viendrais."]
+    },
+    {
+      "id": "fr.5e.participe-passe-avoir",
+      "theme": "Orthographe",
+      "title": "Accord du participe passé avec avoir",
+      "description": "Avec avoir, le participe passé ne s'accorde pas avec le sujet ; il s'accorde avec le COD seulement si celui-ci est placé avant.",
+      "prerequisites": ["fr.6e.accord-participe-etre", "fr.6e.fonctions-sujet-complements"],
+      "commonMistakes": ["Accorder avec le sujet (« elles ont mangées »)"],
+      "examples": ["Les pommes que j'ai mangées."]
+    },
+    {
+      "id": "fr.5e.homophones-5e",
+      "theme": "Orthographe",
+      "title": "Homophones : quand/quant/qu'en, peu/peut/peux, la/l'a/là",
+      "description": "Choisir la bonne orthographe grâce à la classe du mot et aux substitutions.",
+      "prerequisites": ["fr.6e.homophones-grammaticaux"],
+      "commonMistakes": ["Écrire « quand à moi »"],
+      "examples": ["Quant à moi, je reste."]
+    },
+    {
+      "id": "fr.5e.champ-lexical-registres",
+      "theme": "Vocabulaire",
+      "title": "Champ lexical et niveaux de langue",
+      "description": "Repérer un champ lexical dans un texte et distinguer les niveaux de langue familier, courant et soutenu.",
+      "prerequisites": ["fr.6e.synonymes-antonymes"],
+      "commonMistakes": ["Utiliser le registre familier dans un écrit scolaire"],
+      "examples": ["bagnole (familier), voiture (courant), automobile (soutenu)"]
+    },
+    {
+      "id": "fr.5e.sens-propre-figure",
+      "theme": "Vocabulaire",
+      "title": "Sens propre et sens figuré",
+      "description": "Distinguer le sens premier d'un mot de son sens imagé selon le contexte.",
+      "prerequisites": ["fr.6e.synonymes-antonymes"],
+      "commonMistakes": ["Interpréter une expression au pied de la lettre"],
+      "examples": ["« Avoir un cœur de pierre » : être insensible."]
+    },
+    {
+      "id": "fr.5e.donner-son-avis",
+      "theme": "Écriture",
+      "title": "Donner son avis et le justifier",
+      "description": "Exprimer une opinion, l'appuyer sur un argument et un exemple, avec des connecteurs (car, en effet, par exemple).",
+      "prerequisites": ["fr.6e.ecrire-paragraphe"],
+      "commonMistakes": ["Donner son avis sans le justifier", "Donner un exemple sans lien avec l'idée"],
+      "examples": ["Je pense que… car… Par exemple…"]
+    },
+    {
+      "id": "fr.5e.comprendre-recit-5e",
+      "theme": "Lecture et compréhension",
+      "title": "Analyser un récit : narrateur et point de vue",
+      "description": "Identifier le narrateur, le point de vue (interne, externe, omniscient) et les sentiments des personnages.",
+      "prerequisites": ["fr.6e.recit-schema-narratif"],
+      "commonMistakes": ["Confondre l'auteur et le narrateur"],
+      "examples": ["« Je » dans un roman désigne le narrateur, pas forcément l'auteur."]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "subject": "ANGLAIS",
+  "level": "TROISIEME",
+  "notions": [
+    {
+      "id": "an.3e.conditionnel",
+      "theme": "Grammaire",
+      "title": "Le conditionnel (if)",
+      "description": "Exprimer une condition réelle (if + présent, will) ou imaginaire (if + prétérit, would).",
+      "prerequisites": ["an.4e.futur", "an.5e.preterit"],
+      "commonMistakes": ["Mettre would après if"],
+      "examples": ["If I had money, I would travel."]
+    },
+    {
+      "id": "an.3e.passif",
+      "theme": "Grammaire",
+      "title": "La voix passive",
+      "description": "Former le passif avec be + participe passé pour mettre l'objet de l'action en avant.",
+      "prerequisites": ["an.4e.present-perfect"],
+      "commonMistakes": ["Oublier be"],
+      "examples": ["The Eiffel Tower was built in 1889."]
+    },
+    {
+      "id": "an.3e.comprehension-ecrite",
+      "theme": "Méthode",
+      "title": "Comprendre un texte en anglais",
+      "description": "Repérer les mots transparents, les indices et l'idée générale avant le détail ; répondre en citant le texte.",
+      "prerequisites": [],
+      "commonMistakes": [
+        "Vouloir traduire chaque mot",
+        "Se laisser piéger par les faux-amis (actually, sensible)"
+      ],
+      "examples": ["« Actually » signifie « en fait », pas « actuellement »."]
+    }
+  ]
+}

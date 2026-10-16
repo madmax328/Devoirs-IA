@@ -1,0 +1,63 @@
+{
+  "subject": "HIST_GEO_EMC",
+  "level": "SIXIEME",
+  "notions": [
+    {
+      "id": "hg.6e.frise-chronologique",
+      "theme": "Méthodes",
+      "title": "Se repérer dans le temps",
+      "description": "Placer des événements sur une frise, calculer des durées, utiliser siècles et millénaires (avant et après J.-C.).",
+      "prerequisites": ["ma.6e.droite-graduee"],
+      "commonMistakes": [
+        "Se tromper de siècle (l'an 1515 est au XVIe siècle)",
+        "Compter à l'envers avant J.-C."
+      ],
+      "examples": ["L'an 476 est au Ve siècle."]
+    },
+    {
+      "id": "hg.6e.orient-ancien",
+      "theme": "Histoire",
+      "title": "Les débuts de l'humanité et l'Orient ancien",
+      "description": "Comprendre la révolution néolithique, la naissance des premiers États et de l'écriture en Mésopotamie et en Égypte.",
+      "prerequisites": ["hg.6e.frise-chronologique"],
+      "commonMistakes": ["Confondre préhistoire et Antiquité"],
+      "examples": ["L'écriture apparaît vers 3300 av. J.-C."]
+    },
+    {
+      "id": "hg.6e.grece-rome",
+      "theme": "Histoire",
+      "title": "Le monde des cités grecques et Rome",
+      "description": "Connaître la cité grecque (Athènes, démocratie), les récits fondateurs et l'Empire romain.",
+      "prerequisites": ["hg.6e.orient-ancien"],
+      "commonMistakes": ["Croire que tout le monde votait à Athènes"],
+      "examples": ["À Athènes, seuls les citoyens (hommes libres) votent."]
+    },
+    {
+      "id": "hg.6e.lire-une-carte",
+      "theme": "Méthodes",
+      "title": "Lire une carte",
+      "description": "Utiliser le titre, la légende, l'échelle et l'orientation pour comprendre une carte.",
+      "prerequisites": [],
+      "commonMistakes": ["Ignorer la légende", "Lire l'échelle à l'envers"],
+      "examples": ["1 cm sur la carte = 10 km dans la réalité."]
+    },
+    {
+      "id": "hg.6e.habiter-metropole",
+      "theme": "Géographie",
+      "title": "Habiter une métropole",
+      "description": "Décrire l'organisation d'une grande ville (centre, banlieues, mobilités) et les inégalités entre quartiers.",
+      "prerequisites": ["hg.6e.lire-une-carte"],
+      "commonMistakes": ["Confondre ville et métropole"],
+      "examples": ["Les habitants de banlieue font de longs trajets domicile-travail."]
+    },
+    {
+      "id": "hg.6e.emc-regles-vivre-ensemble",
+      "theme": "Enseignement moral et civique",
+      "title": "Règles et droits de l'enfant",
+      "description": "Comprendre le rôle des règles à l'école et dans la société, et connaître les droits de l'enfant.",
+      "prerequisites": [],
+      "commonMistakes": ["Croire qu'une règle ne sert qu'à punir"],
+      "examples": ["La Convention internationale des droits de l'enfant date de 1989."]
+    }
+  ]
+}

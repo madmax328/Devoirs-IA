@@ -1,0 +1,24 @@
+{
+  "subject": "PHYSIQUE_CHIMIE",
+  "level": "SIXIEME",
+  "notions": [
+    {
+      "id": "pc.6e.etats-matiere",
+      "theme": "Matière",
+      "title": "Les états de la matière",
+      "description": "Distinguer solide, liquide et gaz et leurs propriétés (forme, volume).",
+      "prerequisites": [],
+      "commonMistakes": ["Croire qu'un gaz n'a pas de masse"],
+      "examples": ["L'air a une masse : 1 L d'air pèse environ 1,2 g."]
+    },
+    {
+      "id": "pc.6e.melanges",
+      "theme": "Matière",
+      "title": "Mélanges et séparation",
+      "description": "Distinguer mélanges homogènes et hétérogènes, et les séparer (décantation, filtration, évaporation).",
+      "prerequisites": ["pc.6e.etats-matiere"],
+      "commonMistakes": ["Croire que le sucre disparaît quand il se dissout"],
+      "examples": ["L'eau salée est un mélange homogène."]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "subject": "ANGLAIS",
+  "level": "QUATRIEME",
+  "notions": [
+    {
+      "id": "an.4e.present-perfect",
+      "theme": "Grammaire",
+      "title": "Le present perfect",
+      "description": "Relier le passé au présent avec have + participe passé (expérience, bilan, ever/never, since/for).",
+      "prerequisites": ["an.5e.preterit"],
+      "commonMistakes": ["Utiliser le present perfect avec « yesterday »", "Confondre since et for"],
+      "examples": ["I have lived here for three years."]
+    },
+    {
+      "id": "an.4e.futur",
+      "theme": "Grammaire",
+      "title": "Exprimer le futur",
+      "description": "Utiliser will (prévision, décision immédiate) et be going to (intention, prévision évidente).",
+      "prerequisites": ["an.5e.present-continu"],
+      "commonMistakes": ["« I will to go »"],
+      "examples": ["I'm going to visit my aunt next week."]
+    },
+    {
+      "id": "an.4e.modaux-obligation",
+      "theme": "Grammaire",
+      "title": "Must, have to, should",
+      "description": "Exprimer l'obligation, l'interdiction et le conseil.",
+      "prerequisites": ["an.5e.can-modaux-base"],
+      "commonMistakes": ["Confondre mustn't (interdiction) et don't have to (absence d'obligation)"],
+      "examples": ["You mustn't run in the corridor."]
+    }
+  ]
+}

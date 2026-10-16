@@ -1,0 +1,33 @@
+{
+  "subject": "PHYSIQUE_CHIMIE",
+  "level": "TROISIEME",
+  "notions": [
+    {
+      "id": "pc.3e.poids-masse",
+      "theme": "Mouvement et interactions",
+      "title": "Masse et poids",
+      "description": "Distinguer la masse (en kg) et le poids (une force, en newtons) et utiliser P = m × g.",
+      "prerequisites": ["pc.4e.vitesse"],
+      "commonMistakes": ["Exprimer le poids en kilogrammes"],
+      "examples": ["Sur Terre, g ≈ 9,8 N/kg : une masse de 50 kg pèse 490 N."]
+    },
+    {
+      "id": "pc.3e.energie",
+      "theme": "Énergie",
+      "title": "Formes et conversions d'énergie",
+      "description": "Identifier les formes d'énergie, les conversions dans une chaîne énergétique et calculer E = P × t.",
+      "prerequisites": ["pc.4e.tension-intensite"],
+      "commonMistakes": ["Confondre puissance et énergie"],
+      "examples": ["Une lampe de 60 W allumée 2 h consomme 120 Wh."]
+    },
+    {
+      "id": "pc.3e.ions-ph",
+      "theme": "Matière",
+      "title": "Ions et pH",
+      "description": "Savoir qu'un ion est un atome qui a gagné ou perdu des électrons, et qu'une solution est acide, neutre ou basique selon son pH.",
+      "prerequisites": ["pc.4e.atomes-molecules"],
+      "commonMistakes": ["Croire qu'un pH de 2 est moins acide qu'un pH de 5"],
+      "examples": ["Le jus de citron a un pH d'environ 2 : il est acide."]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "subject": "SVT",
+  "level": "SIXIEME",
+  "notions": [
+    {
+      "id": "svt.6e.classification-vivant",
+      "theme": "Le vivant",
+      "title": "Classer les êtres vivants",
+      "description": "Classer les êtres vivants selon les attributs qu'ils possèdent (squelette, mamelles, plumes…) et non selon leur mode de vie.",
+      "prerequisites": [],
+      "commonMistakes": ["Classer la baleine avec les poissons parce qu'elle nage"],
+      "examples": ["La chauve-souris est un mammifère."]
+    },
+    {
+      "id": "svt.6e.besoins-plantes",
+      "theme": "Le vivant",
+      "title": "Les besoins des plantes vertes",
+      "description": "Les plantes vertes fabriquent leur matière à partir de lumière, d'eau, de sels minéraux et de dioxyde de carbone.",
+      "prerequisites": [],
+      "commonMistakes": ["Croire que les plantes se nourrissent de terre"],
+      "examples": ["Sans lumière, une plante verte ne grandit pas."]
+    },
+    {
+      "id": "svt.6e.chaines-alimentaires",
+      "theme": "Le vivant",
+      "title": "Chaînes et réseaux alimentaires",
+      "description": "Représenter qui mange qui dans un milieu, avec des flèches qui signifient « est mangé par ».",
+      "prerequisites": ["svt.6e.besoins-plantes"],
+      "commonMistakes": ["Inverser le sens des flèches"],
+      "examples": ["herbe → lapin → renard"]
+    },
+    {
+      "id": "svt.6e.demarche-experimentale",
+      "theme": "Démarche scientifique",
+      "title": "La démarche expérimentale",
+      "description": "Formuler une hypothèse, concevoir une expérience avec un témoin en ne changeant qu'un seul paramètre, et conclure.",
+      "prerequisites": [],
+      "commonMistakes": ["Changer plusieurs paramètres à la fois", "Oublier l'expérience témoin"],
+      "examples": ["On compare une plante à la lumière et une plante à l'obscurité."]
+    }
+  ]
+}

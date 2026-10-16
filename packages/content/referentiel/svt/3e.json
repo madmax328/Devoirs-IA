@@ -1,0 +1,33 @@
+{
+  "subject": "SVT",
+  "level": "TROISIEME",
+  "notions": [
+    {
+      "id": "svt.3e.genetique-heredite",
+      "theme": "Le vivant",
+      "title": "Génétique et hérédité",
+      "description": "Comprendre la transmission des caractères héréditaires (gènes, allèles) et la diversité génétique.",
+      "prerequisites": ["svt.4e.cellule-adn"],
+      "commonMistakes": ["Confondre gène et allèle"],
+      "examples": ["Le gène du groupe sanguin a plusieurs allèles : A, B, O."]
+    },
+    {
+      "id": "svt.3e.immunite",
+      "theme": "Le vivant",
+      "title": "Le système immunitaire",
+      "description": "Expliquer comment l'organisme se défend contre les micro-organismes et le rôle de la vaccination.",
+      "prerequisites": ["svt.4e.cellule-adn"],
+      "commonMistakes": ["Croire que les antibiotiques agissent sur les virus"],
+      "examples": ["La vaccination prépare les défenses de l'organisme."]
+    },
+    {
+      "id": "svt.3e.evolution",
+      "theme": "Le vivant",
+      "title": "L'évolution des êtres vivants",
+      "description": "Comprendre la parenté entre les espèces et le rôle de la sélection naturelle.",
+      "prerequisites": ["svt.6e.classification-vivant", "svt.3e.genetique-heredite"],
+      "commonMistakes": ["Croire que l'Homme descend du singe actuel"],
+      "examples": ["L'Homme et le chimpanzé ont un ancêtre commun."]
+    }
+  ]
+}

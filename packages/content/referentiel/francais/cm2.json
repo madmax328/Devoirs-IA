@@ -1,0 +1,117 @@
+{
+  "subject": "FRANCAIS",
+  "level": "CM2",
+  "notions": [
+    {
+      "id": "fr.cm2.classes-mots-base",
+      "theme": "Grammaire",
+      "title": "Reconnaître nom, verbe, déterminant, adjectif",
+      "description": "Identifier la classe des mots les plus fréquents dans une phrase simple.",
+      "prerequisites": [],
+      "commonMistakes": [
+        "Prendre un nom pour un verbe (« la marche »)",
+        "Confondre déterminant et pronom (« le » devant un verbe)"
+      ],
+      "examples": ["Le (déterminant) petit (adjectif) chat (nom) dort (verbe)."]
+    },
+    {
+      "id": "fr.cm2.sujet-verbe",
+      "theme": "Grammaire",
+      "title": "Trouver le verbe et son sujet",
+      "description": "Repérer le verbe conjugué (il change avec le temps) et trouver son sujet en posant la question « qui est-ce qui ? ».",
+      "prerequisites": ["fr.cm2.classes-mots-base"],
+      "commonMistakes": ["Prendre le nom le plus proche pour le sujet", "Oublier le sujet inversé"],
+      "examples": ["Dans la cour jouent les enfants : le sujet est « les enfants »."]
+    },
+    {
+      "id": "fr.cm2.accord-sujet-verbe",
+      "theme": "Orthographe",
+      "title": "Accorder le verbe avec son sujet",
+      "description": "Le verbe s'accorde en nombre et en personne avec son sujet, même quand le sujet est éloigné.",
+      "prerequisites": ["fr.cm2.sujet-verbe"],
+      "commonMistakes": [
+        "Accorder avec le mot le plus proche (« les fleurs du jardin pousse »)",
+        "Oublier le -nt du pluriel"
+      ],
+      "examples": ["Les enfants de ma voisine jouent."]
+    },
+    {
+      "id": "fr.cm2.accord-groupe-nominal",
+      "theme": "Orthographe",
+      "title": "Accords dans le groupe nominal",
+      "description": "Le déterminant et l'adjectif s'accordent en genre et en nombre avec le nom.",
+      "prerequisites": ["fr.cm2.classes-mots-base"],
+      "commonMistakes": ["Oublier le -s de l'adjectif au pluriel", "Oublier le -e au féminin"],
+      "examples": ["de grandes maisons blanches"]
+    },
+    {
+      "id": "fr.cm2.present-indicatif",
+      "theme": "Conjugaison",
+      "title": "Le présent de l'indicatif",
+      "description": "Conjuguer au présent les verbes du 1er, 2e et 3e groupe les plus fréquents (être, avoir, aller, faire, dire, venir, pouvoir, voir, vouloir, prendre).",
+      "prerequisites": ["fr.cm2.sujet-verbe"],
+      "commonMistakes": ["« il fini » au lieu de « il finit »", "« tu chante » sans -s"],
+      "examples": ["je finis, tu finis, il finit"]
+    },
+    {
+      "id": "fr.cm2.imparfait-futur",
+      "theme": "Conjugaison",
+      "title": "L'imparfait et le futur simple",
+      "description": "Conjuguer à l'imparfait (terminaisons -ais, -ais, -ait, -ions, -iez, -aient) et au futur simple (-rai, -ras, -ra…).",
+      "prerequisites": ["fr.cm2.present-indicatif"],
+      "commonMistakes": [
+        "Oublier le -e muet au futur (« je jourai »)",
+        "Confondre « je chantai » et « je chantais »"
+      ],
+      "examples": ["Je jouais ; je jouerai."]
+    },
+    {
+      "id": "fr.cm2.passe-compose",
+      "theme": "Conjugaison",
+      "title": "Le passé composé",
+      "description": "Former le passé composé avec l'auxiliaire être ou avoir au présent et le participe passé.",
+      "prerequisites": ["fr.cm2.present-indicatif"],
+      "commonMistakes": [
+        "Choisir le mauvais auxiliaire (« il a tombé »)",
+        "Mal écrire le participe passé (« j'ai fini » / « j'ai finit »)"
+      ],
+      "examples": ["Elle est partie ; nous avons mangé."]
+    },
+    {
+      "id": "fr.cm2.homophones-base",
+      "theme": "Orthographe",
+      "title": "Homophones : a/à, et/est, son/sont, on/ont",
+      "description": "Choisir la bonne écriture en remplaçant par un autre mot (avait, était, leur, ils avaient…).",
+      "prerequisites": ["fr.cm2.sujet-verbe"],
+      "commonMistakes": ["Écrire « il à faim »", "Écrire « on mangé »"],
+      "examples": ["Il a faim (il avait faim) ; il va à Paris."]
+    },
+    {
+      "id": "fr.cm2.ponctuation-phrase",
+      "theme": "Écriture",
+      "title": "Phrase et ponctuation",
+      "description": "Une phrase commence par une majuscule et se termine par un point ; utiliser virgule, point d'interrogation et point d'exclamation.",
+      "prerequisites": [],
+      "commonMistakes": ["Écrire tout un paragraphe sans point", "Oublier la majuscule après un point"],
+      "examples": ["Où vas-tu ? Je pars à l'école."]
+    },
+    {
+      "id": "fr.cm2.comprendre-consigne",
+      "theme": "Lecture et compréhension",
+      "title": "Comprendre une consigne",
+      "description": "Repérer le verbe d'action d'une consigne (souligne, justifie, explique, complète) et ce qui est attendu.",
+      "prerequisites": [],
+      "commonMistakes": ["Répondre sans lire toute la consigne", "Confondre « souligne » et « entoure »"],
+      "examples": ["« Justifie ta réponse » : il faut expliquer pourquoi, avec un élément du texte."]
+    },
+    {
+      "id": "fr.cm2.comprendre-texte-implicite",
+      "theme": "Lecture et compréhension",
+      "title": "Comprendre un texte : explicite et implicite",
+      "description": "Retrouver une information écrite dans le texte et déduire une information qui n'est pas écrite (indices).",
+      "prerequisites": ["fr.cm2.comprendre-consigne"],
+      "commonMistakes": ["Répondre avec son avis au lieu du texte", "Ne pas relire le passage concerné"],
+      "examples": ["« Il secoua son parapluie » : on comprend qu'il pleuvait."]
+    }
+  ]
+}

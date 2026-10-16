@@ -1,0 +1,206 @@
+{
+  "subject": "MATHS",
+  "level": "CINQUIEME",
+  "notions": [
+    {
+      "id": "ma.5e.relatifs-sens",
+      "theme": "Nombres et calculs",
+      "title": "Nombres relatifs : sens et comparaison",
+      "description": "Utiliser les nombres positifs et négatifs (températures, altitudes), les placer sur une droite graduée et les comparer.",
+      "prerequisites": ["ma.6e.droite-graduee"],
+      "commonMistakes": ["Croire que −8 > −3 parce que 8 > 3", "Oublier que 0 n'est ni positif ni négatif"],
+      "examples": ["−8 < −3 < 2"]
+    },
+    {
+      "id": "ma.5e.relatifs-addition-soustraction",
+      "theme": "Nombres et calculs",
+      "title": "Additionner et soustraire des relatifs",
+      "description": "Additionner deux relatifs (même signe : on ajoute les distances à zéro ; signes contraires : on soustrait) ; soustraire revient à ajouter l'opposé.",
+      "prerequisites": ["ma.5e.relatifs-sens"],
+      "commonMistakes": ["−3 − 5 = 2", "Oublier de changer le signe en transformant une soustraction"],
+      "examples": ["−3 + 7 = 4 ; 2 − (−5) = 7"]
+    },
+    {
+      "id": "ma.5e.reperage-plan",
+      "theme": "Espace et géométrie",
+      "title": "Se repérer dans le plan",
+      "description": "Lire et placer des points à partir de leurs coordonnées (abscisse, ordonnée), y compris négatives.",
+      "prerequisites": ["ma.5e.relatifs-sens"],
+      "commonMistakes": ["Inverser abscisse et ordonnée", "Compter les traits au lieu des unités"],
+      "examples": ["A(−2 ; 3) : 2 vers la gauche, 3 vers le haut."]
+    },
+    {
+      "id": "ma.5e.fractions-comparer",
+      "theme": "Nombres et calculs",
+      "title": "Comparer des fractions",
+      "description": "Comparer des fractions en les mettant au même dénominateur ou en les comparant à 1.",
+      "prerequisites": ["ma.6e.fractions-egales"],
+      "commonMistakes": ["Comparer seulement les dénominateurs", "Croire que 2/3 < 3/5 car 3 < 5"],
+      "examples": ["2/3 = 10/15 et 3/5 = 9/15, donc 2/3 > 3/5."]
+    },
+    {
+      "id": "ma.5e.fractions-addition",
+      "theme": "Nombres et calculs",
+      "title": "Additionner et soustraire des fractions",
+      "description": "Additionner des fractions dont un dénominateur est multiple de l'autre en les réduisant au même dénominateur.",
+      "prerequisites": ["ma.6e.fractions-addition-meme-denominateur", "ma.6e.multiples-diviseurs"],
+      "commonMistakes": ["Additionner numérateurs et dénominateurs (1/2 + 1/4 = 2/6)"],
+      "examples": ["1/2 + 1/4 = 2/4 + 1/4 = 3/4"]
+    },
+    {
+      "id": "ma.5e.expressions-litterales",
+      "theme": "Nombres et calculs",
+      "title": "Utiliser une lettre dans une expression",
+      "description": "Produire une expression littérale (périmètre 2 × L + 2 × l), comprendre les conventions d'écriture (3x = 3 × x) et calculer sa valeur pour une valeur donnée.",
+      "prerequisites": ["ma.6e.priorites-operatoires"],
+      "commonMistakes": ["Remplacer 3x par 3 suivi du chiffre (x = 2 → 32)", "Confondre x² et 2x"],
+      "examples": ["Pour x = 4 : 3x + 1 = 13"]
+    },
+    {
+      "id": "ma.5e.tester-egalite",
+      "theme": "Nombres et calculs",
+      "title": "Tester une égalité",
+      "description": "Vérifier si une égalité contenant une lettre est vraie pour une valeur donnée, première approche des équations.",
+      "prerequisites": ["ma.5e.expressions-litterales"],
+      "commonMistakes": [
+        "Ne calculer qu'un seul membre",
+        "Conclure qu'une égalité est toujours vraie après un seul essai"
+      ],
+      "examples": ["Pour x = 3 : 2x + 1 = 7 et x + 4 = 7, l'égalité est vraie."]
+    },
+    {
+      "id": "ma.5e.distributivite-simple",
+      "theme": "Nombres et calculs",
+      "title": "Distributivité simple",
+      "description": "Utiliser k × (a + b) = k × a + k × b pour calculer mentalement et pour développer ou factoriser des expressions simples.",
+      "prerequisites": ["ma.5e.expressions-litterales"],
+      "commonMistakes": ["Ne multiplier que le premier terme : 3(x + 2) = 3x + 2"],
+      "examples": ["3(x + 2) = 3x + 6"]
+    },
+    {
+      "id": "ma.5e.nombres-premiers",
+      "theme": "Nombres et calculs",
+      "title": "Nombres premiers",
+      "description": "Un nombre premier a exactement deux diviseurs : 1 et lui-même. Connaître les premiers nombres premiers.",
+      "prerequisites": ["ma.6e.multiples-diviseurs"],
+      "commonMistakes": ["Considérer 1 comme premier", "Croire que tous les nombres impairs sont premiers"],
+      "examples": ["2, 3, 5, 7, 11, 13 sont premiers ; 9 ne l'est pas."]
+    },
+    {
+      "id": "ma.5e.proportionnalite-reconnaitre",
+      "theme": "Nombres et calculs",
+      "title": "Reconnaître la proportionnalité",
+      "description": "Identifier une situation de proportionnalité dans un tableau ou un graphique (points alignés avec l'origine), calculer une quatrième proportionnelle.",
+      "prerequisites": ["ma.6e.proportionnalite", "ma.5e.reperage-plan"],
+      "commonMistakes": [
+        "Croire que des points alignés suffisent même si la droite ne passe pas par l'origine"
+      ],
+      "examples": ["Le prix payé est proportionnel à la masse de pommes."]
+    },
+    {
+      "id": "ma.5e.pourcentages-appliquer",
+      "theme": "Nombres et calculs",
+      "title": "Calculer et appliquer des pourcentages",
+      "description": "Calculer un pourcentage, appliquer un taux et exprimer une proportion en pourcentage.",
+      "prerequisites": ["ma.6e.pourcentages", "ma.5e.proportionnalite-reconnaitre"],
+      "commonMistakes": ["Diviser par le taux au lieu de multiplier par t/100"],
+      "examples": ["12 élèves sur 30 représentent 40 %."]
+    },
+    {
+      "id": "ma.5e.statistiques-moyenne",
+      "theme": "Organisation et gestion de données",
+      "title": "Effectifs, fréquences et moyenne",
+      "description": "Calculer des effectifs, des fréquences et une moyenne (simple ou pondérée) à partir d'une série de données.",
+      "prerequisites": ["ma.6e.donnees-representations", "ma.6e.division-decimale"],
+      "commonMistakes": [
+        "Diviser par le nombre de valeurs différentes au lieu de l'effectif total",
+        "Oublier de pondérer"
+      ],
+      "examples": ["Notes 12, 15, 9 : moyenne = 12."]
+    },
+    {
+      "id": "ma.5e.probabilites-vocabulaire",
+      "theme": "Organisation et gestion de données",
+      "title": "Premières probabilités",
+      "description": "Utiliser le vocabulaire (issue, événement, certain, impossible) et calculer des probabilités dans des situations d'équiprobabilité simples.",
+      "prerequisites": ["ma.6e.fraction-quotient"],
+      "commonMistakes": [
+        "Donner une probabilité supérieure à 1",
+        "Croire qu'après 3 « pile » le « face » est plus probable"
+      ],
+      "examples": ["Avec un dé, P(obtenir 6) = 1/6."]
+    },
+    {
+      "id": "ma.5e.triangle-construction-inegalite",
+      "theme": "Espace et géométrie",
+      "title": "Construire un triangle, inégalité triangulaire",
+      "description": "Construire un triangle connaissant trois longueurs, deux longueurs et un angle, ou une longueur et deux angles ; savoir quand c'est impossible.",
+      "prerequisites": ["ma.6e.constructions-geometriques", "ma.6e.angles-mesure"],
+      "commonMistakes": ["Ne pas voir qu'un triangle 2 cm, 3 cm, 7 cm est impossible"],
+      "examples": ["Avec 3, 4 et 5 cm on peut construire un triangle."]
+    },
+    {
+      "id": "ma.5e.somme-angles-triangle",
+      "theme": "Espace et géométrie",
+      "title": "Somme des angles d'un triangle",
+      "description": "La somme des angles d'un triangle vaut 180° ; l'utiliser pour calculer un angle manquant.",
+      "prerequisites": ["ma.6e.angles-mesure", "ma.6e.triangles-quadrilateres"],
+      "commonMistakes": ["Utiliser 360° comme pour un quadrilatère", "Mesurer au lieu de calculer"],
+      "examples": ["Angles de 50° et 60° : le troisième mesure 70°."]
+    },
+    {
+      "id": "ma.5e.angles-paralleles",
+      "theme": "Espace et géométrie",
+      "title": "Angles et parallélisme",
+      "description": "Reconnaître des angles alternes-internes et correspondants, et les utiliser pour démontrer que des droites sont parallèles.",
+      "prerequisites": ["ma.5e.somme-angles-triangle", "ma.cm2.droites-perpendiculaires-paralleles"],
+      "commonMistakes": ["Confondre alternes-internes et opposés par le sommet"],
+      "examples": ["Si deux droites sont parallèles, les angles alternes-internes sont égaux."]
+    },
+    {
+      "id": "ma.5e.symetrie-centrale",
+      "theme": "Espace et géométrie",
+      "title": "Symétrie centrale",
+      "description": "Construire le symétrique d'une figure par rapport à un point (demi-tour) et connaître ses propriétés.",
+      "prerequisites": ["ma.6e.symetrie-axiale"],
+      "commonMistakes": ["Faire une symétrie axiale à la place", "Ne pas passer par le centre"],
+      "examples": ["O est le milieu de [AA'] quand A' est le symétrique de A par rapport à O."]
+    },
+    {
+      "id": "ma.5e.parallelogramme",
+      "theme": "Espace et géométrie",
+      "title": "Le parallélogramme",
+      "description": "Connaître les propriétés du parallélogramme (côtés opposés parallèles et de même longueur, diagonales de même milieu) et les cas particuliers.",
+      "prerequisites": ["ma.5e.symetrie-centrale", "ma.6e.triangles-quadrilateres"],
+      "commonMistakes": ["Croire qu'un parallélogramme a des diagonales de même longueur"],
+      "examples": ["Un rectangle est un parallélogramme particulier."]
+    },
+    {
+      "id": "ma.5e.aires-parallelogramme-triangle",
+      "theme": "Grandeurs et mesures",
+      "title": "Aires du parallélogramme et du triangle",
+      "description": "Calculer l'aire d'un parallélogramme (base × hauteur) et d'un triangle en identifiant la bonne hauteur.",
+      "prerequisites": ["ma.6e.aires", "ma.5e.parallelogramme"],
+      "commonMistakes": ["Prendre un côté oblique à la place de la hauteur"],
+      "examples": ["Parallélogramme de base 7 cm et de hauteur 3 cm : aire = 21 cm²."]
+    },
+    {
+      "id": "ma.5e.prismes-cylindres",
+      "theme": "Grandeurs et mesures",
+      "title": "Prismes droits et cylindres : volume",
+      "description": "Calculer le volume d'un prisme droit ou d'un cylindre (aire de la base × hauteur) et convertir volumes et contenances.",
+      "prerequisites": ["ma.6e.volumes-pave", "ma.6e.aires"],
+      "commonMistakes": ["Multiplier le périmètre de la base par la hauteur", "Oublier que 1 L = 1 dm³"],
+      "examples": ["Cylindre de rayon 2 cm et hauteur 5 cm : V = 20π ≈ 62,8 cm³."]
+    },
+    {
+      "id": "ma.5e.algorithmique-boucles-conditions",
+      "theme": "Algorithmique et programmation",
+      "title": "Boucles, conditions et variables",
+      "description": "Programmer avec des boucles, des instructions conditionnelles (si… alors… sinon) et une variable.",
+      "prerequisites": ["ma.6e.algorithmique-scratch"],
+      "commonMistakes": ["Mettre la condition hors de la boucle", "Ne pas initialiser la variable"],
+      "examples": ["Si la note ≥ 10 alors dire « Bravo »."]
+    }
+  ]
+}

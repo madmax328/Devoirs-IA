@@ -1,0 +1,186 @@
+{
+  "subject": "MATHS",
+  "level": "TROISIEME",
+  "notions": [
+    {
+      "id": "ma.3e.arithmetique-decomposition",
+      "theme": "Nombres et calculs",
+      "title": "Décomposition en facteurs premiers",
+      "description": "Décomposer un entier en produit de facteurs premiers et l'utiliser pour trouver des diviseurs communs ou simplifier une fraction.",
+      "prerequisites": ["ma.5e.nombres-premiers", "ma.4e.puissances"],
+      "commonMistakes": ["Laisser un facteur non premier (60 = 4 × 15)", "Oublier un facteur"],
+      "examples": ["60 = 2² × 3 × 5"]
+    },
+    {
+      "id": "ma.3e.fractions-irreductibles",
+      "theme": "Nombres et calculs",
+      "title": "Rendre une fraction irréductible",
+      "description": "Simplifier une fraction au maximum à l'aide de la décomposition en facteurs premiers ou du plus grand diviseur commun.",
+      "prerequisites": ["ma.3e.arithmetique-decomposition", "ma.6e.fractions-egales"],
+      "commonMistakes": ["S'arrêter à une simplification intermédiaire", "Simplifier des termes d'une somme"],
+      "examples": ["84/126 = 2/3"]
+    },
+    {
+      "id": "ma.3e.racine-carree",
+      "theme": "Nombres et calculs",
+      "title": "Racine carrée",
+      "description": "√a est le nombre positif dont le carré vaut a ; connaître les carrés parfaits et utiliser la calculatrice pour une valeur approchée.",
+      "prerequisites": ["ma.4e.pythagore"],
+      "commonMistakes": ["Croire que √(a + b) = √a + √b", "Diviser par 2 au lieu de prendre la racine"],
+      "examples": ["√49 = 7 ; √2 ≈ 1,41"]
+    },
+    {
+      "id": "ma.3e.factoriser",
+      "theme": "Nombres et calculs",
+      "title": "Factoriser une expression",
+      "description": "Mettre en évidence un facteur commun : ka + kb = k(a + b), y compris quand le facteur commun est une expression.",
+      "prerequisites": ["ma.4e.double-distributivite"],
+      "commonMistakes": [
+        "Oublier le « 1 » restant (3x + 3 = 3(x))",
+        "Factoriser par un terme qui n'est pas commun"
+      ],
+      "examples": ["6x + 9 = 3(2x + 3)"]
+    },
+    {
+      "id": "ma.3e.identites-remarquables",
+      "theme": "Nombres et calculs",
+      "title": "Identités remarquables",
+      "description": "Utiliser (a + b)², (a − b)² et (a + b)(a − b) = a² − b² pour développer et factoriser.",
+      "prerequisites": ["ma.4e.double-distributivite", "ma.3e.factoriser"],
+      "commonMistakes": ["Écrire (a + b)² = a² + b²", "Oublier le double produit"],
+      "examples": ["(x + 3)² = x² + 6x + 9 ; x² − 25 = (x − 5)(x + 5)"]
+    },
+    {
+      "id": "ma.3e.equation-produit-nul",
+      "theme": "Nombres et calculs",
+      "title": "Équations produit nul",
+      "description": "Un produit est nul si et seulement si l'un de ses facteurs est nul ; résoudre (ax + b)(cx + d) = 0.",
+      "prerequisites": ["ma.4e.equations-premier-degre", "ma.3e.factoriser"],
+      "commonMistakes": ["Développer au lieu d'utiliser la propriété", "N'écrire qu'une seule solution"],
+      "examples": ["(x − 2)(x + 5) = 0 : x = 2 ou x = −5"]
+    },
+    {
+      "id": "ma.3e.inequations",
+      "theme": "Nombres et calculs",
+      "title": "Inéquations du premier degré",
+      "description": "Résoudre une inéquation et représenter ses solutions ; changer le sens de l'inégalité quand on multiplie ou divise par un négatif.",
+      "prerequisites": ["ma.4e.equations-premier-degre", "ma.5e.relatifs-sens"],
+      "commonMistakes": ["Ne pas changer le sens en divisant par un nombre négatif"],
+      "examples": ["−2x < 6 donc x > −3"]
+    },
+    {
+      "id": "ma.3e.fonctions-notion",
+      "theme": "Fonctions",
+      "title": "Notion de fonction",
+      "description": "Une fonction associe à un nombre une seule image ; lire et calculer images et antécédents à partir d'une formule, d'un tableau ou d'une courbe.",
+      "prerequisites": ["ma.5e.expressions-litterales", "ma.5e.reperage-plan"],
+      "commonMistakes": ["Confondre image et antécédent", "Lire l'antécédent sur le mauvais axe"],
+      "examples": ["f(x) = 2x + 1 : l'image de 3 est 7."]
+    },
+    {
+      "id": "ma.3e.fonctions-lineaires",
+      "theme": "Fonctions",
+      "title": "Fonctions linéaires",
+      "description": "Une fonction linéaire s'écrit f(x) = ax ; elle traduit une situation de proportionnalité et sa représentation est une droite passant par l'origine.",
+      "prerequisites": ["ma.3e.fonctions-notion", "ma.5e.proportionnalite-reconnaitre"],
+      "commonMistakes": ["Croire que toute droite représente une fonction linéaire"],
+      "examples": ["f(x) = 3x : droite passant par O et par (1 ; 3)."]
+    },
+    {
+      "id": "ma.3e.fonctions-affines",
+      "theme": "Fonctions",
+      "title": "Fonctions affines",
+      "description": "Une fonction affine s'écrit f(x) = ax + b ; interpréter a (coefficient directeur) et b (ordonnée à l'origine) et tracer sa droite.",
+      "prerequisites": ["ma.3e.fonctions-lineaires"],
+      "commonMistakes": ["Confondre a et b", "Placer b sur l'axe des abscisses"],
+      "examples": ["f(x) = 2x − 1 coupe l'axe des ordonnées en −1."]
+    },
+    {
+      "id": "ma.3e.pourcentages-evolution",
+      "theme": "Nombres et calculs",
+      "title": "Augmentations et réductions en pourcentage",
+      "description": "Appliquer une hausse ou une baisse de t % en multipliant par (1 + t/100) ou (1 − t/100), et calculer un taux d'évolution.",
+      "prerequisites": ["ma.5e.pourcentages-appliquer", "ma.3e.fonctions-lineaires"],
+      "commonMistakes": ["Croire qu'une hausse de 20 % puis une baisse de 20 % ramène au prix initial"],
+      "examples": ["Un prix de 50 € augmenté de 10 % devient 55 €."]
+    },
+    {
+      "id": "ma.3e.thales",
+      "theme": "Espace et géométrie",
+      "title": "Théorème de Thalès",
+      "description": "Dans deux triangles emboîtés ou en « papillon » avec des côtés parallèles, les longueurs sont proportionnelles ; calculer une longueur.",
+      "prerequisites": ["ma.4e.quatrieme-proportionnelle", "ma.5e.angles-paralleles"],
+      "commonMistakes": [
+        "Associer des côtés qui ne se correspondent pas",
+        "Utiliser Thalès sans droites parallèles"
+      ],
+      "examples": ["AM/AB = AN/AC = MN/BC"]
+    },
+    {
+      "id": "ma.3e.thales-reciproque",
+      "theme": "Espace et géométrie",
+      "title": "Réciproque du théorème de Thalès",
+      "description": "Démontrer que deux droites sont parallèles en vérifiant l'égalité de deux rapports et l'ordre des points.",
+      "prerequisites": ["ma.3e.thales"],
+      "commonMistakes": ["Oublier de vérifier l'alignement et l'ordre des points"],
+      "examples": ["AM/AB = AN/AC et points dans le même ordre : (MN) // (BC)."]
+    },
+    {
+      "id": "ma.3e.trigonometrie",
+      "theme": "Espace et géométrie",
+      "title": "Trigonométrie : sinus, cosinus, tangente",
+      "description": "Utiliser sin, cos et tan dans un triangle rectangle pour calculer une longueur ou un angle (moyen mnémotechnique SOH-CAH-TOA).",
+      "prerequisites": ["ma.4e.cosinus"],
+      "commonMistakes": [
+        "Utiliser la mauvaise formule",
+        "Oublier la touche inverse (arcsin) pour trouver un angle"
+      ],
+      "examples": ["tan(angle) = opposé / adjacent"]
+    },
+    {
+      "id": "ma.3e.homothetie-agrandissement",
+      "theme": "Espace et géométrie",
+      "title": "Agrandissement, réduction et homothétie",
+      "description": "Dans un agrandissement ou une réduction de rapport k, les longueurs sont multipliées par k, les aires par k² et les volumes par k³.",
+      "prerequisites": ["ma.3e.thales", "ma.4e.translation"],
+      "commonMistakes": ["Multiplier les aires par k au lieu de k²"],
+      "examples": ["Rapport 2 : les aires sont multipliées par 4."]
+    },
+    {
+      "id": "ma.3e.rotation",
+      "theme": "Espace et géométrie",
+      "title": "Rotation",
+      "description": "Construire l'image d'une figure par une rotation (centre, angle, sens) et reconnaître des frises et pavages.",
+      "prerequisites": ["ma.5e.symetrie-centrale", "ma.6e.angles-mesure"],
+      "commonMistakes": ["Tourner dans le mauvais sens", "Ne pas garder la même distance au centre"],
+      "examples": ["Une symétrie centrale est une rotation de 180°."]
+    },
+    {
+      "id": "ma.3e.sphere-boule",
+      "theme": "Grandeurs et mesures",
+      "title": "Sphère et boule",
+      "description": "Calculer l'aire d'une sphère (4πr²) et le volume d'une boule (4/3 πr³), et se repérer sur une sphère (latitude, longitude).",
+      "prerequisites": ["ma.4e.pyramides-cones", "ma.6e.perimetres-cercle"],
+      "commonMistakes": ["Confondre aire de la sphère et volume de la boule"],
+      "examples": ["Boule de rayon 3 cm : V = 36π ≈ 113 cm³."]
+    },
+    {
+      "id": "ma.3e.probabilites-deux-epreuves",
+      "theme": "Organisation et gestion de données",
+      "title": "Probabilités : expériences à deux épreuves",
+      "description": "Représenter une expérience à deux épreuves par un arbre ou un tableau et calculer des probabilités.",
+      "prerequisites": ["ma.4e.probabilites-calculer", "ma.4e.fractions-multiplication"],
+      "commonMistakes": ["Additionner les probabilités le long d'une branche au lieu de les multiplier"],
+      "examples": ["Deux lancers de pièce : P(pile puis pile) = 1/4."]
+    },
+    {
+      "id": "ma.3e.algorithmique-3e",
+      "theme": "Algorithmique et programmation",
+      "title": "Algorithmes et résolution de problèmes",
+      "description": "Concevoir un programme qui résout un problème (calculs répétés, conditions multiples, listes) et le corriger.",
+      "prerequisites": ["ma.4e.algorithmique-programmes", "ma.3e.fonctions-notion"],
+      "commonMistakes": ["Ne pas tester son programme sur plusieurs cas"],
+      "examples": ["Programme qui calcule la moyenne de notes saisies."]
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "subject": "MATHS",
+  "level": "CM2",
+  "notions": [
+    {
+      "id": "ma.cm2.entiers-numeration",
+      "theme": "Nombres et calculs",
+      "title": "Lire et écrire les grands nombres entiers",
+      "description": "Comprendre la valeur de chaque chiffre selon sa position (unités, dizaines, centaines, milliers, millions) et passer de l'écriture en chiffres à l'écriture en lettres.",
+      "prerequisites": [],
+      "commonMistakes": [
+        "Oublier les zéros intercalés (« deux mille quinze » écrit 2 15)",
+        "Confondre le chiffre des centaines et le nombre de centaines"
+      ],
+      "examples": ["Dans 45 302, le chiffre des centaines est 3 et le nombre de centaines est 453."]
+    },
+    {
+      "id": "ma.cm2.addition-soustraction",
+      "theme": "Nombres et calculs",
+      "title": "Additionner et soustraire des nombres entiers",
+      "description": "Poser et calculer des additions et des soustractions en alignant les chiffres et en gérant les retenues.",
+      "prerequisites": ["ma.cm2.entiers-numeration"],
+      "commonMistakes": [
+        "Mal aligner les unités sous les unités",
+        "Oublier la retenue dans la soustraction posée"
+      ],
+      "examples": ["1 045 − 278 = 767"]
+    },
+    {
+      "id": "ma.cm2.tables-multiplication",
+      "theme": "Nombres et calculs",
+      "title": "Connaître les tables de multiplication",
+      "description": "Restituer rapidement les produits des tables de 2 à 9 et les utiliser pour retrouver des quotients simples.",
+      "prerequisites": [],
+      "commonMistakes": ["Confondre 7 × 8 et 6 × 9", "Recompter au lieu de mémoriser"],
+      "examples": ["7 × 8 = 56, donc 56 ÷ 8 = 7."]
+    },
+    {
+      "id": "ma.cm2.multiplication-posee",
+      "theme": "Nombres et calculs",
+      "title": "Multiplier des nombres entiers",
+      "description": "Calculer un produit en ligne ou posé, avec un multiplicateur à plusieurs chiffres, en utilisant les décalages.",
+      "prerequisites": ["ma.cm2.tables-multiplication", "ma.cm2.addition-soustraction"],
+      "commonMistakes": [
+        "Oublier le décalage d'un rang pour la ligne des dizaines",
+        "Oublier d'additionner la retenue"
+      ],
+      "examples": ["234 × 16 = 3 744"]
+    },
+    {
+      "id": "ma.cm2.division-euclidienne",
+      "theme": "Nombres et calculs",
+      "title": "Division euclidienne",
+      "description": "Trouver le quotient et le reste d'une division entière, et savoir que le reste est toujours plus petit que le diviseur.",
+      "prerequisites": ["ma.cm2.multiplication-posee"],
+      "commonMistakes": ["Obtenir un reste plus grand que le diviseur", "Oublier un zéro au quotient"],
+      "examples": ["157 = 12 × 13 + 1 : quotient 13, reste 1."]
+    },
+    {
+      "id": "ma.cm2.fractions-sens",
+      "theme": "Nombres et calculs",
+      "title": "Comprendre une fraction simple",
+      "description": "Une fraction représente un partage en parts égales : dans 3/4, l'unité est partagée en 4 parts égales et on en prend 3.",
+      "prerequisites": ["ma.cm2.division-euclidienne"],
+      "commonMistakes": [
+        "Croire que 1/5 est plus grand que 1/3 parce que 5 > 3",
+        "Faire des parts qui ne sont pas égales"
+      ],
+      "examples": ["Une pizza coupée en 8 parts égales : 3 parts représentent 3/8 de la pizza."]
+    },
+    {
+      "id": "ma.cm2.fractions-decimales",
+      "theme": "Nombres et calculs",
+      "title": "Fractions décimales",
+      "description": "Les fractions dont le dénominateur est 10, 100, 1 000 permettent d'introduire les nombres décimaux : 7/10 = 0,7.",
+      "prerequisites": ["ma.cm2.fractions-sens"],
+      "commonMistakes": ["Écrire 7/100 = 0,7", "Ne pas savoir que 10/10 = 1"],
+      "examples": ["35/100 = 0,35"]
+    },
+    {
+      "id": "ma.cm2.decimaux-ecriture",
+      "theme": "Nombres et calculs",
+      "title": "Écrire et lire les nombres décimaux",
+      "description": "Connaître la valeur des chiffres après la virgule (dixièmes, centièmes, millièmes) et le lien avec les fractions décimales.",
+      "prerequisites": ["ma.cm2.fractions-decimales", "ma.cm2.entiers-numeration"],
+      "commonMistakes": [
+        "Lire 3,25 « trois virgule vingt-cinq » sans comprendre 2 dixièmes et 5 centièmes",
+        "Penser que 2,5 et 2,50 sont différents"
+      ],
+      "examples": ["4,07 = 4 + 7/100"]
+    },
+    {
+      "id": "ma.cm2.decimaux-comparer",
+      "theme": "Nombres et calculs",
+      "title": "Comparer des nombres décimaux",
+      "description": "Comparer d'abord les parties entières, puis les dixièmes, puis les centièmes… et non la « longueur » du nombre.",
+      "prerequisites": ["ma.cm2.decimaux-ecriture"],
+      "commonMistakes": [
+        "Croire que 2,15 > 2,5 parce que 15 > 5",
+        "Croire qu'un nombre avec plus de chiffres est plus grand"
+      ],
+      "examples": ["2,5 > 2,15 car 5 dixièmes > 1 dixième."]
+    },
+    {
+      "id": "ma.cm2.decimaux-addition",
+      "theme": "Nombres et calculs",
+      "title": "Additionner et soustraire des décimaux",
+      "description": "Poser l'opération en alignant les virgules (et compléter par des zéros si besoin).",
+      "prerequisites": ["ma.cm2.decimaux-ecriture", "ma.cm2.addition-soustraction"],
+      "commonMistakes": [
+        "Aligner les nombres à droite au lieu d'aligner les virgules",
+        "Oublier la virgule dans le résultat"
+      ],
+      "examples": ["12,5 + 3,75 = 16,25"]
+    },
+    {
+      "id": "ma.cm2.multiplier-par-10",
+      "theme": "Nombres et calculs",
+      "title": "Multiplier et diviser par 10, 100, 1 000",
+      "description": "Multiplier par 10 rend chaque chiffre 10 fois plus grand : il se décale d'un rang vers la gauche.",
+      "prerequisites": ["ma.cm2.decimaux-ecriture"],
+      "commonMistakes": [
+        "« Ajouter un zéro » à un décimal (3,4 × 10 = 3,40)",
+        "Décaler dans le mauvais sens pour une division"
+      ],
+      "examples": ["3,4 × 10 = 34 ; 52 ÷ 100 = 0,52"]
+    },
+    {
+      "id": "ma.cm2.proportionnalite-situations",
+      "theme": "Nombres et calculs",
+      "title": "Résoudre des problèmes de proportionnalité simples",
+      "description": "Reconnaître une situation de proportionnalité (prix, recettes) et la résoudre par le passage à l'unité ou les relations entre les nombres.",
+      "prerequisites": ["ma.cm2.multiplication-posee", "ma.cm2.division-euclidienne"],
+      "commonMistakes": [
+        "Ajouter au lieu de multiplier (si 2 → 6 alors 4 → 8)",
+        "Appliquer la proportionnalité à une situation qui ne l'est pas (âge et taille)"
+      ],
+      "examples": ["3 cahiers coûtent 6 €, donc 1 cahier coûte 2 € et 5 cahiers coûtent 10 €."]
+    },
+    {
+      "id": "ma.cm2.longueurs-masses-conversions",
+      "theme": "Grandeurs et mesures",
+      "title": "Convertir des longueurs, masses et contenances",
+      "description": "Utiliser le tableau de conversion (km, hm, dam, m, dm, cm, mm) et ses équivalents pour les grammes et les litres.",
+      "prerequisites": ["ma.cm2.multiplier-par-10"],
+      "commonMistakes": [
+        "Décaler la virgule dans le mauvais sens",
+        "Mélanger les unités de longueur et de masse"
+      ],
+      "examples": ["2,5 km = 2 500 m ; 350 g = 0,35 kg"]
+    },
+    {
+      "id": "ma.cm2.perimetre",
+      "theme": "Grandeurs et mesures",
+      "title": "Calculer un périmètre",
+      "description": "Le périmètre est la longueur du tour d'une figure ; pour un rectangle : 2 × (longueur + largeur).",
+      "prerequisites": ["ma.cm2.addition-soustraction", "ma.cm2.longueurs-masses-conversions"],
+      "commonMistakes": [
+        "Confondre périmètre et aire",
+        "Additionner des longueurs dans des unités différentes"
+      ],
+      "examples": ["Rectangle de 5 cm sur 3 cm : périmètre = 16 cm."]
+    },
+    {
+      "id": "ma.cm2.aire-notion",
+      "theme": "Grandeurs et mesures",
+      "title": "Comprendre l'aire d'une surface",
+      "description": "L'aire mesure la surface : on compte des carreaux unités, puis on calcule l'aire d'un rectangle (longueur × largeur).",
+      "prerequisites": ["ma.cm2.multiplication-posee"],
+      "commonMistakes": [
+        "Exprimer une aire en cm au lieu de cm²",
+        "Penser que deux figures de même périmètre ont la même aire"
+      ],
+      "examples": ["Un rectangle de 4 cm sur 3 cm a une aire de 12 cm²."]
+    },
+    {
+      "id": "ma.cm2.angles-reperes",
+      "theme": "Espace et géométrie",
+      "title": "Reconnaître les angles",
+      "description": "Distinguer angle droit, angle aigu et angle obtus, et utiliser l'équerre pour vérifier un angle droit.",
+      "prerequisites": [],
+      "commonMistakes": ["Croire que la taille d'un angle dépend de la longueur de ses côtés"],
+      "examples": ["Un angle plus petit qu'un angle droit est aigu."]
+    },
+    {
+      "id": "ma.cm2.droites-perpendiculaires-paralleles",
+      "theme": "Espace et géométrie",
+      "title": "Droites perpendiculaires et parallèles",
+      "description": "Reconnaître et tracer des droites perpendiculaires (qui se coupent en angle droit) et parallèles (qui ne se coupent jamais).",
+      "prerequisites": ["ma.cm2.angles-reperes"],
+      "commonMistakes": [
+        "Croire que deux droites qui ne se coupent pas « sur le dessin » sont parallèles",
+        "Tracer sans équerre"
+      ],
+      "examples": ["Les deux bords opposés d'une feuille sont parallèles."]
+    },
+    {
+      "id": "ma.cm2.figures-planes",
+      "theme": "Espace et géométrie",
+      "title": "Figures planes usuelles",
+      "description": "Reconnaître et décrire carré, rectangle, losange, triangles particuliers et cercle (centre, rayon, diamètre).",
+      "prerequisites": ["ma.cm2.droites-perpendiculaires-paralleles"],
+      "commonMistakes": ["Ne pas voir qu'un carré est aussi un rectangle", "Confondre rayon et diamètre"],
+      "examples": ["Le diamètre d'un cercle mesure deux fois son rayon."]
+    },
+    {
+      "id": "ma.cm2.tableaux-graphiques",
+      "theme": "Organisation et gestion de données",
+      "title": "Lire des tableaux et des graphiques",
+      "description": "Prélever une information dans un tableau, un diagramme en barres ou un graphique, et en produire un simple.",
+      "prerequisites": [],
+      "commonMistakes": ["Lire la mauvaise ligne ou colonne", "Ignorer l'échelle de l'axe"],
+      "examples": ["Lire dans un tableau la température de mardi."]
+    },
+    {
+      "id": "ma.cm2.durees",
+      "theme": "Grandeurs et mesures",
+      "title": "Calculer des durées",
+      "description": "Convertir heures, minutes, secondes (1 h = 60 min) et calculer une durée entre deux horaires.",
+      "prerequisites": ["ma.cm2.addition-soustraction"],
+      "commonMistakes": ["Calculer en base 10 (1 h 50 + 20 min = 1 h 70)", "Écrire 1,5 h = 1 h 50 min"],
+      "examples": ["De 9 h 45 à 11 h 10, il s'écoule 1 h 25 min."]
+    }
+  ]
+}

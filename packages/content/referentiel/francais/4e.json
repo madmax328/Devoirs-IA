@@ -1,0 +1,92 @@
+{
+  "subject": "FRANCAIS",
+  "level": "QUATRIEME",
+  "notions": [
+    {
+      "id": "fr.4e.subordonnees-relatives",
+      "theme": "Grammaire",
+      "title": "Les propositions subordonnées relatives",
+      "description": "Reconnaître une relative introduite par un pronom relatif (qui, que, dont, où, lequel…) et son antécédent.",
+      "prerequisites": ["fr.5e.phrase-simple-complexe", "fr.5e.expansions-nom"],
+      "commonMistakes": ["Choisir « que » au lieu de « dont » (« la chose que je parle »)"],
+      "examples": ["Le livre dont je t'ai parlé est sorti."]
+    },
+    {
+      "id": "fr.4e.subordonnees-conjonctives",
+      "theme": "Grammaire",
+      "title": "Les propositions subordonnées conjonctives",
+      "description": "Distinguer la complétive (COD d'un verbe) et les circonstancielles (temps, cause, conséquence, but…).",
+      "prerequisites": ["fr.5e.phrase-simple-complexe", "fr.5e.complements-circonstanciels"],
+      "commonMistakes": ["Confondre « que » conjonction et « que » pronom relatif"],
+      "examples": ["Je pense qu'il viendra (complétive)."]
+    },
+    {
+      "id": "fr.4e.voix-passive",
+      "theme": "Grammaire",
+      "title": "Voix active et voix passive",
+      "description": "Transformer une phrase active en phrase passive (le COD devient sujet, complément d'agent introduit par « par »).",
+      "prerequisites": ["fr.6e.fonctions-sujet-complements", "fr.6e.accord-participe-etre"],
+      "commonMistakes": ["Changer le temps du verbe en transformant", "Oublier l'accord du participe"],
+      "examples": ["Le chat mange la souris → La souris est mangée par le chat."]
+    },
+    {
+      "id": "fr.4e.discours-rapporte",
+      "theme": "Grammaire",
+      "title": "Discours direct et indirect",
+      "description": "Passer du discours direct au discours indirect en changeant pronoms, temps et indicateurs de temps.",
+      "prerequisites": ["fr.6e.dialogue-ponctuation", "fr.4e.subordonnees-conjonctives"],
+      "commonMistakes": [
+        "Garder les guillemets au discours indirect",
+        "Ne pas changer « demain » en « le lendemain »"
+      ],
+      "examples": ["Il dit : « Je pars demain. » → Il dit qu'il part le lendemain."]
+    },
+    {
+      "id": "fr.4e.subjonctif-present",
+      "theme": "Conjugaison",
+      "title": "Le subjonctif présent",
+      "description": "Former le subjonctif présent et l'employer après « il faut que », « pour que », les verbes de volonté ou de sentiment.",
+      "prerequisites": ["fr.cm2.present-indicatif"],
+      "commonMistakes": ["« il faut que je fais » au lieu de « que je fasse »"],
+      "examples": ["Il faut que tu viennes."]
+    },
+    {
+      "id": "fr.4e.temps-composes",
+      "theme": "Conjugaison",
+      "title": "Plus-que-parfait, futur antérieur, conditionnel passé",
+      "description": "Former les temps composés (auxiliaire conjugué + participe passé) et comprendre l'antériorité qu'ils expriment.",
+      "prerequisites": ["fr.cm2.passe-compose", "fr.5e.conditionnel-present"],
+      "commonMistakes": ["Choisir le mauvais auxiliaire", "Confondre plus-que-parfait et passé composé"],
+      "examples": ["Quand il était arrivé, nous avions déjà mangé."]
+    },
+    {
+      "id": "fr.4e.figures-de-style",
+      "theme": "Vocabulaire",
+      "title": "Figures de style : comparaison, métaphore, personnification",
+      "description": "Identifier une comparaison (avec un outil : comme, tel…), une métaphore (sans outil) et une personnification, et expliquer leur effet.",
+      "prerequisites": ["fr.5e.sens-propre-figure"],
+      "commonMistakes": ["Confondre comparaison et métaphore", "Nommer la figure sans en expliquer l'effet"],
+      "examples": ["« Ses yeux sont des étoiles » : métaphore."]
+    },
+    {
+      "id": "fr.4e.argumentation-these",
+      "theme": "Lecture et compréhension",
+      "title": "Comprendre un texte argumentatif",
+      "description": "Repérer la thèse, les arguments et les exemples d'un texte argumentatif.",
+      "prerequisites": ["fr.5e.donner-son-avis"],
+      "commonMistakes": ["Confondre argument et exemple", "Résumer le texte au lieu d'identifier la thèse"],
+      "examples": [
+        "Thèse : les écrans nuisent au sommeil. Argument : la lumière bleue retarde l'endormissement."
+      ]
+    },
+    {
+      "id": "fr.4e.ecrire-lettre-argumentee",
+      "theme": "Écriture",
+      "title": "Écrire une lettre ou un texte argumenté",
+      "description": "Rédiger un texte qui défend un point de vue avec plusieurs arguments organisés, en respectant la forme demandée (lettre, article).",
+      "prerequisites": ["fr.4e.argumentation-these", "fr.5e.donner-son-avis"],
+      "commonMistakes": ["Oublier les formules de la lettre", "Aligner des idées sans paragraphes"],
+      "examples": ["Madame, Monsieur, … Veuillez agréer…"]
+    }
+  ]
+}

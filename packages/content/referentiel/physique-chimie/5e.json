@@ -1,0 +1,27 @@
+{
+  "subject": "PHYSIQUE_CHIMIE",
+  "level": "CINQUIEME",
+  "notions": [
+    {
+      "id": "pc.5e.changements-etat",
+      "theme": "Matière",
+      "title": "Changements d'état",
+      "description": "Nommer les changements d'état (fusion, solidification, vaporisation, liquéfaction) et savoir que la masse se conserve mais pas le volume.",
+      "prerequisites": ["pc.6e.etats-matiere"],
+      "commonMistakes": ["Croire que la glace qui fond perd de la masse"],
+      "examples": ["L'eau pure fond à 0 °C et bout à 100 °C."]
+    },
+    {
+      "id": "pc.5e.circuits-electriques",
+      "theme": "Électricité",
+      "title": "Circuits en série et en dérivation",
+      "description": "Schématiser un circuit et distinguer les circuits en série (une seule boucle) et en dérivation (plusieurs boucles).",
+      "prerequisites": [],
+      "commonMistakes": [
+        "Croire qu'une lampe « consomme » le courant",
+        "Oublier que le circuit doit être fermé"
+      ],
+      "examples": ["En dérivation, si une lampe grille, l'autre reste allumée."]
+    }
+  ]
+}

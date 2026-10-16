@@ -1,0 +1,33 @@
+{
+  "subject": "HIST_GEO_EMC",
+  "level": "QUATRIEME",
+  "notions": [
+    {
+      "id": "hg.4e.revolution-francaise",
+      "theme": "Histoire",
+      "title": "La Révolution française et l'Empire",
+      "description": "Connaître les grandes étapes de la Révolution (1789, Déclaration des droits, République) et de l'Empire napoléonien.",
+      "prerequisites": ["hg.5e.grandes-decouvertes"],
+      "commonMistakes": ["Confondre la prise de la Bastille et la proclamation de la République"],
+      "examples": ["La Déclaration des droits de l'homme et du citoyen date d'août 1789."]
+    },
+    {
+      "id": "hg.4e.industrialisation-colonisation",
+      "theme": "Histoire",
+      "title": "L'Europe industrielle et la colonisation",
+      "description": "Expliquer la révolution industrielle, ses effets sur la société, et la conquête coloniale au XIXe siècle.",
+      "prerequisites": ["hg.4e.revolution-francaise"],
+      "commonMistakes": ["Oublier les conditions de travail des ouvriers"],
+      "examples": ["Le chemin de fer transforme les échanges."]
+    },
+    {
+      "id": "hg.4e.emc-republique-laicite",
+      "theme": "Enseignement moral et civique",
+      "title": "La République, la laïcité et les libertés",
+      "description": "Comprendre les valeurs de la République, le principe de laïcité et les libertés fondamentales.",
+      "prerequisites": ["hg.6e.emc-regles-vivre-ensemble"],
+      "commonMistakes": ["Confondre laïcité et interdiction des religions"],
+      "examples": ["La laïcité garantit la liberté de croire ou de ne pas croire."]
+    }
+  ]
+}

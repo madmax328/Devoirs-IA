@@ -1,0 +1,42 @@
+{
+  "subject": "HIST_GEO_EMC",
+  "level": "CINQUIEME",
+  "notions": [
+    {
+      "id": "hg.5e.moyen-age-societe",
+      "theme": "Histoire",
+      "title": "Société et pouvoirs au Moyen Âge",
+      "description": "Comprendre la société féodale (seigneurs, paysans), le rôle de l'Église et l'affirmation du pouvoir royal.",
+      "prerequisites": ["hg.6e.grece-rome"],
+      "commonMistakes": ["Croire que le roi contrôle tout dès le début du Moyen Âge"],
+      "examples": ["Le seigneur protège les paysans en échange de redevances."]
+    },
+    {
+      "id": "hg.5e.grandes-decouvertes",
+      "theme": "Histoire",
+      "title": "Les grandes découvertes et la Renaissance",
+      "description": "Expliquer les voyages d'exploration du XVe-XVIe siècle et leurs conséquences, et l'humanisme.",
+      "prerequisites": ["hg.5e.moyen-age-societe"],
+      "commonMistakes": ["Oublier les conséquences pour les peuples d'Amérique"],
+      "examples": ["Christophe Colomb atteint l'Amérique en 1492."]
+    },
+    {
+      "id": "hg.5e.demographie-ressources",
+      "theme": "Géographie",
+      "title": "La croissance démographique et les ressources",
+      "description": "Comprendre l'inégale répartition de la population et des ressources (eau, énergie, alimentation) dans le monde.",
+      "prerequisites": ["hg.6e.lire-une-carte"],
+      "commonMistakes": ["Confondre densité et nombre d'habitants"],
+      "examples": ["La densité = nombre d'habitants / superficie."]
+    },
+    {
+      "id": "hg.5e.analyser-document",
+      "theme": "Méthodes",
+      "title": "Analyser un document",
+      "description": "Présenter un document (nature, auteur, date), prélever des informations et les expliquer avec ses connaissances.",
+      "prerequisites": ["fr.cm2.comprendre-consigne"],
+      "commonMistakes": ["Paraphraser sans expliquer", "Oublier la présentation du document"],
+      "examples": ["Nature, auteur, date, thème, puis idées principales."]
+    }
+  ]
+}

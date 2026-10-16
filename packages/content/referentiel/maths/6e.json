@@ -1,0 +1,252 @@
+{
+  "subject": "MATHS",
+  "level": "SIXIEME",
+  "notions": [
+    {
+      "id": "ma.6e.decimaux-numeration",
+      "theme": "Nombres et calculs",
+      "title": "Nombres décimaux : valeur des chiffres",
+      "description": "Connaître la valeur de chaque chiffre d'un nombre décimal et passer d'une écriture à une autre (fraction décimale, décomposition, écriture à virgule).",
+      "prerequisites": ["ma.cm2.decimaux-ecriture"],
+      "commonMistakes": ["Penser que 0,1 > 0,09 est faux", "Confondre dixième et centième"],
+      "examples": ["5,038 = 5 + 3/100 + 8/1000"]
+    },
+    {
+      "id": "ma.6e.decimaux-comparer-ranger",
+      "theme": "Nombres et calculs",
+      "title": "Comparer, ranger et encadrer des décimaux",
+      "description": "Ranger des nombres décimaux par ordre croissant ou décroissant, les encadrer et intercaler un nombre entre deux décimaux.",
+      "prerequisites": ["ma.cm2.decimaux-comparer", "ma.6e.decimaux-numeration"],
+      "commonMistakes": [
+        "Comparer les parties décimales comme des entiers",
+        "Croire qu'il n'existe aucun nombre entre 2,4 et 2,5"
+      ],
+      "examples": ["2,4 < 2,45 < 2,5"]
+    },
+    {
+      "id": "ma.6e.droite-graduee",
+      "theme": "Nombres et calculs",
+      "title": "Repérer des nombres sur une droite graduée",
+      "description": "Lire l'abscisse d'un point et placer un nombre décimal ou une fraction sur une demi-droite graduée.",
+      "prerequisites": ["ma.6e.decimaux-comparer-ranger"],
+      "commonMistakes": [
+        "Compter les traits au lieu des intervalles",
+        "Ne pas déterminer la valeur d'une graduation"
+      ],
+      "examples": ["Si l'unité est partagée en 5, chaque graduation vaut 0,2."]
+    },
+    {
+      "id": "ma.6e.fraction-quotient",
+      "theme": "Nombres et calculs",
+      "title": "La fraction comme quotient",
+      "description": "a/b est le nombre qui, multiplié par b, donne a : 7/3 est le quotient de 7 par 3.",
+      "prerequisites": ["ma.cm2.fractions-sens", "ma.cm2.division-euclidienne"],
+      "commonMistakes": [
+        "Croire qu'une fraction est toujours plus petite que 1",
+        "Inverser numérateur et dénominateur"
+      ],
+      "examples": ["3 × (7/3) = 7"]
+    },
+    {
+      "id": "ma.6e.fractions-egales",
+      "theme": "Nombres et calculs",
+      "title": "Fractions égales et simplification",
+      "description": "On obtient une fraction égale en multipliant ou divisant le numérateur et le dénominateur par un même nombre non nul.",
+      "prerequisites": ["ma.6e.fraction-quotient", "ma.cm2.tables-multiplication"],
+      "commonMistakes": ["Ajouter le même nombre en haut et en bas", "Ne multiplier que le numérateur"],
+      "examples": ["6/8 = 3/4 (on divise par 2)."]
+    },
+    {
+      "id": "ma.6e.fraction-d-une-quantite",
+      "theme": "Nombres et calculs",
+      "title": "Prendre une fraction d'une quantité",
+      "description": "Calculer 3/4 de 20 : diviser par 4 puis multiplier par 3 (ou l'inverse).",
+      "prerequisites": ["ma.6e.fraction-quotient"],
+      "commonMistakes": ["Diviser par le numérateur", "Calculer 3/4 + 20"],
+      "examples": ["3/4 de 20 = 20 ÷ 4 × 3 = 15"]
+    },
+    {
+      "id": "ma.6e.fractions-addition-meme-denominateur",
+      "theme": "Nombres et calculs",
+      "title": "Additionner des fractions de même dénominateur",
+      "description": "Quand les dénominateurs sont égaux, on additionne les numérateurs et on garde le dénominateur.",
+      "prerequisites": ["ma.6e.fractions-egales"],
+      "commonMistakes": ["Additionner aussi les dénominateurs (2/7 + 3/7 = 5/14)"],
+      "examples": ["2/7 + 3/7 = 5/7"]
+    },
+    {
+      "id": "ma.6e.operations-decimaux",
+      "theme": "Nombres et calculs",
+      "title": "Calculer avec des décimaux (addition, soustraction, multiplication)",
+      "description": "Poser et effectuer des opérations sur les décimaux ; pour la multiplication, compter le nombre total de chiffres après la virgule.",
+      "prerequisites": ["ma.cm2.decimaux-addition", "ma.cm2.multiplication-posee"],
+      "commonMistakes": [
+        "Aligner les virgules pour une multiplication posée",
+        "Mal placer la virgule du produit"
+      ],
+      "examples": ["2,5 × 1,2 = 3"]
+    },
+    {
+      "id": "ma.6e.division-decimale",
+      "theme": "Nombres et calculs",
+      "title": "Division décimale",
+      "description": "Diviser un nombre entier ou décimal par un entier, en poursuivant le calcul après la virgule.",
+      "prerequisites": ["ma.cm2.division-euclidienne", "ma.6e.operations-decimaux"],
+      "commonMistakes": [
+        "S'arrêter au reste au lieu de continuer après la virgule",
+        "Oublier la virgule au quotient"
+      ],
+      "examples": ["17 ÷ 4 = 4,25"]
+    },
+    {
+      "id": "ma.6e.multiples-diviseurs",
+      "theme": "Nombres et calculs",
+      "title": "Multiples, diviseurs et critères de divisibilité",
+      "description": "Reconnaître les multiples et les diviseurs d'un nombre et utiliser les critères de divisibilité par 2, 3, 4, 5, 9 et 10.",
+      "prerequisites": ["ma.cm2.division-euclidienne"],
+      "commonMistakes": ["Confondre multiple et diviseur", "Appliquer le critère de 3 au dernier chiffre"],
+      "examples": ["423 est divisible par 9 car 4 + 2 + 3 = 9."]
+    },
+    {
+      "id": "ma.6e.priorites-operatoires",
+      "theme": "Nombres et calculs",
+      "title": "Priorités opératoires",
+      "description": "Effectuer d'abord les calculs entre parenthèses, puis les multiplications et divisions, puis les additions et soustractions.",
+      "prerequisites": ["ma.cm2.multiplication-posee"],
+      "commonMistakes": ["Calculer de gauche à droite sans tenir compte des priorités (2 + 3 × 4 = 20)"],
+      "examples": ["2 + 3 × 4 = 14"]
+    },
+    {
+      "id": "ma.6e.calcul-mental",
+      "theme": "Nombres et calculs",
+      "title": "Stratégies de calcul mental",
+      "description": "Utiliser les propriétés des opérations (décomposer, compenser, regrouper) pour calculer vite et vérifier un ordre de grandeur.",
+      "prerequisites": ["ma.cm2.tables-multiplication", "ma.cm2.multiplier-par-10"],
+      "commonMistakes": ["Poser systématiquement l'opération", "Ne pas estimer pour vérifier"],
+      "examples": ["25 × 12 = 25 × 4 × 3 = 300"]
+    },
+    {
+      "id": "ma.6e.proportionnalite",
+      "theme": "Nombres et calculs",
+      "title": "Proportionnalité",
+      "description": "Reconnaître et résoudre des situations de proportionnalité avec un tableau, le coefficient de proportionnalité ou le passage à l'unité.",
+      "prerequisites": ["ma.cm2.proportionnalite-situations", "ma.6e.operations-decimaux"],
+      "commonMistakes": [
+        "Ajouter un même nombre au lieu de multiplier",
+        "Chercher un coefficient dans une situation non proportionnelle"
+      ],
+      "examples": ["Si 4 kg coûtent 10 €, 6 kg coûtent 15 €."]
+    },
+    {
+      "id": "ma.6e.pourcentages",
+      "theme": "Nombres et calculs",
+      "title": "Appliquer un pourcentage simple",
+      "description": "Calculer 10 %, 25 %, 50 % ou t % d'une quantité, en lien avec la proportionnalité.",
+      "prerequisites": ["ma.6e.proportionnalite", "ma.6e.fraction-d-une-quantite"],
+      "commonMistakes": ["Retirer t au lieu de t % (20 % de 50 = 30)", "Confondre pourcentage et valeur"],
+      "examples": ["25 % de 80 = 20"]
+    },
+    {
+      "id": "ma.6e.perimetres-cercle",
+      "theme": "Grandeurs et mesures",
+      "title": "Périmètres, dont celui du cercle",
+      "description": "Calculer le périmètre d'un polygone et la longueur d'un cercle (2 × π × rayon ou π × diamètre).",
+      "prerequisites": ["ma.cm2.perimetre", "ma.cm2.figures-planes", "ma.6e.operations-decimaux"],
+      "commonMistakes": [
+        "Utiliser le rayon à la place du diamètre dans π × d",
+        "Confondre longueur du cercle et aire du disque"
+      ],
+      "examples": ["Cercle de rayon 3 cm : longueur ≈ 18,8 cm."]
+    },
+    {
+      "id": "ma.6e.aires",
+      "theme": "Grandeurs et mesures",
+      "title": "Aires du rectangle, du triangle et du disque",
+      "description": "Calculer des aires avec les formules (rectangle L × l, triangle base × hauteur ÷ 2, disque π × r²) et convertir les unités d'aire.",
+      "prerequisites": ["ma.cm2.aire-notion", "ma.6e.perimetres-cercle"],
+      "commonMistakes": [
+        "Oublier de diviser par 2 pour le triangle",
+        "Convertir les cm² en m² en divisant par 100"
+      ],
+      "examples": ["Triangle de base 6 cm et de hauteur 4 cm : aire = 12 cm²."]
+    },
+    {
+      "id": "ma.6e.volumes-pave",
+      "theme": "Grandeurs et mesures",
+      "title": "Volume du pavé droit",
+      "description": "Calculer le volume d'un cube ou d'un pavé droit (longueur × largeur × hauteur) et connaître le lien 1 dm³ = 1 L.",
+      "prerequisites": ["ma.cm2.aire-notion", "ma.cm2.longueurs-masses-conversions"],
+      "commonMistakes": ["Additionner les dimensions", "Exprimer un volume en cm²"],
+      "examples": ["Pavé 5 cm × 4 cm × 2 cm : volume = 40 cm³."]
+    },
+    {
+      "id": "ma.6e.angles-mesure",
+      "theme": "Espace et géométrie",
+      "title": "Mesurer et construire des angles",
+      "description": "Utiliser le rapporteur pour mesurer et tracer un angle en degrés, et nommer un angle (sommet au milieu).",
+      "prerequisites": ["ma.cm2.angles-reperes"],
+      "commonMistakes": [
+        "Lire la mauvaise graduation du rapporteur (40° au lieu de 140°)",
+        "Mal placer le centre du rapporteur"
+      ],
+      "examples": ["Un angle droit mesure 90°."]
+    },
+    {
+      "id": "ma.6e.symetrie-axiale",
+      "theme": "Espace et géométrie",
+      "title": "Symétrie axiale",
+      "description": "Construire le symétrique d'un point ou d'une figure par rapport à une droite et reconnaître les axes de symétrie d'une figure.",
+      "prerequisites": ["ma.cm2.droites-perpendiculaires-paralleles"],
+      "commonMistakes": [
+        "Reporter la distance sans tracer la perpendiculaire",
+        "Faire une translation au lieu d'une symétrie"
+      ],
+      "examples": ["Le carré a 4 axes de symétrie."]
+    },
+    {
+      "id": "ma.6e.constructions-geometriques",
+      "theme": "Espace et géométrie",
+      "title": "Constructions géométriques et médiatrice",
+      "description": "Tracer perpendiculaires, parallèles, cercles et la médiatrice d'un segment avec les instruments, en suivant un programme de construction.",
+      "prerequisites": ["ma.cm2.figures-planes", "ma.6e.symetrie-axiale"],
+      "commonMistakes": [
+        "Tracer « à l'œil » sans instrument",
+        "Ne pas lire tout le programme de construction"
+      ],
+      "examples": ["La médiatrice de [AB] est perpendiculaire à [AB] en son milieu."]
+    },
+    {
+      "id": "ma.6e.triangles-quadrilateres",
+      "theme": "Espace et géométrie",
+      "title": "Triangles et quadrilatères particuliers",
+      "description": "Connaître les propriétés des triangles isocèles, équilatéraux, rectangles et des quadrilatères (carré, rectangle, losange).",
+      "prerequisites": ["ma.cm2.figures-planes", "ma.6e.angles-mesure"],
+      "commonMistakes": [
+        "Croire qu'un losange a forcément des angles droits",
+        "Se fier au dessin plutôt qu'aux codages"
+      ],
+      "examples": ["Un losange a quatre côtés de même longueur."]
+    },
+    {
+      "id": "ma.6e.donnees-representations",
+      "theme": "Organisation et gestion de données",
+      "title": "Lire et représenter des données",
+      "description": "Lire, compléter et construire des tableaux, diagrammes en barres, circulaires et graphiques cartésiens.",
+      "prerequisites": ["ma.cm2.tableaux-graphiques", "ma.6e.droite-graduee"],
+      "commonMistakes": ["Choisir une échelle irrégulière sur un axe", "Inverser abscisses et ordonnées"],
+      "examples": ["Construire le diagramme en barres des sports préférés d'une classe."]
+    },
+    {
+      "id": "ma.6e.algorithmique-scratch",
+      "theme": "Algorithmique et programmation",
+      "title": "Premiers programmes (blocs)",
+      "description": "Écrire et comprendre un programme simple avec des blocs : séquences, répétitions, déplacements d'un lutin.",
+      "prerequisites": ["ma.6e.angles-mesure"],
+      "commonMistakes": [
+        "Confondre « tourner de 90° » et « s'orienter à 90° »",
+        "Oublier de répéter une instruction"
+      ],
+      "examples": ["Répéter 4 fois : avancer de 50, tourner de 90° → un carré."]
+    }
+  ]
+}

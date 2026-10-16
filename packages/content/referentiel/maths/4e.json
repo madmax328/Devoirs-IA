@@ -1,0 +1,210 @@
+{
+  "subject": "MATHS",
+  "level": "QUATRIEME",
+  "notions": [
+    {
+      "id": "ma.4e.relatifs-multiplication-division",
+      "theme": "Nombres et calculs",
+      "title": "Multiplier et diviser des relatifs",
+      "description": "Appliquer la règle des signes pour un produit ou un quotient de nombres relatifs.",
+      "prerequisites": ["ma.5e.relatifs-addition-soustraction"],
+      "commonMistakes": [
+        "Appliquer la règle des signes à l'addition (−3 + −4 = 7)",
+        "Oublier qu'un nombre pair de signes « − » donne un résultat positif"
+      ],
+      "examples": ["(−3) × (−4) = 12 ; (−12) ÷ 4 = −3"]
+    },
+    {
+      "id": "ma.4e.fractions-multiplication",
+      "theme": "Nombres et calculs",
+      "title": "Multiplier des fractions",
+      "description": "Multiplier les numérateurs entre eux et les dénominateurs entre eux, en simplifiant si possible.",
+      "prerequisites": ["ma.5e.fractions-addition", "ma.4e.relatifs-multiplication-division"],
+      "commonMistakes": [
+        "Mettre au même dénominateur avant de multiplier",
+        "Ne multiplier que les numérateurs"
+      ],
+      "examples": ["2/3 × 9/4 = 18/12 = 3/2"]
+    },
+    {
+      "id": "ma.4e.fractions-division",
+      "theme": "Nombres et calculs",
+      "title": "Diviser par une fraction",
+      "description": "Diviser par une fraction revient à multiplier par son inverse.",
+      "prerequisites": ["ma.4e.fractions-multiplication"],
+      "commonMistakes": ["Inverser la première fraction au lieu de la seconde"],
+      "examples": ["(3/4) ÷ (2/5) = 3/4 × 5/2 = 15/8"]
+    },
+    {
+      "id": "ma.4e.fractions-relatives-calcul",
+      "theme": "Nombres et calculs",
+      "title": "Enchaîner des calculs avec des fractions",
+      "description": "Calculer des expressions avec des fractions relatives (somme, différence, produit, quotient) en respectant les priorités.",
+      "prerequisites": ["ma.4e.fractions-division", "ma.6e.priorites-operatoires"],
+      "commonMistakes": ["Ignorer les priorités avec les fractions", "Perdre le signe « − »"],
+      "examples": ["1/2 − 3/4 × 2/3 = 1/2 − 1/2 = 0"]
+    },
+    {
+      "id": "ma.4e.puissances",
+      "theme": "Nombres et calculs",
+      "title": "Puissances d'un nombre",
+      "description": "Comprendre aⁿ comme un produit répété, utiliser les puissances de 10 (positives et négatives) et leurs règles de calcul.",
+      "prerequisites": ["ma.4e.relatifs-multiplication-division"],
+      "commonMistakes": ["Calculer 2³ = 6", "Croire que 10⁻² est négatif"],
+      "examples": ["2³ = 8 ; 10⁻² = 0,01 ; 10³ × 10² = 10⁵"]
+    },
+    {
+      "id": "ma.4e.ecriture-scientifique",
+      "theme": "Nombres et calculs",
+      "title": "Notation scientifique",
+      "description": "Écrire un nombre sous la forme a × 10ⁿ avec 1 ≤ a < 10 et utiliser cette notation pour comparer ou calculer des ordres de grandeur.",
+      "prerequisites": ["ma.4e.puissances"],
+      "commonMistakes": [
+        "Écrire 35 × 10⁴ (a doit être entre 1 et 10)",
+        "Se tromper de sens dans le décalage de la virgule"
+      ],
+      "examples": ["45 000 = 4,5 × 10⁴ ; 0,003 = 3 × 10⁻³"]
+    },
+    {
+      "id": "ma.4e.calcul-litteral-reduire",
+      "theme": "Nombres et calculs",
+      "title": "Réduire une expression littérale",
+      "description": "Regrouper les termes semblables (les x avec les x, les nombres avec les nombres) pour simplifier une expression.",
+      "prerequisites": ["ma.5e.distributivite-simple"],
+      "commonMistakes": ["Additionner 3x + 2 = 5x", "Confondre x × x = x² et x + x = 2x"],
+      "examples": ["3x + 5 − x + 2 = 2x + 7"]
+    },
+    {
+      "id": "ma.4e.double-distributivite",
+      "theme": "Nombres et calculs",
+      "title": "Développer avec la double distributivité",
+      "description": "Développer (a + b)(c + d) = ac + ad + bc + bd puis réduire.",
+      "prerequisites": ["ma.4e.calcul-litteral-reduire", "ma.4e.relatifs-multiplication-division"],
+      "commonMistakes": ["Oublier deux des quatre produits", "Se tromper de signe avec les termes négatifs"],
+      "examples": ["(x + 2)(x − 3) = x² − x − 6"]
+    },
+    {
+      "id": "ma.4e.equations-premier-degre",
+      "theme": "Nombres et calculs",
+      "title": "Résoudre une équation du premier degré",
+      "description": "Isoler l'inconnue en faisant la même opération dans les deux membres, puis vérifier la solution.",
+      "prerequisites": ["ma.5e.tester-egalite", "ma.4e.calcul-litteral-reduire"],
+      "commonMistakes": [
+        "Changer de membre sans changer l'opération",
+        "Diviser seulement un des deux membres"
+      ],
+      "examples": ["3x + 5 = 20 donc 3x = 15 donc x = 5"]
+    },
+    {
+      "id": "ma.4e.mettre-en-equation",
+      "theme": "Nombres et calculs",
+      "title": "Mettre un problème en équation",
+      "description": "Choisir l'inconnue, traduire l'énoncé par une équation, la résoudre et répondre à la question posée.",
+      "prerequisites": ["ma.4e.equations-premier-degre"],
+      "commonMistakes": ["Ne pas préciser ce que représente x", "Oublier de répondre par une phrase"],
+      "examples": ["Trois nombres entiers consécutifs ont pour somme 72 : n + (n + 1) + (n + 2) = 72."]
+    },
+    {
+      "id": "ma.4e.quatrieme-proportionnelle",
+      "theme": "Nombres et calculs",
+      "title": "Quatrième proportionnelle et produit en croix",
+      "description": "Calculer une quatrième proportionnelle avec l'égalité des produits en croix et l'utiliser dans des problèmes (échelles, recettes).",
+      "prerequisites": ["ma.5e.proportionnalite-reconnaitre", "ma.4e.equations-premier-degre"],
+      "commonMistakes": [
+        "Faire le produit en croix sur des grandeurs non proportionnelles",
+        "Mal placer les valeurs dans le tableau"
+      ],
+      "examples": ["3/5 = x/20, donc x = 3 × 20 ÷ 5 = 12."]
+    },
+    {
+      "id": "ma.4e.vitesse-grandeurs-composees",
+      "theme": "Grandeurs et mesures",
+      "title": "Vitesse et grandeurs composées",
+      "description": "Utiliser la relation d = v × t, convertir des vitesses (km/h, m/s) et des durées exprimées en heures décimales.",
+      "prerequisites": ["ma.4e.quatrieme-proportionnelle", "ma.cm2.durees"],
+      "commonMistakes": ["Écrire 1 h 30 min = 1,30 h", "Diviser au lieu de multiplier"],
+      "examples": ["À 60 km/h pendant 1,5 h, on parcourt 90 km."]
+    },
+    {
+      "id": "ma.4e.pythagore",
+      "theme": "Espace et géométrie",
+      "title": "Théorème de Pythagore",
+      "description": "Dans un triangle rectangle, le carré de l'hypoténuse est égal à la somme des carrés des deux autres côtés ; l'utiliser pour calculer une longueur.",
+      "prerequisites": ["ma.6e.triangles-quadrilateres", "ma.4e.puissances"],
+      "commonMistakes": [
+        "Utiliser une autre longueur que l'hypoténuse comme côté le plus long",
+        "Oublier la racine carrée à la fin"
+      ],
+      "examples": ["Côtés 3 et 4 : hypoténuse = √(9 + 16) = 5"]
+    },
+    {
+      "id": "ma.4e.pythagore-reciproque",
+      "theme": "Espace et géométrie",
+      "title": "Réciproque du théorème de Pythagore",
+      "description": "Démontrer qu'un triangle est rectangle (ou ne l'est pas) en comparant le carré du plus grand côté à la somme des carrés des autres.",
+      "prerequisites": ["ma.4e.pythagore"],
+      "commonMistakes": [
+        "Utiliser le théorème direct pour prouver qu'un triangle est rectangle",
+        "Ne pas identifier le plus grand côté"
+      ],
+      "examples": ["6² + 8² = 100 = 10² : le triangle est rectangle."]
+    },
+    {
+      "id": "ma.4e.cosinus",
+      "theme": "Espace et géométrie",
+      "title": "Cosinus d'un angle aigu",
+      "description": "Dans un triangle rectangle, cos(angle) = côté adjacent / hypoténuse ; calculer une longueur ou un angle.",
+      "prerequisites": ["ma.4e.pythagore", "ma.4e.quatrieme-proportionnelle"],
+      "commonMistakes": ["Confondre côté adjacent et côté opposé", "Calculatrice réglée en radians"],
+      "examples": ["cos(60°) = 0,5"]
+    },
+    {
+      "id": "ma.4e.translation",
+      "theme": "Espace et géométrie",
+      "title": "Translation",
+      "description": "Construire l'image d'une figure par une translation (glissement) et connaître ses propriétés de conservation.",
+      "prerequisites": ["ma.5e.symetrie-centrale", "ma.5e.parallelogramme"],
+      "commonMistakes": ["Faire glisser dans la mauvaise direction ou de la mauvaise longueur"],
+      "examples": ["Si A a pour image A', ABB'A' est un parallélogramme."]
+    },
+    {
+      "id": "ma.4e.pyramides-cones",
+      "theme": "Grandeurs et mesures",
+      "title": "Pyramides et cônes : volume",
+      "description": "Calculer le volume d'une pyramide ou d'un cône : (aire de la base × hauteur) ÷ 3.",
+      "prerequisites": ["ma.5e.prismes-cylindres"],
+      "commonMistakes": ["Oublier de diviser par 3"],
+      "examples": ["Cône de base 12 cm² et de hauteur 5 cm : V = 20 cm³."]
+    },
+    {
+      "id": "ma.4e.statistiques-mediane",
+      "theme": "Organisation et gestion de données",
+      "title": "Médiane et étendue",
+      "description": "Déterminer la médiane d'une série (valeur qui partage la série ordonnée en deux) et son étendue, et comparer avec la moyenne.",
+      "prerequisites": ["ma.5e.statistiques-moyenne"],
+      "commonMistakes": ["Prendre la valeur du milieu sans ranger la série", "Confondre médiane et moyenne"],
+      "examples": ["Série 3, 5, 8, 12, 20 : médiane 8, étendue 17."]
+    },
+    {
+      "id": "ma.4e.probabilites-calculer",
+      "theme": "Organisation et gestion de données",
+      "title": "Calculer des probabilités",
+      "description": "Calculer la probabilité d'un événement, de son contraire, et utiliser des fréquences pour estimer une probabilité.",
+      "prerequisites": ["ma.5e.probabilites-vocabulaire", "ma.5e.fractions-addition"],
+      "commonMistakes": [
+        "Additionner les probabilités d'événements qui ne s'excluent pas",
+        "Oublier que P(non A) = 1 − P(A)"
+      ],
+      "examples": ["P(ne pas obtenir 6) = 5/6"]
+    },
+    {
+      "id": "ma.4e.algorithmique-programmes",
+      "theme": "Algorithmique et programmation",
+      "title": "Programmes avec variables et sous-programmes",
+      "description": "Écrire des programmes qui utilisent plusieurs variables, des boucles imbriquées et des blocs personnalisés.",
+      "prerequisites": ["ma.5e.algorithmique-boucles-conditions"],
+      "commonMistakes": ["Modifier la variable au mauvais endroit de la boucle"],
+      "examples": ["Un bloc « carré(côté) » réutilisé pour tracer une frise."]
+    }
+  ]
+}

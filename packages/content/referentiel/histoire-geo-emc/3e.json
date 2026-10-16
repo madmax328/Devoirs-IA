@@ -1,0 +1,33 @@
+{
+  "subject": "HIST_GEO_EMC",
+  "level": "TROISIEME",
+  "notions": [
+    {
+      "id": "hg.3e.guerres-mondiales",
+      "theme": "Histoire",
+      "title": "Les deux guerres mondiales",
+      "description": "Expliquer les causes, le déroulement et les conséquences des guerres mondiales, la violence de masse et les génocides.",
+      "prerequisites": ["hg.4e.industrialisation-colonisation"],
+      "commonMistakes": ["Confondre les dates des deux guerres"],
+      "examples": ["1914-1918 ; 1939-1945."]
+    },
+    {
+      "id": "hg.3e.guerre-froide-ve-republique",
+      "theme": "Histoire",
+      "title": "Le monde depuis 1945 et la Ve République",
+      "description": "Comprendre la guerre froide, la décolonisation, la construction européenne et les institutions de la Ve République.",
+      "prerequisites": ["hg.3e.guerres-mondiales"],
+      "commonMistakes": ["Croire que la guerre froide est une guerre directe entre les deux blocs"],
+      "examples": ["La Ve République est fondée en 1958."]
+    },
+    {
+      "id": "hg.3e.croquis-brevet",
+      "theme": "Méthodes",
+      "title": "Réaliser un croquis ou un schéma",
+      "description": "Construire une légende organisée et représenter des informations géographiques avec des figurés adaptés.",
+      "prerequisites": ["hg.6e.lire-une-carte"],
+      "commonMistakes": ["Oublier le titre ou la légende", "Utiliser des couleurs sans logique"],
+      "examples": ["Figurés : surfaces, points, lignes."]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "subject": "ANGLAIS",
+  "level": "CINQUIEME",
+  "notions": [
+    {
+      "id": "an.5e.present-continu",
+      "theme": "Grammaire",
+      "title": "Le présent en be + V-ing",
+      "description": "Décrire une action en cours avec be + V-ing et la distinguer du présent simple.",
+      "prerequisites": ["an.6e.present-simple"],
+      "commonMistakes": ["Oublier l'auxiliaire be (« I playing »)"],
+      "examples": ["Look! It is raining."]
+    },
+    {
+      "id": "an.5e.preterit",
+      "theme": "Grammaire",
+      "title": "Le prétérit (verbes réguliers et irréguliers)",
+      "description": "Raconter des événements passés et terminés : -ed pour les verbes réguliers, liste des verbes irréguliers, did pour la négation et la question.",
+      "prerequisites": ["an.6e.present-simple"],
+      "commonMistakes": ["« I didn't went » au lieu de « I didn't go »"],
+      "examples": ["Yesterday I went to the cinema."]
+    },
+    {
+      "id": "an.5e.comparatifs-superlatifs",
+      "theme": "Grammaire",
+      "title": "Comparatifs et superlatifs",
+      "description": "Comparer avec -er / more … than et -est / the most.",
+      "prerequisites": ["an.6e.be-have"],
+      "commonMistakes": ["« more big » au lieu de « bigger »"],
+      "examples": ["London is bigger than Paris."]
+    },
+    {
+      "id": "an.5e.can-modaux-base",
+      "theme": "Grammaire",
+      "title": "Can et l'expression de la capacité",
+      "description": "Exprimer la capacité et la permission avec can / can't, suivis de la base verbale.",
+      "prerequisites": ["an.6e.present-simple"],
+      "commonMistakes": ["« She can swims »"],
+      "examples": ["I can't swim."]
+    }
+  ]
+}

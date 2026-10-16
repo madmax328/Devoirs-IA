@@ -1,0 +1,137 @@
+{
+  "subject": "FRANCAIS",
+  "level": "SIXIEME",
+  "notions": [
+    {
+      "id": "fr.6e.classes-grammaticales",
+      "theme": "Grammaire",
+      "title": "Les classes grammaticales",
+      "description": "Identifier la nature des mots : nom, verbe, déterminant, adjectif, pronom, adverbe, préposition, conjonction de coordination.",
+      "prerequisites": ["fr.cm2.classes-mots-base"],
+      "commonMistakes": ["Confondre préposition et adverbe", "Prendre « leur » pronom pour un déterminant"],
+      "examples": ["« Il marche lentement » : lentement est un adverbe."]
+    },
+    {
+      "id": "fr.6e.fonctions-sujet-complements",
+      "theme": "Grammaire",
+      "title": "Sujet, COD et COI",
+      "description": "Identifier le sujet, le complément d'objet direct (qui ? quoi ? après le verbe) et le complément d'objet indirect (à qui ? de quoi ?).",
+      "prerequisites": ["fr.cm2.sujet-verbe", "fr.6e.classes-grammaticales"],
+      "commonMistakes": ["Confondre COD et sujet inversé", "Prendre un complément de lieu pour un COI"],
+      "examples": ["Léa offre un livre (COD) à son frère (COI)."]
+    },
+    {
+      "id": "fr.6e.types-formes-phrases",
+      "theme": "Grammaire",
+      "title": "Types et formes de phrases",
+      "description": "Reconnaître les phrases déclaratives, interrogatives, injonctives, exclamatives et la forme négative.",
+      "prerequisites": ["fr.cm2.ponctuation-phrase"],
+      "commonMistakes": [
+        "Oublier le « ne » de la négation à l'écrit",
+        "Croire qu'une phrase injonctive finit toujours par « ! »"
+      ],
+      "examples": ["Ferme la porte. (injonctive)"]
+    },
+    {
+      "id": "fr.6e.accord-participe-etre",
+      "theme": "Orthographe",
+      "title": "Accord du participe passé avec être",
+      "description": "Avec l'auxiliaire être, le participe passé s'accorde avec le sujet.",
+      "prerequisites": ["fr.cm2.passe-compose", "fr.cm2.accord-groupe-nominal"],
+      "commonMistakes": ["Oublier l'accord au féminin pluriel (« elles sont parti »)"],
+      "examples": ["Elles sont parties."]
+    },
+    {
+      "id": "fr.6e.passe-simple",
+      "theme": "Conjugaison",
+      "title": "Le passé simple",
+      "description": "Conjuguer au passé simple, surtout à la 3e personne, les verbes en -er et les verbes fréquents (être, avoir, faire, venir, prendre).",
+      "prerequisites": ["fr.cm2.imparfait-futur"],
+      "commonMistakes": ["« il chanta » écrit « il chantat »", "Mélanger les terminaisons -a et -it"],
+      "examples": ["Il entra, il prit son sac et il partit."]
+    },
+    {
+      "id": "fr.6e.valeurs-imparfait-passe-simple",
+      "theme": "Conjugaison",
+      "title": "Imparfait ou passé simple dans un récit",
+      "description": "L'imparfait sert au décor et aux actions qui durent ; le passé simple aux actions de premier plan, brèves et successives.",
+      "prerequisites": ["fr.6e.passe-simple", "fr.cm2.imparfait-futur"],
+      "commonMistakes": [
+        "Écrire tout le récit à l'imparfait",
+        "Utiliser le passé simple pour une description"
+      ],
+      "examples": ["Il pleuvait (décor) quand soudain la porte s'ouvrit (action)."]
+    },
+    {
+      "id": "fr.6e.homophones-grammaticaux",
+      "theme": "Orthographe",
+      "title": "Homophones grammaticaux (ce/se, ces/ses, leur/leurs…)",
+      "description": "Distinguer les homophones en identifiant la classe du mot et en remplaçant par un équivalent.",
+      "prerequisites": ["fr.cm2.homophones-base", "fr.6e.classes-grammaticales"],
+      "commonMistakes": [
+        "Écrire « ses livres » pour des livres qu'on montre",
+        "Mettre un -s à « leur » pronom devant un verbe"
+      ],
+      "examples": ["Il se lave (se + verbe) ; ce chien (ce + nom)."]
+    },
+    {
+      "id": "fr.6e.formation-mots",
+      "theme": "Vocabulaire",
+      "title": "Formation des mots et familles de mots",
+      "description": "Reconnaître radical, préfixe et suffixe pour comprendre et orthographier des mots de la même famille.",
+      "prerequisites": ["fr.cm2.classes-mots-base"],
+      "commonMistakes": [
+        "Croire que deux mots qui se ressemblent sont de la même famille (« chat » / « château »)"
+      ],
+      "examples": ["refaire = re- + faire ; lavable = lav- + -able"]
+    },
+    {
+      "id": "fr.6e.synonymes-antonymes",
+      "theme": "Vocabulaire",
+      "title": "Synonymes, antonymes et sens d'un mot",
+      "description": "Trouver un mot de sens proche ou contraire et utiliser le contexte pour comprendre un mot inconnu.",
+      "prerequisites": ["fr.6e.formation-mots"],
+      "commonMistakes": ["Choisir un synonyme qui ne convient pas au contexte"],
+      "examples": ["« rapide » : synonyme « vif », antonyme « lent »."]
+    },
+    {
+      "id": "fr.6e.recit-schema-narratif",
+      "theme": "Lecture et compréhension",
+      "title": "Le récit et le schéma narratif",
+      "description": "Repérer les étapes d'un récit (situation initiale, élément perturbateur, péripéties, dénouement, situation finale) et les personnages.",
+      "prerequisites": ["fr.cm2.comprendre-texte-implicite"],
+      "commonMistakes": ["Confondre élément perturbateur et péripétie"],
+      "examples": ["Dans un conte, l'élément perturbateur lance l'aventure."]
+    },
+    {
+      "id": "fr.6e.lecture-comprehension-6e",
+      "theme": "Lecture et compréhension",
+      "title": "Répondre à des questions sur un texte",
+      "description": "Répondre par une phrase complète, citer le texte entre guillemets pour justifier et reformuler avec ses mots.",
+      "prerequisites": ["fr.cm2.comprendre-texte-implicite"],
+      "commonMistakes": ["Recopier une phrase entière sans l'expliquer", "Répondre par un seul mot"],
+      "examples": ["« Le héros a peur, comme le montre : “ses mains tremblaient”. »"]
+    },
+    {
+      "id": "fr.6e.ecrire-paragraphe",
+      "theme": "Écriture",
+      "title": "Écrire un paragraphe organisé",
+      "description": "Rédiger un paragraphe cohérent avec une idée principale, des connecteurs (d'abord, ensuite, enfin) et une ponctuation correcte.",
+      "prerequisites": ["fr.cm2.ponctuation-phrase"],
+      "commonMistakes": ["Répéter le même mot", "Enchaîner les idées sans connecteurs"],
+      "examples": ["D'abord… Ensuite… Enfin…"]
+    },
+    {
+      "id": "fr.6e.dialogue-ponctuation",
+      "theme": "Écriture",
+      "title": "Écrire et ponctuer un dialogue",
+      "description": "Utiliser les guillemets, les tirets, les verbes de parole et l'alternance des répliques.",
+      "prerequisites": ["fr.6e.ecrire-paragraphe"],
+      "commonMistakes": [
+        "Oublier le tiret à chaque changement de personnage",
+        "Toujours utiliser le verbe « dire »"
+      ],
+      "examples": ["— Tu viens ? demanda Paul."]
+    }
+  ]
+}

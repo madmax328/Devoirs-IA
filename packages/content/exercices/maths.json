@@ -1,0 +1,711 @@
+{
+  "exercises": [
+    {
+      "key": "ma-cm2-division-1",
+      "notionIds": ["ma.cm2.division-euclidienne"],
+      "level": "CM2",
+      "difficulty": 2,
+      "statement": "Un fleuriste a 158 roses. Il fait des bouquets de 12 roses. Combien de bouquets complets peut-il faire ?",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "13",
+        "tolerance": 0,
+        "unit": null,
+        "format": "integer"
+      },
+      "explanation": "158 = 12 × 13 + 2 : il peut faire 13 bouquets complets et il reste 2 roses.",
+      "hints": [
+        "Tu cherches combien de fois 12 « rentre » dans 158.",
+        "Essaie 12 × 10, puis ajoute des 12 jusqu'à approcher 158 sans dépasser.",
+        "Exemple : avec 100 billes et des sacs de 8, 8 × 12 = 96, donc 12 sacs complets."
+      ]
+    },
+    {
+      "key": "ma-cm2-decimaux-comparer-1",
+      "notionIds": ["ma.cm2.decimaux-comparer"],
+      "level": "CM2",
+      "difficulty": 2,
+      "statement": "Quel est le plus grand nombre ?",
+      "answer": {
+        "type": "MCQ",
+        "choices": ["2,15", "2,5", "2,105", "2,09"],
+        "correct": [1],
+        "multiple": false
+      },
+      "explanation": "On compare d'abord les dixièmes : 2,5 a 5 dixièmes, les autres en ont 1 ou 0. Donc 2,5 est le plus grand.",
+      "hints": [
+        "Les parties entières sont toutes égales : regarde le chiffre juste après la virgule.",
+        "Compare les dixièmes, puis les centièmes seulement si les dixièmes sont égaux.",
+        "Exemple : 3,4 > 3,38 car 4 dixièmes > 3 dixièmes."
+      ]
+    },
+    {
+      "key": "ma-cm2-fractions-sens-1",
+      "notionIds": ["ma.cm2.fractions-sens"],
+      "level": "CM2",
+      "difficulty": 1,
+      "statement": "Une tablette de chocolat a 8 carrés identiques. Tom en mange 3. Quelle fraction de la tablette a-t-il mangée ?",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "3/8",
+        "tolerance": 0,
+        "unit": null,
+        "format": "fraction_simplified"
+      },
+      "explanation": "La tablette est partagée en 8 parts égales et Tom en mange 3 : il a mangé 3/8 de la tablette.",
+      "hints": [
+        "Le dénominateur (en bas) indique en combien de parts égales on partage.",
+        "Le numérateur (en haut) indique combien de parts on prend.",
+        "Exemple : 2 parts d'un gâteau coupé en 6 représentent 2/6 du gâteau."
+      ]
+    },
+    {
+      "key": "ma-cm2-multiplier-10-1",
+      "notionIds": ["ma.cm2.multiplier-par-10"],
+      "level": "CM2",
+      "difficulty": 1,
+      "statement": "Calcule : 4,7 × 100",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "470",
+        "tolerance": 0,
+        "unit": null,
+        "format": "any"
+      },
+      "explanation": "Multiplier par 100 rend chaque chiffre 100 fois plus grand : les chiffres se décalent de deux rangs vers la gauche.",
+      "hints": [
+        "Multiplier par 100, c'est rendre le nombre 100 fois plus grand.",
+        "Chaque chiffre se décale de deux rangs vers la gauche ; complète avec des zéros si besoin.",
+        "Exemple : 3,2 × 100 = 320."
+      ]
+    },
+    {
+      "key": "ma-6e-decimaux-ranger-1",
+      "notionIds": ["ma.6e.decimaux-comparer-ranger"],
+      "level": "SIXIEME",
+      "difficulty": 2,
+      "statement": "Range ces nombres du plus petit au plus grand.",
+      "answer": {
+        "type": "ORDERING",
+        "items": ["0,09", "0,9", "1,09", "1,9"]
+      },
+      "explanation": "0,09 < 0,9 car 0 dixième < 9 dixièmes ; 1,09 < 1,9 pour la même raison, et les nombres commençant par 0 sont plus petits.",
+      "hints": [
+        "Commence par comparer les parties entières.",
+        "À partie entière égale, compare les dixièmes.",
+        "Exemple : 0,3 < 0,35 < 0,4."
+      ]
+    },
+    {
+      "key": "ma-6e-fraction-quantite-1",
+      "notionIds": ["ma.6e.fraction-d-une-quantite"],
+      "level": "SIXIEME",
+      "difficulty": 2,
+      "statement": "Dans une classe de 28 élèves, les 3/4 mangent à la cantine. Combien d'élèves mangent à la cantine ?",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "21",
+        "tolerance": 0,
+        "unit": null,
+        "format": "integer"
+      },
+      "explanation": "28 ÷ 4 = 7 (un quart), puis 7 × 3 = 21 (trois quarts).",
+      "hints": [
+        "Commence par trouver un quart de la classe.",
+        "Divise par le dénominateur, puis multiplie par le numérateur.",
+        "Exemple : 2/5 de 30 → 30 ÷ 5 = 6, puis 6 × 2 = 12."
+      ]
+    },
+    {
+      "key": "ma-6e-fractions-egales-1",
+      "notionIds": ["ma.6e.fractions-egales"],
+      "level": "SIXIEME",
+      "difficulty": 2,
+      "statement": "Simplifie la fraction 12/18 le plus possible.",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "2/3",
+        "tolerance": 0,
+        "unit": null,
+        "format": "fraction_simplified"
+      },
+      "explanation": "12 et 18 sont tous les deux divisibles par 6 : 12/18 = 2/3.",
+      "hints": [
+        "Cherche un nombre qui divise à la fois 12 et 18.",
+        "Divise le numérateur ET le dénominateur par ce même nombre ; recommence si c'est encore possible.",
+        "Exemple : 15/20 = 3/4 en divisant par 5."
+      ]
+    },
+    {
+      "key": "ma-6e-priorites-1",
+      "notionIds": ["ma.6e.priorites-operatoires"],
+      "level": "SIXIEME",
+      "difficulty": 2,
+      "statement": "Calcule : 5 + 3 × 4",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "17",
+        "tolerance": 0,
+        "unit": null,
+        "format": "integer"
+      },
+      "explanation": "La multiplication est prioritaire : 3 × 4 = 12, puis 5 + 12 = 17.",
+      "hints": [
+        "Toutes les opérations ne se font pas de gauche à droite.",
+        "La multiplication passe avant l'addition.",
+        "Exemple : 2 + 6 × 2 = 2 + 12 = 14."
+      ]
+    },
+    {
+      "key": "ma-6e-proportionnalite-1",
+      "notionIds": ["ma.6e.proportionnalite"],
+      "level": "SIXIEME",
+      "difficulty": 2,
+      "statement": "5 croissants coûtent 6 €. Combien coûtent 15 croissants ?",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "18",
+        "tolerance": 0,
+        "unit": "€",
+        "format": "any"
+      },
+      "explanation": "15 croissants, c'est 3 fois plus que 5 croissants, donc le prix est 3 fois plus grand : 6 × 3 = 18 €.",
+      "hints": [
+        "Compare 15 et 5 : combien de fois plus ?",
+        "Si on achète un certain nombre de fois plus de croissants, on paie ce même nombre de fois plus.",
+        "Exemple : 2 stylos à 3 € → 6 stylos (3 fois plus) à 9 €."
+      ]
+    },
+    {
+      "key": "ma-6e-aires-triangle-1",
+      "notionIds": ["ma.6e.aires"],
+      "level": "SIXIEME",
+      "difficulty": 3,
+      "statement": "Un triangle a une base de 8 cm et une hauteur de 5 cm. Quelle est son aire en cm² ?",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "20",
+        "tolerance": 0,
+        "unit": "cm²",
+        "format": "any"
+      },
+      "explanation": "Aire d'un triangle = base × hauteur ÷ 2 = 8 × 5 ÷ 2 = 20 cm².",
+      "hints": [
+        "Pense à l'aire du rectangle de mêmes dimensions.",
+        "Le triangle occupe la moitié de ce rectangle : base × hauteur ÷ 2.",
+        "Exemple : base 6 cm, hauteur 4 cm → 6 × 4 ÷ 2 = 12 cm²."
+      ]
+    },
+    {
+      "key": "ma-6e-pourcentage-1",
+      "notionIds": ["ma.6e.pourcentages"],
+      "level": "SIXIEME",
+      "difficulty": 2,
+      "statement": "Un jeu coûte 40 €. Il est soldé à −25 %. De combien d'euros le prix baisse-t-il ?",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "10",
+        "tolerance": 0,
+        "unit": "€",
+        "format": "any"
+      },
+      "explanation": "25 % = 1/4. Un quart de 40 €, c'est 10 €.",
+      "hints": [
+        "25 %, c'est une fraction simple : laquelle ?",
+        "25 % = 25/100 = 1/4 : cherche le quart du prix.",
+        "Exemple : 25 % de 60 € = 60 ÷ 4 = 15 €."
+      ]
+    },
+    {
+      "key": "ma-6e-multiples-1",
+      "notionIds": ["ma.6e.multiples-diviseurs"],
+      "level": "SIXIEME",
+      "difficulty": 2,
+      "statement": "Parmi ces nombres, lesquels sont divisibles par 3 ? (plusieurs réponses)",
+      "answer": {
+        "type": "MCQ",
+        "choices": ["114", "205", "321", "1 000"],
+        "correct": [0, 2],
+        "multiple": true
+      },
+      "explanation": "Un nombre est divisible par 3 si la somme de ses chiffres l'est : 1+1+4 = 6 et 3+2+1 = 6 ; 2+0+5 = 7 et 1+0+0+0 = 1 ne le sont pas.",
+      "hints": [
+        "Il existe un critère rapide pour 3 qui utilise les chiffres du nombre.",
+        "Additionne les chiffres : si la somme est dans la table de 3, le nombre est divisible par 3.",
+        "Exemple : 45 → 4 + 5 = 9, divisible par 3."
+      ]
+    },
+    {
+      "key": "ma-5e-relatifs-1",
+      "notionIds": ["ma.5e.relatifs-addition-soustraction"],
+      "level": "CINQUIEME",
+      "difficulty": 2,
+      "statement": "Calcule : −7 + 4",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "-3",
+        "tolerance": 0,
+        "unit": null,
+        "format": "integer"
+      },
+      "explanation": "Les signes sont contraires : on fait 7 − 4 = 3 et on garde le signe du nombre le plus éloigné de zéro (−7), donc −3.",
+      "hints": [
+        "Imagine une température de −7 °C qui monte de 4 degrés.",
+        "Signes contraires : soustrais les distances à zéro et garde le signe du plus « grand » en distance.",
+        "Exemple : −5 + 2 = −3."
+      ]
+    },
+    {
+      "key": "ma-5e-relatifs-2",
+      "notionIds": ["ma.5e.relatifs-addition-soustraction"],
+      "level": "CINQUIEME",
+      "difficulty": 3,
+      "statement": "Calcule : 3 − (−5)",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "8",
+        "tolerance": 0,
+        "unit": null,
+        "format": "integer"
+      },
+      "explanation": "Soustraire un nombre, c'est ajouter son opposé : 3 − (−5) = 3 + 5 = 8.",
+      "hints": [
+        "Que devient une soustraction de nombre négatif ?",
+        "Soustraire −5 revient à ajouter son opposé.",
+        "Exemple : 2 − (−1) = 2 + 1 = 3."
+      ]
+    },
+    {
+      "key": "ma-5e-fractions-addition-1",
+      "notionIds": ["ma.5e.fractions-addition"],
+      "level": "CINQUIEME",
+      "difficulty": 3,
+      "statement": "Calcule et donne le résultat sous forme de fraction simplifiée : 1/3 + 1/6",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "1/2",
+        "tolerance": 0,
+        "unit": null,
+        "format": "fraction_simplified"
+      },
+      "explanation": "1/3 = 2/6, donc 1/3 + 1/6 = 2/6 + 1/6 = 3/6 = 1/2.",
+      "hints": [
+        "Les dénominateurs sont différents : on ne peut pas additionner directement.",
+        "Écris 1/3 avec le dénominateur 6, puis additionne les numérateurs.",
+        "Exemple : 1/4 + 1/8 = 2/8 + 1/8 = 3/8."
+      ]
+    },
+    {
+      "key": "ma-5e-expression-1",
+      "notionIds": ["ma.5e.expressions-litterales"],
+      "level": "CINQUIEME",
+      "difficulty": 2,
+      "statement": "Calcule la valeur de 4x − 3 pour x = 5.",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "17",
+        "tolerance": 0,
+        "unit": null,
+        "format": "integer"
+      },
+      "explanation": "4x signifie 4 × x : 4 × 5 − 3 = 20 − 3 = 17.",
+      "hints": [
+        "Remplace la lettre par sa valeur.",
+        "Attention : 4x veut dire 4 × x, pas « 4 suivi de x ».",
+        "Exemple : pour x = 2, 3x + 1 = 3 × 2 + 1 = 7."
+      ]
+    },
+    {
+      "key": "ma-5e-angles-triangle-1",
+      "notionIds": ["ma.5e.somme-angles-triangle"],
+      "level": "CINQUIEME",
+      "difficulty": 2,
+      "statement": "Dans un triangle, deux angles mesurent 65° et 45°. Combien mesure le troisième angle (en degrés) ?",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "70",
+        "tolerance": 0,
+        "unit": "°",
+        "format": "any"
+      },
+      "explanation": "La somme des angles d'un triangle vaut 180° : 180 − 65 − 45 = 70°.",
+      "hints": [
+        "Que vaut la somme des trois angles d'un triangle ?",
+        "Retire les deux angles connus de cette somme.",
+        "Exemple : 180 − 90 − 30 = 60°."
+      ]
+    },
+    {
+      "key": "ma-5e-moyenne-1",
+      "notionIds": ["ma.5e.statistiques-moyenne"],
+      "level": "CINQUIEME",
+      "difficulty": 2,
+      "statement": "Léo a eu 12, 8 et 16 à ses contrôles. Quelle est sa moyenne ?",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "12",
+        "tolerance": 0,
+        "unit": null,
+        "format": "any"
+      },
+      "explanation": "On additionne les notes (12 + 8 + 16 = 36) puis on divise par le nombre de notes (3) : 36 ÷ 3 = 12.",
+      "hints": [
+        "Une moyenne se calcule en deux étapes.",
+        "Additionne toutes les notes puis divise par le nombre de notes.",
+        "Exemple : 10 et 16 → (10 + 16) ÷ 2 = 13."
+      ]
+    },
+    {
+      "key": "ma-5e-proba-1",
+      "notionIds": ["ma.5e.probabilites-vocabulaire"],
+      "level": "CINQUIEME",
+      "difficulty": 2,
+      "statement": "On lance un dé équilibré à 6 faces. Quelle est la probabilité d'obtenir un nombre pair ? (fraction simplifiée)",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "1/2",
+        "tolerance": 0,
+        "unit": null,
+        "format": "fraction_simplified"
+      },
+      "explanation": "Il y a 3 issues paires (2, 4, 6) sur 6 issues possibles : 3/6 = 1/2.",
+      "hints": [
+        "Liste toutes les issues possibles du dé.",
+        "Compte les issues favorables et divise par le nombre total d'issues.",
+        "Exemple : P(obtenir un multiple de 3) = 2/6 = 1/3."
+      ]
+    },
+    {
+      "key": "ma-4e-relatifs-produit-1",
+      "notionIds": ["ma.4e.relatifs-multiplication-division"],
+      "level": "QUATRIEME",
+      "difficulty": 2,
+      "statement": "Calcule : (−6) × (−3)",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "18",
+        "tolerance": 0,
+        "unit": null,
+        "format": "integer"
+      },
+      "explanation": "Le produit de deux nombres de même signe est positif : 6 × 3 = 18.",
+      "hints": [
+        "Commence par le signe du résultat.",
+        "Deux facteurs négatifs : le produit est positif.",
+        "Exemple : (−2) × (−5) = 10."
+      ]
+    },
+    {
+      "key": "ma-4e-fractions-produit-1",
+      "notionIds": ["ma.4e.fractions-multiplication"],
+      "level": "QUATRIEME",
+      "difficulty": 3,
+      "statement": "Calcule et simplifie : 2/5 × 15/4",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "3/2",
+        "tolerance": 0,
+        "unit": null,
+        "format": "fraction_simplified"
+      },
+      "explanation": "2/5 × 15/4 = 30/20 = 3/2 (on simplifie par 10).",
+      "hints": [
+        "Pour multiplier deux fractions, pas besoin de dénominateur commun.",
+        "Multiplie les numérateurs entre eux et les dénominateurs entre eux, puis simplifie.",
+        "Exemple : 2/3 × 3/4 = 6/12 = 1/2."
+      ]
+    },
+    {
+      "key": "ma-4e-puissances-1",
+      "notionIds": ["ma.4e.puissances"],
+      "level": "QUATRIEME",
+      "difficulty": 2,
+      "statement": "Calcule : 2⁵",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "32",
+        "tolerance": 0,
+        "unit": null,
+        "format": "integer"
+      },
+      "explanation": "2⁵ = 2 × 2 × 2 × 2 × 2 = 32.",
+      "hints": [
+        "L'exposant indique combien de fois on multiplie le nombre par lui-même.",
+        "Écris le produit de 2 répété autant de fois que l'exposant, puis calcule pas à pas.",
+        "Exemple : 3³ = 3 × 3 × 3 = 27."
+      ]
+    },
+    {
+      "key": "ma-4e-ecriture-scientifique-1",
+      "notionIds": ["ma.4e.ecriture-scientifique"],
+      "level": "QUATRIEME",
+      "difficulty": 3,
+      "statement": "Quelle est l'écriture scientifique de 0,00072 ?",
+      "answer": {
+        "type": "MCQ",
+        "choices": ["72 × 10⁻⁵", "7,2 × 10⁻⁴", "7,2 × 10⁴", "0,72 × 10⁻³"],
+        "correct": [1],
+        "multiple": false
+      },
+      "explanation": "Dans l'écriture scientifique, le premier nombre est entre 1 et 10 : 7,2. On a déplacé la virgule de 4 rangs vers la droite, donc × 10⁻⁴.",
+      "hints": [
+        "Le nombre devant la puissance de 10 doit être compris entre 1 et 10.",
+        "Compte de combien de rangs tu déplaces la virgule et dans quel sens.",
+        "Exemple : 0,05 = 5 × 10⁻²."
+      ]
+    },
+    {
+      "key": "ma-4e-reduire-1",
+      "notionIds": ["ma.4e.calcul-litteral-reduire"],
+      "level": "QUATRIEME",
+      "difficulty": 2,
+      "statement": "Réduis l'expression en complétant les cases.",
+      "answer": {
+        "type": "FILL_BLANKS",
+        "text": "5x + 3 − 2x + 4 = [[1]]x + [[2]]",
+        "blanks": [
+          {
+            "id": "1",
+            "accepted": ["3"],
+            "accentSensitive": true
+          },
+          {
+            "id": "2",
+            "accepted": ["7"],
+            "accentSensitive": true
+          }
+        ]
+      },
+      "explanation": "On regroupe les termes en x : 5x − 2x = 3x, et les nombres : 3 + 4 = 7.",
+      "hints": [
+        "Sépare les termes qui contiennent x et ceux qui n'en contiennent pas.",
+        "Calcule séparément : (5 − 2)x et (3 + 4).",
+        "Exemple : 4x + 1 + x + 2 = 5x + 3."
+      ]
+    },
+    {
+      "key": "ma-4e-equation-1",
+      "notionIds": ["ma.4e.equations-premier-degre"],
+      "level": "QUATRIEME",
+      "difficulty": 3,
+      "statement": "Résous l'équation : 3x + 7 = 22. Que vaut x ?",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "5",
+        "tolerance": 0,
+        "unit": null,
+        "format": "any"
+      },
+      "explanation": "3x + 7 = 22 donc 3x = 22 − 7 = 15, donc x = 15 ÷ 3 = 5. Vérification : 3 × 5 + 7 = 22.",
+      "hints": [
+        "Isole d'abord le terme en x.",
+        "Enlève 7 des deux côtés, puis divise les deux côtés par 3.",
+        "Exemple : 2x + 1 = 9 → 2x = 8 → x = 4."
+      ]
+    },
+    {
+      "key": "ma-4e-pythagore-1",
+      "notionIds": ["ma.4e.pythagore"],
+      "level": "QUATRIEME",
+      "difficulty": 3,
+      "statement": "ABC est rectangle en A, avec AB = 6 cm et AC = 8 cm. Calcule BC (en cm).",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "10",
+        "tolerance": 0,
+        "unit": "cm",
+        "format": "any"
+      },
+      "explanation": "BC est l'hypoténuse : BC² = AB² + AC² = 36 + 64 = 100, donc BC = √100 = 10 cm.",
+      "hints": [
+        "Quel côté est l'hypoténuse (en face de l'angle droit) ?",
+        "Le carré de l'hypoténuse est égal à la somme des carrés des deux autres côtés ; n'oublie pas la racine carrée.",
+        "Exemple : côtés 5 et 12 → √(25 + 144) = √169 = 13."
+      ]
+    },
+    {
+      "key": "ma-4e-vitesse-1",
+      "notionIds": ["ma.4e.vitesse-grandeurs-composees"],
+      "level": "QUATRIEME",
+      "difficulty": 3,
+      "statement": "Un cycliste roule à 18 km/h pendant 2 h 30 min. Quelle distance parcourt-il (en km) ?",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "45",
+        "tolerance": 0,
+        "unit": "km",
+        "format": "any"
+      },
+      "explanation": "2 h 30 min = 2,5 h (et non 2,30 h). d = v × t = 18 × 2,5 = 45 km.",
+      "hints": [
+        "Convertis d'abord la durée en heures décimales.",
+        "30 min = une demi-heure ; puis distance = vitesse × durée.",
+        "Exemple : 10 km/h pendant 1 h 30 min = 10 × 1,5 = 15 km."
+      ]
+    },
+    {
+      "key": "ma-3e-fonction-1",
+      "notionIds": ["ma.3e.fonctions-notion"],
+      "level": "TROISIEME",
+      "difficulty": 2,
+      "statement": "On considère la fonction f(x) = 3x − 2. Calcule l'image de 4.",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "10",
+        "tolerance": 0,
+        "unit": null,
+        "format": "any"
+      },
+      "explanation": "f(4) = 3 × 4 − 2 = 12 − 2 = 10.",
+      "hints": [
+        "L'image de 4, c'est f(4).",
+        "Remplace x par 4 dans l'expression de f.",
+        "Exemple : si g(x) = 2x + 1, alors g(3) = 7."
+      ]
+    },
+    {
+      "key": "ma-3e-developper-1",
+      "notionIds": ["ma.3e.identites-remarquables"],
+      "level": "TROISIEME",
+      "difficulty": 3,
+      "statement": "Quel est le développement de (x + 4)² ?",
+      "answer": {
+        "type": "MCQ",
+        "choices": ["x² + 16", "x² + 8x + 16", "x² + 4x + 16", "2x + 8"],
+        "correct": [1],
+        "multiple": false
+      },
+      "explanation": "(a + b)² = a² + 2ab + b² : (x + 4)² = x² + 2 × x × 4 + 16 = x² + 8x + 16.",
+      "hints": [
+        "Attention : (x + 4)² n'est pas x² + 4².",
+        "Écris (x + 4)(x + 4) et développe, ou utilise (a + b)² = a² + 2ab + b².",
+        "Exemple : (x + 1)² = x² + 2x + 1."
+      ]
+    },
+    {
+      "key": "ma-3e-produit-nul-1",
+      "notionIds": ["ma.3e.equation-produit-nul"],
+      "level": "TROISIEME",
+      "difficulty": 3,
+      "statement": "Quelles sont les solutions de (x − 3)(x + 2) = 0 ? (plusieurs réponses)",
+      "answer": {
+        "type": "MCQ",
+        "choices": ["−3", "3", "−2", "2"],
+        "correct": [1, 2],
+        "multiple": true
+      },
+      "explanation": "Un produit est nul si l'un des facteurs est nul : x − 3 = 0 donne x = 3, x + 2 = 0 donne x = −2.",
+      "hints": [
+        "Un produit de deux facteurs vaut zéro dans quel cas ?",
+        "Écris deux petites équations, une pour chaque facteur.",
+        "Exemple : (x − 1)(x + 5) = 0 → x = 1 ou x = −5."
+      ]
+    },
+    {
+      "key": "ma-3e-pourcentage-evolution-1",
+      "notionIds": ["ma.3e.pourcentages-evolution"],
+      "level": "TROISIEME",
+      "difficulty": 3,
+      "statement": "Un prix de 80 € augmente de 15 %. Quel est le nouveau prix (en €) ?",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "92",
+        "tolerance": 0,
+        "unit": "€",
+        "format": "any"
+      },
+      "explanation": "Augmenter de 15 %, c'est multiplier par 1,15 : 80 × 1,15 = 92 €.",
+      "hints": [
+        "Calcule d'abord l'augmentation, ou utilise un coefficient multiplicateur.",
+        "Augmenter de t %, c'est multiplier par (1 + t/100).",
+        "Exemple : 50 € + 10 % = 50 × 1,1 = 55 €."
+      ]
+    },
+    {
+      "key": "ma-3e-trigo-1",
+      "notionIds": ["ma.3e.trigonometrie"],
+      "level": "TROISIEME",
+      "difficulty": 3,
+      "statement": "Dans un triangle rectangle, quel rapport donne la tangente d'un angle aigu ?",
+      "answer": {
+        "type": "MCQ",
+        "choices": [
+          "adjacent / hypoténuse",
+          "opposé / hypoténuse",
+          "opposé / adjacent",
+          "hypoténuse / opposé"
+        ],
+        "correct": [2],
+        "multiple": false
+      },
+      "explanation": "tan = côté opposé / côté adjacent (TOA dans SOH-CAH-TOA).",
+      "hints": [
+        "Il y a un moyen mnémotechnique pour retenir les trois formules.",
+        "SOH-CAH-TOA : la lettre T va avec O et A.",
+        "Exemple : sin = opposé / hypoténuse (SOH)."
+      ]
+    },
+    {
+      "key": "ma-3e-thales-1",
+      "notionIds": ["ma.3e.thales"],
+      "level": "TROISIEME",
+      "difficulty": 4,
+      "statement": "Dans le triangle ABC, M est sur [AB] et N sur [AC], avec (MN) parallèle à (BC). AM = 3 cm, AB = 9 cm, BC = 12 cm. Calcule MN (en cm).",
+      "answer": {
+        "type": "NUMERIC",
+        "value": "4",
+        "tolerance": 0,
+        "unit": "cm",
+        "format": "any"
+      },
+      "explanation": "D'après le théorème de Thalès : AM/AB = MN/BC, donc 3/9 = MN/12, donc MN = 12 × 3 ÷ 9 = 4 cm.",
+      "hints": [
+        "Les droites parallèles permettent d'utiliser un théorème célèbre.",
+        "Écris l'égalité des rapports AM/AB = AN/AC = MN/BC et garde celle qui contient MN.",
+        "Exemple : si AM/AB = 1/2 et BC = 10, alors MN = 5."
+      ]
+    },
+    {
+      "key": "ma-6e-symetrie-tf-1",
+      "notionIds": ["ma.6e.symetrie-axiale"],
+      "level": "SIXIEME",
+      "difficulty": 2,
+      "statement": "Vrai ou faux : un rectangle (qui n'est pas un carré) a 4 axes de symétrie.",
+      "answer": {
+        "type": "TRUE_FALSE",
+        "correct": false,
+        "requireJustification": false,
+        "expectedJustification": null
+      },
+      "explanation": "Un rectangle qui n'est pas un carré a seulement 2 axes de symétrie : les droites qui passent par les milieux des côtés opposés. Les diagonales ne sont pas des axes de symétrie.",
+      "hints": [
+        "Imagine que tu plies le rectangle : selon quelles lignes les deux moitiés se superposent-elles ?",
+        "Teste les diagonales en pensant au pliage : les coins se superposent-ils ?",
+        "Exemple : un carré a 4 axes, un triangle équilatéral en a 3."
+      ]
+    },
+    {
+      "key": "ma-6e-conversions-match-1",
+      "notionIds": ["ma.cm2.longueurs-masses-conversions"],
+      "level": "CM2",
+      "difficulty": 2,
+      "statement": "Associe chaque mesure à la mesure égale.",
+      "answer": {
+        "type": "MATCHING",
+        "left": ["1,5 km", "15 cm", "150 mm"],
+        "right": ["1 500 m", "0,15 m", "15 cm"],
+        "pairs": [
+          [0, 0],
+          [1, 1],
+          [2, 2]
+        ]
+      },
+      "explanation": "1,5 km = 1 500 m ; 15 cm = 0,15 m ; 150 mm = 15 cm.",
+      "hints": [
+        "Utilise le tableau de conversion km, hm, dam, m, dm, cm, mm.",
+        "Place le chiffre des unités dans la colonne de l'unité de départ, puis lis dans l'unité d'arrivée.",
+        "Exemple : 2,3 m = 230 cm."
+      ]
+    }
+  ]
+}

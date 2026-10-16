@@ -1,0 +1,24 @@
+{
+  "subject": "SVT",
+  "level": "QUATRIEME",
+  "notions": [
+    {
+      "id": "svt.4e.reproduction-puberte",
+      "theme": "Le vivant",
+      "title": "Puberté et reproduction humaine",
+      "description": "Comprendre les transformations de la puberté, le fonctionnement des appareils reproducteurs et la contraception.",
+      "prerequisites": ["svt.5e.respiration-digestion"],
+      "commonMistakes": ["Confondre les rôles des organes reproducteurs"],
+      "examples": ["La fécondation a lieu dans une trompe."]
+    },
+    {
+      "id": "svt.4e.cellule-adn",
+      "theme": "Le vivant",
+      "title": "Cellules, chromosomes et ADN",
+      "description": "Savoir que le vivant est constitué de cellules dont le noyau contient les chromosomes, formés d'ADN.",
+      "prerequisites": ["svt.6e.classification-vivant"],
+      "commonMistakes": ["Croire que seules les cellules humaines ont un noyau"],
+      "examples": ["Une cellule humaine contient 23 paires de chromosomes."]
+    }
+  ]
+}

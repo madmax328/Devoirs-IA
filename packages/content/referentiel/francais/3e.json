@@ -1,0 +1,81 @@
+{
+  "subject": "FRANCAIS",
+  "level": "TROISIEME",
+  "notions": [
+    {
+      "id": "fr.3e.circonstancielles-avancees",
+      "theme": "Grammaire",
+      "title": "Cause, conséquence, but, opposition, concession",
+      "description": "Exprimer et identifier les rapports logiques dans la phrase complexe, avec le mode qui convient (indicatif ou subjonctif).",
+      "prerequisites": ["fr.4e.subordonnees-conjonctives", "fr.4e.subjonctif-present"],
+      "commonMistakes": [
+        "« Bien qu'il est malade » au lieu de « bien qu'il soit »",
+        "Confondre cause et conséquence"
+      ],
+      "examples": ["Bien qu'il soit fatigué, il continue (concession)."]
+    },
+    {
+      "id": "fr.3e.modalisation",
+      "theme": "Grammaire",
+      "title": "Modalisation et implication de l'énonciateur",
+      "description": "Repérer les marques du degré de certitude et du jugement (adverbes, conditionnel, verbes d'opinion, vocabulaire mélioratif ou péjoratif).",
+      "prerequisites": ["fr.4e.argumentation-these"],
+      "commonMistakes": ["Ne pas voir le doute exprimé par le conditionnel"],
+      "examples": ["« Il aurait quitté la ville » : l'information n'est pas certaine."]
+    },
+    {
+      "id": "fr.3e.figures-de-style-3e",
+      "theme": "Vocabulaire",
+      "title": "Figures de style : hyperbole, antithèse, oxymore, anaphore, gradation",
+      "description": "Identifier ces figures et analyser l'effet qu'elles produisent dans un texte.",
+      "prerequisites": ["fr.4e.figures-de-style"],
+      "commonMistakes": ["Confondre antithèse et oxymore"],
+      "examples": ["« Cette obscure clarté » : oxymore."]
+    },
+    {
+      "id": "fr.3e.orthographe-accords-complexes",
+      "theme": "Orthographe",
+      "title": "Accords complexes et relecture",
+      "description": "Maîtriser les accords difficiles (participe passé avec avoir et COD placé avant, sujet inversé ou éloigné) et relire son texte avec méthode.",
+      "prerequisites": ["fr.5e.participe-passe-avoir", "fr.cm2.accord-sujet-verbe"],
+      "commonMistakes": ["Relire une seule fois sans cibler les accords"],
+      "examples": ["Les lettres que je vous ai envoyées sont arrivées."]
+    },
+    {
+      "id": "fr.3e.questions-brevet",
+      "theme": "Lecture et compréhension",
+      "title": "Répondre aux questions du brevet",
+      "description": "Analyser un texte littéraire et une image : répondre de façon argumentée en citant le texte et en analysant les procédés.",
+      "prerequisites": ["fr.6e.lecture-comprehension-6e", "fr.4e.figures-de-style"],
+      "commonMistakes": ["Citer sans analyser", "Ne répondre qu'à une partie de la question"],
+      "examples": ["Question → affirmation → citation → analyse."]
+    },
+    {
+      "id": "fr.3e.redaction-imagination",
+      "theme": "Écriture",
+      "title": "Rédaction : sujet d'imagination",
+      "description": "Écrire un récit cohérent qui respecte les contraintes du sujet (point de vue, temps, insertion de dialogue ou de description).",
+      "prerequisites": ["fr.6e.valeurs-imparfait-passe-simple", "fr.6e.dialogue-ponctuation"],
+      "commonMistakes": ["Oublier une contrainte du sujet", "Changer de temps du récit en cours de route"],
+      "examples": ["Raconter la scène du point de vue d'un autre personnage."]
+    },
+    {
+      "id": "fr.3e.redaction-reflexion",
+      "theme": "Écriture",
+      "title": "Rédaction : sujet de réflexion",
+      "description": "Construire un développement argumenté (introduction, parties, conclusion) avec des arguments et des exemples précis.",
+      "prerequisites": ["fr.4e.ecrire-lettre-argumentee"],
+      "commonMistakes": ["Donner des exemples trop vagues", "Oublier la conclusion"],
+      "examples": ["Introduction : amorce, question, annonce du plan."]
+    },
+    {
+      "id": "fr.3e.poesie-versification",
+      "theme": "Lecture et compréhension",
+      "title": "La poésie et la versification",
+      "description": "Compter les syllabes (alexandrin), repérer les rimes et les strophes, et analyser comment la forme sert le sens.",
+      "prerequisites": ["fr.4e.figures-de-style"],
+      "commonMistakes": ["Ne pas prononcer le « e » muet devant une consonne"],
+      "examples": ["« Demain, dès l'aube, à l'heure où blanchit la campagne » : alexandrin."]
+    }
+  ]
+}

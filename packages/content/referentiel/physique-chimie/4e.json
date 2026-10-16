@@ -1,0 +1,33 @@
+{
+  "subject": "PHYSIQUE_CHIMIE",
+  "level": "QUATRIEME",
+  "notions": [
+    {
+      "id": "pc.4e.atomes-molecules",
+      "theme": "Matière",
+      "title": "Atomes et molécules",
+      "description": "Comprendre que la matière est faite d'atomes qui forment des molécules, et que les atomes se conservent lors d'une transformation chimique.",
+      "prerequisites": ["pc.5e.changements-etat"],
+      "commonMistakes": ["Confondre transformation physique et transformation chimique"],
+      "examples": ["La molécule d'eau H₂O contient 2 atomes d'hydrogène et 1 d'oxygène."]
+    },
+    {
+      "id": "pc.4e.vitesse",
+      "theme": "Mouvement et interactions",
+      "title": "Mouvement et vitesse",
+      "description": "Décrire un mouvement (trajectoire, vitesse) et calculer une vitesse moyenne v = d / t.",
+      "prerequisites": ["ma.4e.vitesse-grandeurs-composees"],
+      "commonMistakes": ["Oublier les unités", "Diviser le temps par la distance"],
+      "examples": ["100 m en 20 s : v = 5 m/s."]
+    },
+    {
+      "id": "pc.4e.tension-intensite",
+      "theme": "Électricité",
+      "title": "Tension, intensité et loi d'Ohm",
+      "description": "Mesurer une tension (en volts) et une intensité (en ampères) et utiliser U = R × I.",
+      "prerequisites": ["pc.5e.circuits-electriques", "ma.4e.equations-premier-degre"],
+      "commonMistakes": ["Brancher le voltmètre en série", "Confondre tension et intensité"],
+      "examples": ["R = 100 Ω, I = 0,05 A : U = 5 V."]
+    }
+  ]
+}

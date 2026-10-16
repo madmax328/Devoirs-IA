@@ -1,0 +1,54 @@
+{
+  "subject": "ANGLAIS",
+  "level": "SIXIEME",
+  "notions": [
+    {
+      "id": "an.6e.be-have",
+      "theme": "Grammaire",
+      "title": "Les verbes be et have got au présent",
+      "description": "Conjuguer be (am, is, are) et have got au présent pour se présenter et décrire.",
+      "prerequisites": [],
+      "commonMistakes": [
+        "« I is » au lieu de « I am »",
+        "Oublier « got » (« I have a dog » est aussi correct mais différent)"
+      ],
+      "examples": ["She is twelve. They have got a cat."]
+    },
+    {
+      "id": "an.6e.present-simple",
+      "theme": "Grammaire",
+      "title": "Le présent simple",
+      "description": "Exprimer une habitude ou une vérité générale ; ajouter -s à la 3e personne du singulier ; négation et question avec do/does.",
+      "prerequisites": ["an.6e.be-have"],
+      "commonMistakes": ["Oublier le -s à he/she/it", "« He don't like » au lieu de « He doesn't like »"],
+      "examples": ["He plays football every Sunday."]
+    },
+    {
+      "id": "an.6e.pronoms-possessifs",
+      "theme": "Grammaire",
+      "title": "Pronoms personnels et adjectifs possessifs",
+      "description": "Utiliser I, you, he, she, it, we, they et my, your, his, her, its, our, their.",
+      "prerequisites": ["an.6e.be-have"],
+      "commonMistakes": ["Confondre his et her (selon le possesseur, pas l'objet)"],
+      "examples": ["Tom loves his sister."]
+    },
+    {
+      "id": "an.6e.there-is-are",
+      "theme": "Grammaire",
+      "title": "There is / there are, pluriels",
+      "description": "Décrire un lieu avec there is / there are et former les pluriels réguliers et irréguliers.",
+      "prerequisites": ["an.6e.be-have"],
+      "commonMistakes": ["« There is two books »", "« childs » au lieu de « children »"],
+      "examples": ["There are three children in the park."]
+    },
+    {
+      "id": "an.6e.nombres-heure-dates",
+      "theme": "Vocabulaire",
+      "title": "Nombres, heure et dates",
+      "description": "Dire les nombres, l'heure et la date en anglais.",
+      "prerequisites": [],
+      "commonMistakes": ["Confondre thirteen et thirty"],
+      "examples": ["It's half past seven. My birthday is on May 3rd."]
+    }
+  ]
+}
