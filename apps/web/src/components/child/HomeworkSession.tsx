@@ -17,10 +17,11 @@ export function HomeworkSession({ initial }: { initial: HomeworkView }) {
   const [error, setError] = useState<string | null>(null);
   const endRef = useRef<HTMLDivElement>(null);
 
-  useEffect(
-    () => endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" }),
-    [hw.messages.length, pending],
-  );
+  // Défilement instantané vers le dernier message (pas d'animation : plus sobre et plus robuste).
+  useEffect(() => {
+    const el = endRef.current;
+    if (el) window.scrollTo({ top: el.offsetTop, behavior: "auto" });
+  }, [hw.messages.length, pending]);
 
   async function call(path: string, body: object) {
     setPending(true);
@@ -138,7 +139,7 @@ export function HomeworkSession({ initial }: { initial: HomeworkView }) {
         </details>
       )}
 
-      <div className="chat" aria-live="polite">
+      <div className="chat" role="log" aria-label={t("homework.coach")}>
         {hw.messages.map((m) => (
           <div key={m.id} className={`msg ${m.role === "coach" ? "msg-coach" : "msg-child"}`}>
             <span className="msg-meta">
