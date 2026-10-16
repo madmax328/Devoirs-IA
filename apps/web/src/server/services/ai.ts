@@ -2,6 +2,7 @@ import { AnthropicLlm, type AiUsageEvent, type LlmClient } from "@devoirs/ai";
 import { collections } from "@devoirs/db";
 import { ObjectId } from "mongodb";
 import { HttpError } from "../http";
+import { DemoLlm, demoAiEnabled } from "./fake-llm";
 
 /** Budget IA quotidien en dollars (variable AI_DAILY_BUDGET_USD, 5 $ par défaut). */
 export function dailyBudgetUsd(): number {
@@ -86,6 +87,7 @@ export function setLlmForTests(llm: LlmClient | null): void {
 /** Client IA prêt à l'emploi, ou erreur claire si la clé manque ou si le budget du jour est atteint. */
 export async function getLlm(): Promise<LlmClient> {
   if (llmOverride) return llmOverride;
+  if (demoAiEnabled()) return new DemoLlm();
   if (!process.env.ANTHROPIC_API_KEY) throw new HttpError(503, "AI_NOT_CONFIGURED", "admin.aiNotConfigured");
   if ((await spentTodayUsd()) >= dailyBudgetUsd())
     throw new HttpError(429, "AI_BUDGET_EXCEEDED", "admin.aiBudgetExceeded");

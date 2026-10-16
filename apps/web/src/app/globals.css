@@ -497,3 +497,71 @@ ul.plain li {
   background: var(--c-surface-alt);
   font-size: var(--fs-sm);
 }
+
+/* ───────── Mode Devoirs */
+.chat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+.msg {
+  max-width: 88%;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-lg);
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+.msg-coach {
+  align-self: flex-start;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-top-left-radius: 4px;
+}
+.msg-child {
+  align-self: flex-end;
+  background: var(--c-primary);
+  color: var(--c-on-primary);
+  border-top-right-radius: 4px;
+}
+.msg-meta {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-bottom: 2px;
+  display: block;
+}
+.photo-grid {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+.photo-grid img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--c-border);
+}
+.help-card {
+  border: 3px solid var(--c-accent);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  background: var(--c-surface);
+}
+.help-card a.btn {
+  width: 100%;
+}
+.thinking {
+  color: var(--c-text-muted);
+  font-style: italic;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .thinking::after {
+    content: "…";
+    animation: blink 1.2s infinite;
+  }
+  @keyframes blink {
+    50% {
+      opacity: 0.2;
+    }
+  }
+}

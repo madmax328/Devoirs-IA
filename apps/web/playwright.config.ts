@@ -19,7 +19,8 @@ export default defineConfig({
   webServer: {
     command: `pnpm exec next start -p ${port}`,
     url: `http://localhost:${port}/api/health`,
-    reuseExistingServer: !process.env.CI,
-    env: { BETTER_AUTH_URL: `http://localhost:${port}` },
+    reuseExistingServer: false,
+    // IA de démonstration (réponses scriptées) : pas de clé ni de coût pendant les tests.
+    env: { BETTER_AUTH_URL: `http://localhost:${port}`, AI_FAKE: "1" },
   },
 });

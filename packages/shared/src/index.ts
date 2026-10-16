@@ -5,3 +5,4 @@ export * from "./notion";
 export * from "./exercise";
 export * from "./public-exercise";
 export * from "./player";
+export * from "./homework";

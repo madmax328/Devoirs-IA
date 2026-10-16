@@ -5,12 +5,16 @@ import { t } from "@/lib/i18n";
 import { parentOrRedirect } from "@/server/page-guards";
 import { listChildren } from "@/server/services/children";
 import { overview } from "@/server/services/diagnostic";
+import { unreadNotifications } from "@/server/services/safety";
+import { SafetyBanner } from "@/components/SafetyBanner";
 
 export const dynamic = "force-dynamic";
 
 export default async function ParentDashboard() {
   const parent = await parentOrRedirect();
   const children = await listChildren(parent.userId);
+  const notifications = await unreadNotifications(parent.userId);
+  const nameOf = new Map(children.map((c) => [c.id, c.displayName]));
   const diagnostics = new Map(
     await Promise.all(children.map(async (c) => [c.id, await overview(c)] as const)),
   );
@@ -26,6 +30,14 @@ export default async function ParentDashboard() {
           </Link>
         )}
       </div>
+
+      {notifications.map((n) => (
+        <SafetyBanner
+          key={n._id.toHexString()}
+          id={n._id.toHexString()}
+          childName={nameOf.get(n.childId) ?? ""}
+        />
+      ))}
 
       {children.length === 0 && <p className="muted">{t("parent.noChildren")}</p>}
 

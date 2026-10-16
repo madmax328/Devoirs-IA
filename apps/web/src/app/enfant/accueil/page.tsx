@@ -35,6 +35,17 @@ export default async function ChildHomePage() {
         </Coach>
       )}
 
+      <Link
+        className="card subject-card"
+        href="/enfant/devoirs"
+        style={{ textDecoration: "none", color: "inherit", borderColor: "var(--c-primary)", borderWidth: 2 }}
+      >
+        <div>
+          <strong>📷 {t("homework.newHelp")}</strong>
+          <div className="muted small">{t("homework.newHelpHint")}</div>
+        </div>
+      </Link>
+
       <section className="stack" style={{ gap: 12 }}>
         <h2>{t("diagnostic.title")}</h2>
         {items.map((item) => (

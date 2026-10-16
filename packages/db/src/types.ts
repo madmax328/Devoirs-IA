@@ -8,10 +8,11 @@ import type {
   ExerciseStatus,
   ExerciseType,
   Notion,
+  SchoolLevel,
   StudentResponse,
   Subject,
 } from "@devoirs/shared";
-import type { ObjectId } from "mongodb";
+import type { Binary, ObjectId } from "mongodb";
 
 /**
  * Collections gérées par Better Auth : "user", "session", "account", "verification".
@@ -202,4 +203,110 @@ export interface DiagnosticSessionDoc {
   startedAt: Date;
   updatedAt: Date;
   completedAt: Date | null;
+}
+
+// ───────── Mode Devoirs (jalon 4)
+
+export type HomeworkStatus =
+  "UNREADABLE" | "TO_CONFIRM" | "IN_PROGRESS" | "COMPLETED" | "ABANDONED" | "SAFETY_STOP" | "OUT_OF_SCOPE";
+
+/** Analyse de l'exercice : contient les solutions, JAMAIS envoyées à l'enfant. */
+export interface HomeworkAnalysisData {
+  readable: boolean;
+  unreadableReason: string | null;
+  outOfScope: "none" | "above_level" | "below_level" | "not_school";
+  subject: Subject | null;
+  level: SchoolLevel | null;
+  notionIds: string[];
+  exerciseKind: string;
+  statement: string;
+  questions: {
+    index: number;
+    text: string;
+    answerKind: "numeric" | "short" | "open" | "writing";
+    expectedAnswer: string | null;
+    solutionSteps: string;
+  }[];
+  containsPersonalInfo: boolean;
+}
+
+export interface HomeworkHelpDoc {
+  _id: ObjectId;
+  childId: string;
+  parentId: string;
+  status: HomeworkStatus;
+  /** Empreinte des photos / du texte, pour le cache d'analyse. */
+  inputHash: string;
+  typedText: string | null;
+  photoIds: ObjectId[];
+  analysis: HomeworkAnalysisData | null;
+  hintsUsed: number;
+  stuckCount: number;
+  solvedQuestions: number[];
+  recap: { learned: string[]; notionsToWork: string[] } | null;
+  messageCount: number;
+  createdAt: Date;
+  updatedAt: Date;
+  completedAt: Date | null;
+}
+
+export interface HomeworkMessageDoc {
+  _id: ObjectId;
+  homeworkId: ObjectId;
+  childId: string;
+  role: "child" | "coach";
+  action: "start" | "message" | "hint" | "stuck" | null;
+  /** Texte après masquage des informations personnelles. */
+  text: string;
+  intent: string | null;
+  hintLevel: number | null;
+  /** Message de sécurité affiché à la place du coach (détresse, contenu inapproprié). */
+  safety: "distress" | "inappropriate" | null;
+  createdAt: Date;
+}
+
+/** Photo chiffrée (AES-256-GCM), supprimée automatiquement par MongoDB à `purgeAt`. */
+export interface HomeworkPhotoDoc {
+  _id: ObjectId;
+  homeworkId: ObjectId;
+  childId: string;
+  mediaType: "image/jpeg" | "image/png" | "image/webp";
+  iv: Binary;
+  tag: Binary;
+  data: Binary;
+  size: number;
+  purgeAt: Date;
+  createdAt: Date;
+}
+
+export interface AnalysisCacheDoc {
+  _id: string;
+  analysis: HomeworkAnalysisData;
+  promptVersion: string;
+  createdAt: Date;
+}
+
+/** Événement de sécurité : type et date uniquement, jamais le contenu. */
+export interface SafetyEventDoc {
+  _id: ObjectId;
+  childId: string;
+  parentId: string;
+  type: "DISTRESS" | "PERSONAL_INFO" | "INAPPROPRIATE" | "ANSWER_LEAK_BLOCKED";
+  source: "homework";
+  createdAt: Date;
+}
+
+export interface NotificationDoc {
+  _id: ObjectId;
+  userId: string;
+  type: "SAFETY_MOMENT";
+  childId: string;
+  readAt: Date | null;
+  createdAt: Date;
+}
+
+export interface UsageCounterDoc {
+  _id: string;
+  count: number;
+  expiresAt: Date;
 }

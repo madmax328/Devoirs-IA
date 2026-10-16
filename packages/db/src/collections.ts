@@ -2,6 +2,13 @@ import type { Db } from "mongodb";
 import { getDb } from "./client";
 import type {
   AiUsageLogDoc,
+  AnalysisCacheDoc,
+  HomeworkHelpDoc,
+  HomeworkMessageDoc,
+  HomeworkPhotoDoc,
+  NotificationDoc,
+  SafetyEventDoc,
+  UsageCounterDoc,
   AnswerAttemptDoc,
   DiagnosticSessionDoc,
   MasteryStateDoc,
@@ -32,6 +39,13 @@ export const COLLECTIONS = {
   masteryStates: "masteryStates",
   answerAttempts: "answerAttempts",
   diagnosticSessions: "diagnosticSessions",
+  homeworkHelps: "homeworkHelps",
+  homeworkMessages: "homeworkMessages",
+  homeworkPhotos: "homeworkPhotos",
+  analysisCache: "analysisCache",
+  safetyEvents: "safetyEvents",
+  notifications: "notifications",
+  usageCounters: "usageCounters",
 } as const;
 
 export function collections(db: Db = getDb()) {
@@ -51,6 +65,13 @@ export function collections(db: Db = getDb()) {
     masteryStates: db.collection<MasteryStateDoc>(COLLECTIONS.masteryStates),
     answerAttempts: db.collection<AnswerAttemptDoc>(COLLECTIONS.answerAttempts),
     diagnosticSessions: db.collection<DiagnosticSessionDoc>(COLLECTIONS.diagnosticSessions),
+    homeworkHelps: db.collection<HomeworkHelpDoc>(COLLECTIONS.homeworkHelps),
+    homeworkMessages: db.collection<HomeworkMessageDoc>(COLLECTIONS.homeworkMessages),
+    homeworkPhotos: db.collection<HomeworkPhotoDoc>(COLLECTIONS.homeworkPhotos),
+    analysisCache: db.collection<AnalysisCacheDoc>(COLLECTIONS.analysisCache),
+    safetyEvents: db.collection<SafetyEventDoc>(COLLECTIONS.safetyEvents),
+    notifications: db.collection<NotificationDoc>(COLLECTIONS.notifications),
+    usageCounters: db.collection<UsageCounterDoc>(COLLECTIONS.usageCounters),
   };
 }
 export type Collections = ReturnType<typeof collections>;
@@ -86,6 +107,15 @@ export async function ensureIndexes(db: Db = getDb()): Promise<void> {
     c.answerAttempts.createIndex({ childId: 1, notionId: 1, createdAt: -1 }),
     c.answerAttempts.createIndex({ childId: 1, exerciseId: 1 }),
     c.diagnosticSessions.createIndex({ childId: 1, subject: 1, startedAt: -1 }),
+    c.homeworkHelps.createIndex({ childId: 1, createdAt: -1 }),
+    c.homeworkMessages.createIndex({ homeworkId: 1, createdAt: 1 }),
+    c.homeworkPhotos.createIndex({ homeworkId: 1 }),
+    // Suppression automatique des photos (30 jours par défaut) et du cache d'analyse.
+    c.homeworkPhotos.createIndex({ purgeAt: 1 }, { expireAfterSeconds: 0 }),
+    c.analysisCache.createIndex({ createdAt: 1 }, { expireAfterSeconds: 30 * 86400 }),
+    c.safetyEvents.createIndex({ childId: 1, createdAt: -1 }),
+    c.notifications.createIndex({ userId: 1, readAt: 1, createdAt: -1 }),
+    c.usageCounters.createIndex({ expiresAt: 1 }, { expireAfterSeconds: 0 }),
   ]);
 }
 
