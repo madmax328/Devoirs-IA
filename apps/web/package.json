@@ -15,7 +15,10 @@
   },
   "dependencies": {
     "@better-auth/expo": "^1.7.9",
+    "@devoirs/ai": "workspace:*",
+    "@devoirs/content": "workspace:*",
     "@devoirs/db": "workspace:*",
+    "@devoirs/pedagogy": "workspace:*",
     "@devoirs/shared": "workspace:*",
     "@devoirs/ui": "workspace:*",
     "@node-rs/argon2": "^2.2.2",

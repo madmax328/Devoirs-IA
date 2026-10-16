@@ -9,7 +9,14 @@ const securityHeaders = [
 ];
 
 const config: NextConfig = {
-  transpilePackages: ["@devoirs/shared", "@devoirs/ui", "@devoirs/db"],
+  transpilePackages: [
+    "@devoirs/shared",
+    "@devoirs/ui",
+    "@devoirs/db",
+    "@devoirs/content",
+    "@devoirs/pedagogy",
+    "@devoirs/ai",
+  ],
   serverExternalPackages: ["@node-rs/argon2", "mongodb"],
   poweredByHeader: false,
   async headers() {

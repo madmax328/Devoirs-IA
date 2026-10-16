@@ -12,9 +12,10 @@ packages/
   shared/     schémas de validation (Zod), constantes, textes (i18n)
   db/         connexion MongoDB, types des documents, index
   ui/         design tokens (couleurs clair/sombre, tailles), vérification des contrastes
+  content/    référentiel des notions (JSON) + exercices de départ (JSON), chargement et vérifications
+  pedagogy/   correction déterministe (puis modèle de maîtrise et répétition espacée aux jalons 3 et 5)
+  ai/         appels à l'API Claude, prompts versionnés, pipeline de génération et de relecture
 ```
-
-Prévus aux jalons suivants : `packages/ai` (appels Claude, prompts, évaluations), `packages/pedagogy` (correction, modèle de maîtrise, répétition espacée), `content/referentiel` (graphe de compétences).
 
 Pas de serveur séparé : l'API vit dans Next.js (fonctions serverless Vercel). Les tâches de fond (purge des photos, bilans hebdo) passeront par **Vercel Cron** qui appelle des routes `/api/cron/*` protégées.
 
@@ -68,3 +69,43 @@ Tous les textes sont dans `packages/shared/src/i18n/locales/fr.ts`. `pt-BR` et `
 - `apps/web/e2e` : parcours complet dans un navigateur (Playwright).
 - `apps/mobile/test` : logique pure (pavé PIN, erreurs API).
 - CI GitHub Actions : formatage, lint, types, tests, build, E2E, bundle iOS.
+
+## Contenu pédagogique (jalon 2)
+
+### Référentiel
+
+- Fichiers `packages/content/referentiel/<matière>/<niveau>.json` : notions avec id, thème, titre, description, prérequis, erreurs fréquentes, exemples.
+- Identifiants stables `<matière>.<niveau>.<slug>`, ex. `ma.6e.fractions-egales` (matières : ma, fr, an, hg, svt, pc ; niveaux : cm2, 6e, 5e, 4e, 3e).
+- 208 notions : maths (103) et français (52) du CM2 à la 3e, version allégée pour l'anglais, l'histoire-géo-EMC, les SVT et la physique-chimie. Écrit d'après les programmes des cycles 3 et 4 : **à faire relire par un enseignant**.
+- Les tests vérifient le graphe : identifiants uniques, prérequis existants, pas de cycle, pas de prérequis d'un niveau supérieur, chaque notion de maths après le CM2 a au moins un prérequis.
+- Après l'ajout d'un fichier JSON : `pnpm --filter @devoirs/content generate` (met à jour la liste des imports).
+- Le site recopie automatiquement le référentiel et les exercices du dépôt dans MongoDB quand leur empreinte change (`ensureContentSynced`) : rien à lancer à la main.
+
+### Exercices
+
+- 7 types : QCM, réponse numérique, texte à trous, appariement, remettre dans l'ordre, vrai/faux (justifié ou non), réponse rédigée.
+- Statuts : `DRAFT` (à relire), `AUTO_VALIDATED` (servi), `HUMAN_VALIDATED` (servi), `REJECTED`. Origine : `REPO` (écrit dans le dépôt), `AI`, `HUMAN` (corrigé dans l'admin).
+- Un signalement renvoie un exercice auto-validé en relecture (`DRAFT`) ; valider ou rejeter clôt les signalements.
+
+### Correction déterministe (`packages/pedagogy`)
+
+- Nombres exacts (fractions en BigInt) : accepte `3,5`, `3.5`, `7/2`, `1 000`, le signe −, l'unité attendue ; repère une fraction non simplifiée ou une écriture qui ne respecte pas le format demandé.
+- Textes à trous : casse, espaces, apostrophes et ponctuation finale ignorés ; accents comptés ou non selon l'exercice.
+- Résultat : `correct` / `partial` / `incorrect` / `invalid` (saisie illisible) / `pending_ai` (réponse rédigée), un score, un code de retour positif et, pour les exercices à plusieurs éléments, les éléments à revoir — jamais la bonne réponse.
+
+### Génération par IA (`packages/ai`)
+
+1. **Génération** structurée (JSON validé par Zod) avec le modèle « fort » (`claude-opus-5-5`, effort `high`), relance serveur automatique en cas de refus (`fallbacks: "default"`).
+2. **Vérifications par le code** : schéma strict, notion et niveau, réponse attendue acceptée par le moteur de correction, aucun indice qui contient la réponse, et pour les réponses numériques **recalcul avec mathjs** de l'expression fournie par l'IA.
+3. **Relecture** par un second appel (même modèle, effort `medium`) : l'IA résout l'exercice sans regarder la réponse et juge clarté, niveau et indices.
+4. **Décision** : tout est bon → `AUTO_VALIDATED` ; doute (relecture « à revoir », calcul non vérifiable) → `DRAFT` pour la file humaine ; réponse fausse ou rejet → écarté.
+
+- Prompts versionnés dans `packages/ai/src/prompts/*.v1.ts` (une modification = un nouveau fichier `v2`).
+- Chaque appel est journalisé dans `aiUsage` (fonction, modèle, version du prompt, jetons, coût estimé, durée), **sans contenu ni identifiant d'enfant**.
+- Budget quotidien (`AI_DAILY_BUDGET_USD`) : au-delà, la génération est refusée jusqu'au lendemain.
+- La génération se lance depuis l'admin (Référentiel → « Générer », 1 à 5 exercices par notion).
+
+### Administration (`/admin`)
+
+Tableau de bord, file de validation, liste des exercices (filtres par statut, notion, signalements), fiche exercice (aperçu de la réponse attendue ; valider, rejeter ou remettre à relire avec une note ; correction du contenu en JSON revérifiée par le serveur), référentiel par matière et niveau avec génération, coûts IA sur 14 jours.
+Accès : rôle `ADMIN` en base ou e-mail listé dans `ADMIN_EMAILS`.

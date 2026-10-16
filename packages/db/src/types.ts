@@ -1,4 +1,14 @@
-import type { Avatar, ChildLevel, ChildSettings, ConsentType } from "@devoirs/shared";
+import type {
+  Avatar,
+  ChildLevel,
+  ChildSettings,
+  ConsentType,
+  ExerciseContent,
+  ExerciseReportInput,
+  ExerciseStatus,
+  ExerciseType,
+  Notion,
+} from "@devoirs/shared";
 import type { ObjectId } from "mongodb";
 
 /**
@@ -64,4 +74,81 @@ export interface AuditLogDoc {
   targetId: string | null;
   meta?: Record<string, unknown>;
   createdAt: Date;
+}
+
+// ───────── Référentiel et exercices (jalon 2)
+
+/** Une notion du référentiel, copiée depuis packages/content (le dépôt fait foi). */
+export interface NotionDoc extends Omit<Notion, "id"> {
+  _id: string;
+  cycle: 3 | 4;
+  /** Notion retirée du référentiel : conservée pour l'historique, plus proposée. */
+  archived: boolean;
+  updatedAt: Date;
+}
+
+/** AI = généré par l'IA ; HUMAN = écrit dans l'admin ; REPO = écrit dans le dépôt (packages/content). */
+export type ExerciseSource = "AI" | "HUMAN" | "REPO";
+
+export interface ExerciseDoc extends ExerciseContent {
+  _id: ObjectId;
+  /** Clé stable des exercices du dépôt (null sinon). */
+  key: string | null;
+  type: ExerciseType;
+  status: ExerciseStatus;
+  source: ExerciseSource;
+  /** Empreinte du contenu, pour repérer les doublons et les modifications. */
+  contentHash: string;
+  /** Difficulté sur une échelle de type Elo, recalibrée avec les réponses des élèves (jalon 3). */
+  rating: number;
+  stats: { served: number; correct: number };
+  openReports: number;
+  genMeta: Record<string, unknown> | null;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface ExerciseReviewDoc {
+  _id: ObjectId;
+  exerciseId: ObjectId;
+  /** « ai:<modèle> », « repo » ou l'identifiant de l'admin. */
+  reviewer: string;
+  verdict: ExerciseStatus | "NOTE";
+  notes: string | null;
+  createdAt: Date;
+}
+
+export interface ExerciseReportDoc {
+  _id: ObjectId;
+  exerciseId: ObjectId;
+  reporterType: "CHILD" | "PARENT";
+  reporterId: string;
+  reason: ExerciseReportInput["reason"];
+  comment: string | null;
+  resolvedAt: Date | null;
+  createdAt: Date;
+}
+
+/** Coût des appels IA : aucune donnée personnelle, aucun identifiant d'enfant. */
+export interface AiUsageLogDoc {
+  _id: ObjectId;
+  feature: string;
+  model: string;
+  promptVersion: string;
+  inputTokens: number;
+  outputTokens: number;
+  cacheReadTokens: number;
+  cacheCreationTokens: number;
+  costMicroUsd: number;
+  latencyMs: number;
+  ok: boolean;
+  stopReason: string | null;
+  createdAt: Date;
+}
+
+/** Petites valeurs techniques (versions synchronisées, réglages modifiables depuis l'admin). */
+export interface MetaDoc {
+  _id: string;
+  value: unknown;
+  updatedAt: Date;
 }

@@ -10,10 +10,25 @@ export interface ParentContext {
   role: UserRole;
 }
 
+/**
+ * Comptes admin désignés par la variable ADMIN_EMAILS (adresses séparées par des virgules).
+ * Pratique sur Vercel : pas besoin de modifier la base pour devenir admin.
+ */
+export function isAdminEmail(email: string): boolean {
+  const list = (process.env.ADMIN_EMAILS ?? "")
+    .split(",")
+    .map((e) => e.trim().toLowerCase())
+    .filter(Boolean);
+  return list.includes(email.trim().toLowerCase());
+}
+
 export async function getParent(headers: Headers): Promise<ParentContext | null> {
   const session = await auth().api.getSession({ headers });
   if (!session) return null;
-  const role = (session.user as { role?: string }).role === "ADMIN" ? "ADMIN" : "PARENT";
+  const role =
+    (session.user as { role?: string }).role === "ADMIN" || isAdminEmail(session.user.email)
+      ? "ADMIN"
+      : "PARENT";
   return { userId: session.user.id, email: session.user.email, name: session.user.name, role };
 }
 

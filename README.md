@@ -5,6 +5,7 @@ L'app qui aide les collégiens en difficulté à faire leurs devoirs, sans jamai
 - **Site web** (Next.js, hébergé sur Vercel) : site public, espace parent, espace enfant, administration, **et l'API** utilisée par l'app mobile.
 - **App mobile** (Expo / React Native) : iOS et Android.
 - **Base de données** : MongoDB (Atlas en ligne, Docker en local).
+- **Contenu pédagogique** : `packages/content` (référentiel des notions et exercices de départ, versionnés dans le dépôt).
 
 ## Installer et lancer en local
 
@@ -51,15 +52,19 @@ Pour ajouter un module Expo, toujours utiliser `npx expo install <module>` dans 
 
 Site / API (`apps/web/.env.local`, et dans Vercel → Settings → Environment Variables) :
 
-| Variable                                                                  | Obligatoire | Description                                                                 |
-| ------------------------------------------------------------------------- | ----------- | --------------------------------------------------------------------------- |
-| `MONGODB_URI`                                                             | oui         | Chaîne de connexion MongoDB (Atlas : choisir une région UE)                 |
-| `BETTER_AUTH_SECRET`                                                      | oui         | Secret aléatoire de 32 caractères minimum                                   |
-| `BETTER_AUTH_URL`                                                         | oui         | URL publique du site (ex. `https://xxx.vercel.app`)                         |
-| `MOBILE_APP_SCHEME`                                                       | non         | `devoirsia://` par défaut                                                   |
-| `TRUSTED_ORIGINS`                                                         | non         | Origines web autorisées en plus (ex. `http://localhost:8081` pour Expo web) |
-| `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET`                               | non         | Connexion Google (désactivée si vide)                                       |
-| `APPLE_CLIENT_ID` / `APPLE_CLIENT_SECRET` / `APPLE_APP_BUNDLE_IDENTIFIER` | non         | Connexion Apple (désactivée si vide)                                        |
+| Variable                                                                  | Obligatoire | Description                                                                                       |
+| ------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------- |
+| `MONGODB_URI`                                                             | oui         | Chaîne de connexion MongoDB (Atlas : choisir une région UE)                                       |
+| `BETTER_AUTH_SECRET`                                                      | oui         | Secret aléatoire de 32 caractères minimum                                                         |
+| `BETTER_AUTH_URL`                                                         | oui         | URL publique du site (ex. `https://xxx.vercel.app`)                                               |
+| `MOBILE_APP_SCHEME`                                                       | non         | `devoirsia://` par défaut                                                                         |
+| `TRUSTED_ORIGINS`                                                         | non         | Origines web autorisées en plus (ex. `http://localhost:8081` pour Expo web)                       |
+| `ADMIN_EMAILS`                                                            | non         | E-mails des comptes qui ont accès à `/admin`, séparés par des virgules                            |
+| `ANTHROPIC_API_KEY`                                                       | non         | Clé de l'API Claude. Sans elle, la génération d'exercices est désactivée (le reste fonctionne)    |
+| `AI_DAILY_BUDGET_USD`                                                     | non         | Budget IA par jour en dollars (5 par défaut) ; au-delà, la génération s'arrête jusqu'au lendemain |
+| `AI_MODEL_STRONG` / `AI_MODEL_FAST`                                       | non         | Modèles utilisés (par défaut `claude-opus-5-5` / `claude-haiku-5-5`)                              |
+| `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET`                               | non         | Connexion Google (désactivée si vide)                                                             |
+| `APPLE_CLIENT_ID` / `APPLE_CLIENT_SECRET` / `APPLE_APP_BUNDLE_IDENTIFIER` | non         | Connexion Apple (désactivée si vide)                                                              |
 
 App mobile (`apps/mobile/.env`) : `EXPO_PUBLIC_API_URL` = URL du site.
 
@@ -79,6 +84,14 @@ App mobile (`apps/mobile/.env`) : `EXPO_PUBLIC_API_URL` = URL du site.
 5. Vérifier : `https://<votre-site>.vercel.app/api/health` doit afficher `{"status":"ok"}`.
 
 Plus tard, avec un nom de domaine à vous : ajouter `BETTER_AUTH_URL=https://votre-domaine.fr`.
+
+### Accéder à l'administration
+
+1. Dans Vercel, ajouter `ADMIN_EMAILS` = l'adresse e-mail de votre compte, puis redéployer.
+2. Se connecter avec ce compte et ouvrir `https://<votre-site>/admin`.
+3. Pour générer des exercices avec l'IA : ajouter `ANTHROPIC_API_KEY` (clé créée sur https://platform.claude.com) et, si besoin, `AI_DAILY_BUDGET_USD`.
+
+⚠️ La vérification des e-mails n'est pas encore active : créez votre compte **avant** d'ajouter votre adresse dans `ADMIN_EMAILS`.
 
 ## Documentation
 

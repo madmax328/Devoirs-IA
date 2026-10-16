@@ -5,9 +5,10 @@ let counter = 0;
 /** Crée un parent via Better Auth et renvoie les en-têtes (cookie de session) à réutiliser. */
 export async function signUpParent(
   name = "Parent Test",
+  emailOverride?: string,
 ): Promise<{ headers: Headers; userId: string; email: string }> {
   counter += 1;
-  const email = `parent${counter}-${Date.now()}@exemple.fr`;
+  const email = emailOverride ?? `parent${counter}-${Date.now()}@exemple.fr`;
   const res = await auth().api.signUpEmail({
     body: { name, email, password: "motdepasse-solide", acceptTerms: true } as never,
     asResponse: true,

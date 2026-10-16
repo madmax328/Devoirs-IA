@@ -1,6 +1,18 @@
 import type { Db } from "mongodb";
 import { getDb } from "./client";
-import type { AuditLogDoc, ChildDoc, ChildSessionDoc, ConsentDoc, DeviceDoc } from "./types";
+import type {
+  AiUsageLogDoc,
+  AuditLogDoc,
+  ChildDoc,
+  ChildSessionDoc,
+  ConsentDoc,
+  DeviceDoc,
+  ExerciseDoc,
+  ExerciseReportDoc,
+  ExerciseReviewDoc,
+  MetaDoc,
+  NotionDoc,
+} from "./types";
 
 export const COLLECTIONS = {
   children: "children",
@@ -8,6 +20,12 @@ export const COLLECTIONS = {
   devices: "devices",
   childSessions: "childSessions",
   auditLogs: "auditLogs",
+  notions: "notions",
+  exercises: "exercises",
+  exerciseReviews: "exerciseReviews",
+  exerciseReports: "exerciseReports",
+  aiUsage: "aiUsage",
+  meta: "meta",
 } as const;
 
 export function collections(db: Db = getDb()) {
@@ -18,6 +36,12 @@ export function collections(db: Db = getDb()) {
     devices: db.collection<DeviceDoc>(COLLECTIONS.devices),
     childSessions: db.collection<ChildSessionDoc>(COLLECTIONS.childSessions),
     auditLogs: db.collection<AuditLogDoc>(COLLECTIONS.auditLogs),
+    notions: db.collection<NotionDoc>(COLLECTIONS.notions),
+    exercises: db.collection<ExerciseDoc>(COLLECTIONS.exercises),
+    exerciseReviews: db.collection<ExerciseReviewDoc>(COLLECTIONS.exerciseReviews),
+    exerciseReports: db.collection<ExerciseReportDoc>(COLLECTIONS.exerciseReports),
+    aiUsage: db.collection<AiUsageLogDoc>(COLLECTIONS.aiUsage),
+    meta: db.collection<MetaDoc>(COLLECTIONS.meta),
   };
 }
 export type Collections = ReturnType<typeof collections>;
@@ -35,6 +59,19 @@ export async function ensureIndexes(db: Db = getDb()): Promise<void> {
     // MongoDB supprime lui-même les sessions expirées.
     c.childSessions.createIndex({ expiresAt: 1 }, { expireAfterSeconds: 0 }),
     c.auditLogs.createIndex({ actorId: 1, createdAt: -1 }),
+    c.notions.createIndex({ subject: 1, level: 1 }),
+    c.exercises.createIndex({ status: 1, level: 1 }),
+    c.exercises.createIndex({ notionIds: 1, status: 1 }),
+    c.exercises.createIndex({ contentHash: 1 }),
+    c.exercises.createIndex(
+      { key: 1 },
+      { unique: true, partialFilterExpression: { key: { $type: "string" } } },
+    ),
+    c.exercises.createIndex({ openReports: -1, updatedAt: -1 }),
+    c.exerciseReviews.createIndex({ exerciseId: 1, createdAt: -1 }),
+    c.exerciseReports.createIndex({ exerciseId: 1, resolvedAt: 1 }),
+    c.aiUsage.createIndex({ createdAt: -1 }),
+    c.aiUsage.createIndex({ feature: 1, createdAt: -1 }),
   ]);
 }
 

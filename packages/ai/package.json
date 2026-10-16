@@ -1,0 +1,25 @@
+{
+  "name": "@devoirs/ai",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint src test",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.135.0",
+    "@devoirs/content": "workspace:*",
+    "@devoirs/pedagogy": "workspace:*",
+    "@devoirs/shared": "workspace:*",
+    "mathjs": "^15.2.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0"
+  }
+}
