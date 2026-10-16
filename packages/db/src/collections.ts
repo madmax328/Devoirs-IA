@@ -11,6 +11,7 @@ export const COLLECTIONS = {
 } as const;
 
 export function collections(db: Db = getDb()) {
+  ensureIndexesOnce(db);
   return {
     children: db.collection<ChildDoc>(COLLECTIONS.children),
     consents: db.collection<ConsentDoc>(COLLECTIONS.consents),
@@ -35,4 +36,19 @@ export async function ensureIndexes(db: Db = getDb()): Promise<void> {
     c.childSessions.createIndex({ expiresAt: 1 }, { expireAfterSeconds: 0 }),
     c.auditLogs.createIndex({ actorId: 1, createdAt: -1 }),
   ]);
+}
+
+const indexed = new WeakSet<Db>();
+
+/**
+ * Crée les index au premier accès à la base (une fois par instance serveur), sans bloquer les requêtes.
+ * Évite d'avoir besoin de la base pendant le build Vercel.
+ */
+function ensureIndexesOnce(db: Db): void {
+  if (indexed.has(db)) return;
+  indexed.add(db);
+  ensureIndexes(db).catch((err: unknown) => {
+    indexed.delete(db);
+    console.error("[db] création des index échouée", err instanceof Error ? err.message : err);
+  });
 }

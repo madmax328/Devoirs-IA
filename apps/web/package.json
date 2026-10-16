@@ -11,8 +11,7 @@
     "typecheck": "tsc -p tsconfig.json",
     "test": "vitest run",
     "seed": "tsx --env-file-if-exists=.env.local scripts/seed.ts",
-    "e2e": "playwright test",
-    "vercel-build": "pnpm --filter @devoirs/db indexes && next build"
+    "e2e": "playwright test"
   },
   "dependencies": {
     "@better-auth/expo": "^1.7.9",
