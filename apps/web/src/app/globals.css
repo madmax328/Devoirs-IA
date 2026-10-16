@@ -391,3 +391,109 @@ ol.hints li,
 ul.plain li {
   margin-bottom: 4px;
 }
+
+/* ───────── Espace enfant */
+.coach {
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+}
+.coach-avatar {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  background: var(--c-accent);
+  color: var(--c-on-accent);
+}
+.bubble {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  border-top-left-radius: 4px;
+  padding: var(--space-md) var(--space-lg);
+}
+.subject-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+}
+.progress {
+  height: 10px;
+  background: var(--c-surface-alt);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.progress > span {
+  display: block;
+  height: 100%;
+  background: var(--c-primary);
+  border-radius: 999px;
+  transition: width 300ms;
+}
+.statement {
+  font-size: var(--fs-lg);
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+.blank-input {
+  display: inline-block;
+  width: 9em;
+  min-height: 44px !important;
+  margin: 4px;
+  vertical-align: middle;
+}
+.text-flow {
+  line-height: 2.4;
+  font-size: var(--fs-lg);
+}
+.match-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+.match-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+.choice[data-active="true"] {
+  border-color: var(--c-accent);
+  outline: 3px solid var(--c-accent);
+}
+.choice .tag {
+  font-size: 12px;
+  color: var(--c-text-muted);
+}
+.feedback {
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  font-weight: 700;
+  font-size: var(--fs-lg);
+  border: 2px solid var(--c-primary);
+  background: var(--c-surface);
+}
+.feedback.notYet,
+.feedback.skipped,
+.feedback.partial {
+  border-color: var(--c-accent);
+}
+.feedback.retry {
+  border-color: var(--c-danger);
+  color: var(--c-danger);
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+.chip {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--c-surface-alt);
+  font-size: var(--fs-sm);
+}

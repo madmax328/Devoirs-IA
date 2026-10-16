@@ -2,6 +2,9 @@ import type { Db } from "mongodb";
 import { getDb } from "./client";
 import type {
   AiUsageLogDoc,
+  AnswerAttemptDoc,
+  DiagnosticSessionDoc,
+  MasteryStateDoc,
   AuditLogDoc,
   ChildDoc,
   ChildSessionDoc,
@@ -26,6 +29,9 @@ export const COLLECTIONS = {
   exerciseReports: "exerciseReports",
   aiUsage: "aiUsage",
   meta: "meta",
+  masteryStates: "masteryStates",
+  answerAttempts: "answerAttempts",
+  diagnosticSessions: "diagnosticSessions",
 } as const;
 
 export function collections(db: Db = getDb()) {
@@ -42,6 +48,9 @@ export function collections(db: Db = getDb()) {
     exerciseReports: db.collection<ExerciseReportDoc>(COLLECTIONS.exerciseReports),
     aiUsage: db.collection<AiUsageLogDoc>(COLLECTIONS.aiUsage),
     meta: db.collection<MetaDoc>(COLLECTIONS.meta),
+    masteryStates: db.collection<MasteryStateDoc>(COLLECTIONS.masteryStates),
+    answerAttempts: db.collection<AnswerAttemptDoc>(COLLECTIONS.answerAttempts),
+    diagnosticSessions: db.collection<DiagnosticSessionDoc>(COLLECTIONS.diagnosticSessions),
   };
 }
 export type Collections = ReturnType<typeof collections>;
@@ -72,6 +81,11 @@ export async function ensureIndexes(db: Db = getDb()): Promise<void> {
     c.exerciseReports.createIndex({ exerciseId: 1, resolvedAt: 1 }),
     c.aiUsage.createIndex({ createdAt: -1 }),
     c.aiUsage.createIndex({ feature: 1, createdAt: -1 }),
+    c.masteryStates.createIndex({ childId: 1, notionId: 1 }, { unique: true }),
+    c.masteryStates.createIndex({ childId: 1, nextReviewAt: 1 }),
+    c.answerAttempts.createIndex({ childId: 1, notionId: 1, createdAt: -1 }),
+    c.answerAttempts.createIndex({ childId: 1, exerciseId: 1 }),
+    c.diagnosticSessions.createIndex({ childId: 1, subject: 1, startedAt: -1 }),
   ]);
 }
 

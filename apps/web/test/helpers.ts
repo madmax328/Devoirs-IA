@@ -39,3 +39,27 @@ export const validChild = {
   pin: "4821",
   parentalConsent: true,
 } as const;
+
+/** Crée un parent, un enfant et ouvre la session enfant. */
+export async function childWithSession(
+  child: Record<string, unknown> = {},
+): Promise<{ parentHeaders: Headers; childHeaders: Headers; childId: string }> {
+  const { POST: childrenPost } = await import("@/app/api/children/route");
+  const { POST: childSessionPost } = await import("@/app/api/child-session/route");
+  const { headers } = await signUpParent();
+  const res = await childrenPost(
+    jsonRequest("/api/children", "POST", headers, { ...validChild, ...child }),
+    undefined as never,
+  );
+  const { child: created } = (await res.json()) as { child: { id: string } };
+  const login = await childSessionPost(
+    jsonRequest("/api/child-session", "POST", headers, { childId: created.id, pin: validChild.pin }),
+    undefined as never,
+  );
+  const { token } = (await login.json()) as { token: string };
+  return {
+    parentHeaders: headers,
+    childHeaders: new Headers({ "x-child-session": token }),
+    childId: created.id,
+  };
+}

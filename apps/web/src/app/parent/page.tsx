@@ -4,12 +4,16 @@ import { Avatar } from "@/components/Avatar";
 import { t } from "@/lib/i18n";
 import { parentOrRedirect } from "@/server/page-guards";
 import { listChildren } from "@/server/services/children";
+import { overview } from "@/server/services/diagnostic";
 
 export const dynamic = "force-dynamic";
 
 export default async function ParentDashboard() {
   const parent = await parentOrRedirect();
   const children = await listChildren(parent.userId);
+  const diagnostics = new Map(
+    await Promise.all(children.map(async (c) => [c.id, await overview(c)] as const)),
+  );
   const canAdd = children.length < MAX_CHILDREN_PER_PARENT;
 
   return (
@@ -39,6 +43,18 @@ export default async function ParentDashboard() {
               {t("parent.levelLabel")} : {t(`levels.${child.level}`)} ·{" "}
               {child.settings.subjects.map((s) => t(`subjects.${s}`)).join(", ")}
             </div>
+            <ul className="plain small" style={{ margin: "6px 0 0", paddingLeft: 18 }}>
+              {(diagnostics.get(child.id) ?? []).map((d) => (
+                <li key={d.subject}>
+                  {t(`subjects.${d.subject}`)} :{" "}
+                  {t(`diagnostic.parentStatus.${d.status}`, {
+                    asked: d.progress?.asked ?? 0,
+                    mastered: d.summary?.mastered.length ?? 0,
+                    toWork: d.summary?.toWork.length ?? 0,
+                  })}
+                </li>
+              ))}
+            </ul>
           </div>
         </Link>
       ))}

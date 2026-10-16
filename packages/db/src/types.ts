@@ -8,6 +8,8 @@ import type {
   ExerciseStatus,
   ExerciseType,
   Notion,
+  StudentResponse,
+  Subject,
 } from "@devoirs/shared";
 import type { ObjectId } from "mongodb";
 
@@ -151,4 +153,53 @@ export interface MetaDoc {
   _id: string;
   value: unknown;
   updatedAt: Date;
+}
+
+// ───────── Maîtrise et diagnostic (jalon 3)
+
+/** Maîtrise d'une notion par un enfant (score de type Elo). */
+export interface MasteryStateDoc {
+  _id: ObjectId;
+  childId: string;
+  notionId: string;
+  rating: number;
+  observations: number;
+  lastPracticedAt: Date | null;
+  /** Prochaine révision (répétition espacée, jalon 5). */
+  nextReviewAt: Date | null;
+  updatedAt: Date;
+}
+
+/** Chaque réponse est conservée : on pourra recalculer la maîtrise avec un autre modèle. */
+export interface AnswerAttemptDoc {
+  _id: ObjectId;
+  childId: string;
+  exerciseId: ObjectId;
+  notionId: string;
+  context: "diagnostic" | "session" | "homework";
+  contextId: string;
+  response: StudentResponse | null;
+  skipped: boolean;
+  outcome: string;
+  score: number;
+  hintsUsed: number;
+  durationMs: number | null;
+  createdAt: Date;
+}
+
+export interface DiagnosticSessionDoc {
+  _id: ObjectId;
+  childId: string;
+  subject: Subject;
+  status: "IN_PROGRESS" | "COMPLETED";
+  queue: string[];
+  results: { notionId: string; outcome: "pass" | "fail" | "skip"; score: number; exerciseId: string }[];
+  maxItems: number;
+  /** Exercice affiché, en attente de réponse. */
+  current: { exerciseId: string; notionId: string; servedAt: Date } | null;
+  /** Exercices déjà montrés (pour ne jamais reposer le même). */
+  shownExerciseIds: string[];
+  startedAt: Date;
+  updatedAt: Date;
+  completedAt: Date | null;
 }

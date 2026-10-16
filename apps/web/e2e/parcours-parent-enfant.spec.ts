@@ -37,6 +37,19 @@ test("un parent s'inscrit, crée un profil enfant, puis l'enfant ouvre son espac
   for (const d of "2468") await page.getByRole("button", { name: d, exact: true }).click();
 
   await expect(page).toHaveURL(/\/enfant\/accueil/);
-  await expect(page.getByText("Ton coach arrive très bientôt")).toBeVisible();
+  await expect(page.getByText("Moi, c'est ton coach")).toBeVisible();
   await page.screenshot({ path: "e2e/__screens__/accueil-enfant.png" });
+
+  // Diagnostic de maths : l'enfant répond « je ne sais pas encore » jusqu'au bout.
+  await page.getByRole("link", { name: "C'est parti !" }).first().click();
+  await expect(page.getByText(/Question 1 sur/)).toBeVisible();
+  await page.screenshot({ path: "e2e/__screens__/diagnostic-question.png" });
+  for (let i = 0; i < 15; i++) {
+    if (await page.getByRole("heading", { name: "Bravo, c'est terminé !" }).isVisible()) break;
+    await page.getByRole("button", { name: "Je ne sais pas encore" }).click();
+    await page.getByRole("button", { name: "Continuer" }).click();
+  }
+  await expect(page.getByRole("heading", { name: "Bravo, c'est terminé !" })).toBeVisible();
+  await expect(page.getByText("Ce qu'on va travailler ensemble")).toBeVisible();
+  await page.screenshot({ path: "e2e/__screens__/diagnostic-bilan.png", fullPage: true });
 });

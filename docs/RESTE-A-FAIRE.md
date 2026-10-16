@@ -13,7 +13,6 @@ Liste tenue à jour à chaque jalon. Rien de ce qui est listé ici n'est caché 
 
 - [ ] Nom de l'app (« Devoirs IA »), identifiant `fr.devoirsia.app`, schéma `devoirsia://` : à remplacer quand le nom sera choisi.
 - [ ] Avatars = emojis, en attendant les illustrations et le personnage du coach.
-- [ ] Accueil enfant = écran d'attente (« Ton coach arrive très bientôt »).
 - [ ] Le réglage « police dys » est enregistré ; il n'est appliqué que sur l'accueil enfant web. Intégration complète (police Luciole) au jalon 9.
 - [ ] Les textes CGU / confidentialité n'existent pas encore : le consentement enregistre la version `2026-10-15` des textes à venir (jalon 9).
 - [ ] `apps/web/src/server/services/children.ts` : limite de 3 enfants appliquée à tous ; elle dépendra de l'abonnement au jalon 8.
@@ -27,6 +26,14 @@ Liste tenue à jour à chaque jalon. Rien de ce qui est listé ici n'est caché 
 - [ ] Correction par l'IA des réponses rédigées et des justifications (`pending_ai`) : arrive avec le diagnostic et les sessions (jalons 3 et 5).
 - [ ] Relecture IA faite avec le modèle « fort » : à comparer avec le modèle rapide quand on aura des données (coût).
 - [ ] Les exercices du dépôt couvrent 52 notions sur 208 : le reste se remplira par la génération + validation.
+
+## Diagnostic et maîtrise (jalon 3)
+
+- [ ] **Le diagnostic ne teste que les notions qui ont au moins un exercice servi.** Avec les 52 exercices de départ, il est déjà utilisable en maths et en français, mais pas en anglais, histoire-géo, SVT ni physique-chimie (« bientôt disponible »). Il faut générer et valider des exercices (admin → Référentiel), en priorité pour les notions de base du CM2 et de la 6e.
+- [ ] Seuils à ajuster avec de vraies données : notion réussie à 75 %, « maîtrisée » à 60 % de chances, 12 questions maximum, 6 notions de départ.
+- [ ] Le diagnostic ne peut pas encore être refait (bouton « refaire le point » côté parent à prévoir au jalon 7).
+- [ ] Application mobile : la police dys n'est pas encore appliquée (jalon 9). Le coach est un symbole provisoire (✦) en attendant le personnage.
+- [ ] « Mes progrès » (carte des notions) côté enfant : arrive avec les sessions du jour (jalon 5).
 
 ## Sécurité à compléter
 

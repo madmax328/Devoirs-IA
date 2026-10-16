@@ -123,6 +123,9 @@ export async function deleteChild(parentId: string, childId: string): Promise<vo
   const c = collections();
   await c.childSessions.deleteMany({ childId });
   await c.consents.deleteMany({ childId });
+  await c.masteryStates.deleteMany({ childId });
+  await c.answerAttempts.deleteMany({ childId });
+  await c.diagnosticSessions.deleteMany({ childId });
   await c.devices.updateMany({ dedicatedChildId: childId }, { $set: { dedicatedChildId: null } });
   await c.children.deleteOne({ _id: doc._id });
   await audit(parentId, "child.delete", "child", childId);

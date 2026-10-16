@@ -109,3 +109,43 @@ Tous les textes sont dans `packages/shared/src/i18n/locales/fr.ts`. `pt-BR` et `
 
 Tableau de bord, file de validation, liste des exercices (filtres par statut, notion, signalements), fiche exercice (aperçu de la réponse attendue ; valider, rejeter ou remettre à relire avec une note ; correction du contenu en JSON revérifiée par le serveur), référentiel par matière et niveau avec génération, coûts IA sur 14 jours.
 Accès : rôle `ADMIN` en base ou e-mail listé dans `ADMIN_EMAILS`.
+
+## Diagnostic et maîtrise (jalon 3)
+
+### Modèle de maîtrise (`packages/pedagogy/src/mastery.ts`)
+
+- Un score de type **Elo** par enfant et par notion (`masteryStates`), 0 = niveau d'un exercice moyen (difficulté 3/5). Chaque exercice a aussi un score (difficulté 1→5 = −400→+400), recalibré doucement avec les réponses des élèves.
+- Probabilité de réussite = 1 / (1 + 10^((score exercice − score enfant) / 400)). Après chaque réponse : score += K × poids × (résultat − probabilité attendue).
+- K diminue avec le nombre d'observations (beaucoup d'incertitude au début, puis stabilité).
+- Poids : diagnostic et sessions = 1 ; devoir aidé = 0,5 ; chaque indice utilisé retire 25 % (minimum 25 %). Une réponse partielle compte partiellement.
+- Réussir une notion crédite légèrement ses prérequis jamais observés (preuve indirecte, poids 0,3, qui ne compte pas comme une observation).
+- Statuts : « à découvrir » (aucune donnée), « en cours », « maîtrisée » (≥ 60 % de chances de réussir un exercice moyen).
+- **Pourquoi Elo plutôt que BKT** : le BKT demande d'ajuster 4 paramètres par notion avec des données qu'on n'a pas encore ; l'Elo s'auto-calibre, tient compte de la difficulté des exercices et s'explique simplement. Toutes les réponses sont conservées (`answerAttempts`) : on pourra recalculer avec un autre modèle.
+
+### Diagnostic adaptatif (`packages/pedagogy/src/diagnostic.ts`)
+
+1. **Départ** : jusqu'à 6 notions du niveau de l'élève qui ont des exercices, les plus « fondatrices » d'abord (celles dont dépendent le plus d'autres notions), en variant les thèmes. S'il y en a moins de 3, on complète avec le niveau inférieur.
+2. **Une question par notion**. Réussie (≥ 75 %) → on passe à la suite. Pas encore réussie → ses **prérequis** non testés passent en tête de file : on descend jusqu'à la lacune racine (jusqu'au CM2).
+3. **Fin** après 12 questions au maximum (~10-15 min) ou quand la file est vide. Le diagnostic peut se faire en plusieurs fois (la session et l'exercice affiché sont conservés).
+4. **Bilan** : notions réussies et notions à travailler, en commençant par les lacunes racines (une notion ratée dont aucun prérequis testé n'a échoué). L'enfant ne voit que les 3 premières, pour ne pas le décourager.
+
+- Seuls les types corrigés entièrement par le code sont utilisés (pas de réponse rédigée ni de justification).
+- Une saisie illisible (« beaucoup ») ou une mauvaise unité ne compte pas : l'élève peut corriger.
+- « Je ne sais pas encore » est toujours possible et compte comme « pas encore ».
+- Pendant le diagnostic, les retours restent neutres et positifs (« Bien joué ! » / « Merci ! On travaillera ça ensemble. »), jamais « faux ».
+- L'exercice envoyé à l'élève ne contient jamais la réponse (`toPublicExercise`) : pas de bonne réponse, de réponses acceptées, de paires ni d'ordre correct (les éléments à ordonner ou à apparier sont mélangés).
+
+### API enfant
+
+| Méthode | Route                              | Rôle                                                                     |
+| ------- | ---------------------------------- | ------------------------------------------------------------------------ |
+| GET     | `/api/child/diagnostic`            | état du diagnostic pour chaque matière suivie                            |
+| POST    | `/api/child/diagnostic`            | démarrer ou reprendre (`{ subject }`)                                    |
+| POST    | `/api/child/diagnostic/:id/answer` | répondre (`{ exerciseId, response }` ou `{ exerciseId, skipped: true }`) |
+| POST    | `/api/exercises/:id/report`        | signaler une erreur (enfant ou parent)                                   |
+
+### Écrans
+
+- Site et application : accueil enfant avec présentation du coach (première visite), cartes « Faisons le point » par matière, lecteur d'exercices (QCM, nombre, texte à trous, appariement par touches, remettre dans l'ordre par touches, vrai/faux), retour après chaque réponse, bilan.
+- La logique de saisie est partagée entre le site et l'application (`packages/shared/src/player.ts`).
+- Espace parent (site) : état du point de départ de chaque enfant par matière.
