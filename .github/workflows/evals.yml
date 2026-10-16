@@ -1,0 +1,59 @@
+name: Évaluations du coach IA
+
+# Appelle le vrai modèle (coût de quelques centimes) : à chaque modification de l'IA, et à la demande.
+on:
+  push:
+    paths:
+      - "packages/ai/**"
+      - ".github/workflows/evals.yml"
+  workflow_dispatch:
+    inputs:
+      full:
+        description: "Lancer tous les cas (sinon : les cas critiques)"
+        type: boolean
+        default: true
+
+concurrency:
+  group: evals-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  evals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      - name: Clé API présente ?
+        id: key
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::warning::Secret ANTHROPIC_API_KEY absent : évaluations ignorées (Settings → Secrets and variables → Actions)."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.key.outputs.skip != 'true'
+      - uses: pnpm/action-setup@v4
+        if: steps.key.outputs.skip != 'true'
+      - uses: actions/setup-node@v4
+        if: steps.key.outputs.skip != 'true'
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+        if: steps.key.outputs.skip != 'true'
+      - name: Évaluations
+        if: steps.key.outputs.skip != 'true'
+        working-directory: packages/ai
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.full }}" = "true" ]; then
+            pnpm evals
+          else
+            pnpm evals --sample 10
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.key.outputs.skip != 'true'
+        with:
+          name: evals-report
+          path: packages/ai/evals-report.json
+          retention-days: 30

@@ -53,8 +53,9 @@ class FakeLlm implements LlmClient {
         ? { data: { exercises: this.generation } as T, stopReason: "end_turn" }
         : { data: null, stopReason: "refusal" };
     }
-    const statement = (JSON.parse(req.user.split("Exercice (JSON) :\n")[1] ?? "{}") as { statement: string })
-      .statement;
+    const statement = (
+      JSON.parse((req.user ?? "").split("Exercice (JSON) :\n")[1] ?? "{}") as { statement: string }
+    ).statement;
     return { data: this.review(statement) as T, stopReason: "end_turn" };
   }
 }
@@ -121,7 +122,7 @@ describe("pipeline de génération", () => {
   it("transmet la notion, ses erreurs fréquentes et les énoncés à éviter", async () => {
     const llm = new FakeLlm([numeric("21", "28 / 4 * 3")], () => approve);
     await generateExercises(llm, { notion, ref, count: 1, avoidStatements: ["Ancien énoncé"] });
-    const user = llm.calls[0]!.user;
+    const user = llm.calls[0]!.user ?? "";
     expect(user).toContain(notion.title);
     expect(user).toContain(notion.commonMistakes[0]!);
     expect(user).toContain("Ancien énoncé");

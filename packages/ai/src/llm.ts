@@ -25,12 +25,25 @@ export interface AiUsageEvent extends TokenUsage {
   stopReason: string | null;
 }
 
+/** Contenu d'un message : texte ou image (photo d'exercice, en base64). */
+export type LlmContent =
+  | { type: "text"; text: string }
+  | { type: "image"; mediaType: "image/jpeg" | "image/png" | "image/webp"; base64: string };
+
+export interface LlmMessage {
+  role: "user" | "assistant";
+  content: string | LlmContent[];
+}
+
 export interface StructuredRequest<T> {
   feature: AiFeature;
   model: string;
   promptVersion: string;
   system: string;
-  user: string;
+  /** Message unique de l'utilisateur… */
+  user?: string;
+  /** … ou conversation complète (prioritaire sur `user`). */
+  messages?: LlmMessage[];
   schema: z.ZodType<T>;
   effort: "low" | "medium" | "high" | "xhigh" | "max";
   maxTokens?: number;
@@ -72,7 +85,7 @@ export class AnthropicLlm implements LlmClient {
         max_tokens: req.maxTokens ?? 16000,
         // Le prompt système est stable : on le met en cache.
         system: [{ type: "text", text: req.system, cache_control: { type: "ephemeral" } }],
-        messages: [{ role: "user", content: req.user }],
+        messages: toApiMessages(req),
         output_config: { effort: req.effort, format: betaZodOutputFormat(req.schema) },
         ...(fallback ? { betas: ["server-side-fallback-2026-07-01"], fallbacks: "default" as const } : {}),
       });
@@ -99,4 +112,22 @@ export class AnthropicLlm implements LlmClient {
       });
     }
   }
+}
+
+function toApiMessages(req: StructuredRequest<unknown>): Anthropic.Beta.BetaMessageParam[] {
+  const messages: LlmMessage[] = req.messages ?? [{ role: "user", content: req.user ?? "" }];
+  return messages.map((m) => ({
+    role: m.role,
+    content:
+      typeof m.content === "string"
+        ? m.content
+        : m.content.map((c) =>
+            c.type === "text"
+              ? { type: "text" as const, text: c.text }
+              : {
+                  type: "image" as const,
+                  source: { type: "base64" as const, media_type: c.mediaType, data: c.base64 },
+                },
+          ),
+  }));
 }
