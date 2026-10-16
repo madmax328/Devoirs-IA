@@ -15,7 +15,6 @@ pnpm install
 docker compose up -d                       # lance MongoDB en local
 cp apps/web/.env.example apps/web/.env.local
 # puis mettre une valeur dans BETTER_AUTH_SECRET :  openssl rand -base64 32
-pnpm db:indexes                            # crée les index MongoDB
 pnpm --filter @devoirs/web seed            # comptes de démo
 pnpm --filter @devoirs/web dev             # site + API sur http://localhost:3000
 ```
@@ -66,10 +65,20 @@ App mobile (`apps/mobile/.env`) : `EXPO_PUBLIC_API_URL` = URL du site.
 
 ## Mettre en ligne sur Vercel
 
-1. Créer une base sur MongoDB Atlas (région **UE**, ex. Paris ou Francfort) et récupérer la chaîne de connexion.
-2. Dans Vercel : importer le dépôt GitHub, **Root Directory = `apps/web`** (Vercel détecte pnpm et le monorepo).
-3. Renseigner les variables d'environnement ci-dessus.
-4. Déployer. Le script `vercel-build` crée les index MongoDB puis construit le site.
+1. **MongoDB Atlas** : créer un cluster (région **UE**, ex. Paris ou Francfort).
+   - _Database Access_ : créer un utilisateur avec mot de passe.
+   - _Network Access_ : ajouter `0.0.0.0/0` (Vercel n'a pas d'adresse IP fixe ; l'accès reste protégé par le mot de passe).
+   - _Connect → Drivers_ : copier la chaîne de connexion et ajouter le nom de la base, ex. `mongodb+srv://user:mdp@cluster.xxx.mongodb.net/devoirs?retryWrites=true&w=majority`.
+2. **Vercel** → _Add New Project_ → importer le dépôt GitHub.
+   - **Root Directory : `apps/web`** (bouton _Edit_ à côté du nom du dossier). C'est indispensable.
+   - Framework : Next.js (détecté automatiquement). Ne rien changer aux commandes.
+3. _Environment Variables_ : seulement deux sont obligatoires :
+   - `MONGODB_URI` = la chaîne de l'étape 1
+   - `BETTER_AUTH_SECRET` = une longue chaîne aléatoire (au moins 32 caractères, ex. générée sur https://generate-secret.vercel.app/32)
+4. _Deploy_. L'adresse du site est détectée automatiquement ; les index MongoDB se créent tout seuls au premier accès.
+5. Vérifier : `https://<votre-site>.vercel.app/api/health` doit afficher `{"status":"ok"}`.
+
+Plus tard, avec un nom de domaine à vous : ajouter `BETTER_AUTH_URL=https://votre-domaine.fr`.
 
 ## Documentation
 
