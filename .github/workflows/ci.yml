@@ -41,6 +41,10 @@ jobs:
         run: |
           pnpm --filter @devoirs/web exec playwright install --with-deps chromium
           pnpm --filter @devoirs/web e2e
+      - name: Diagnostic des tests E2E en échec
+        if: failure()
+        run: |
+          find apps/web/test-results -name error-context.md -print -exec sed -n '/Page snapshot/,/Test source/p' {} \; || true
       - uses: actions/upload-artifact@v4
         if: failure()
         with:

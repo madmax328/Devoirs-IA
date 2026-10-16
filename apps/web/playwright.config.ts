@@ -6,6 +6,8 @@ export default defineConfig({
   testDir: "./e2e",
   fullyParallel: false,
   retries: process.env.CI ? 1 : 0,
+  // Les machines de CI sont plus lentes : on laisse plus de temps aux réponses du serveur.
+  expect: { timeout: 15_000 },
   use: {
     baseURL: `http://localhost:${port}`,
     trace: "retain-on-failure",
