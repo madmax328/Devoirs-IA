@@ -26,7 +26,19 @@
       "output": "single"
     },
     "scheme": "devoirsia",
-    "plugins": ["expo-router", "expo-secure-store", "expo-localization"],
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-localization",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "L'application a besoin d'acc\u00e9der \u00e0 tes photos pour que tu puisses envoyer ton exercice \u00e0 ton coach.",
+          "cameraPermission": "L'application a besoin de l'appareil photo pour que tu puisses photographier ton exercice.",
+          "microphonePermission": false
+        }
+      ]
+    ],
     "experiments": {
       "typedRoutes": true
     }

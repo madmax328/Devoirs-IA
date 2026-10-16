@@ -63,6 +63,9 @@ Site / API (`apps/web/.env.local`, et dans Vercel → Settings → Environment V
 | `ANTHROPIC_API_KEY`                                                       | non         | Clé de l'API Claude. Sans elle, la génération d'exercices est désactivée (le reste fonctionne)    |
 | `AI_DAILY_BUDGET_USD`                                                     | non         | Budget IA par jour en dollars (5 par défaut) ; au-delà, la génération s'arrête jusqu'au lendemain |
 | `AI_MODEL_STRONG` / `AI_MODEL_FAST`                                       | non         | Modèles utilisés (par défaut `claude-opus-5-5` / `claude-haiku-5-5`)                              |
+| `PHOTO_RETENTION_DAYS`                                                    | non         | Durée de conservation des photos d'exercices (30 jours par défaut)                                |
+| `LIMIT_HOMEWORK_PER_DAY` / `LIMIT_MESSAGES_PER_HOMEWORK`                  | non         | Limites par enfant (10 aides par jour, 60 messages par exercice)                                  |
+| `AI_FAKE`                                                                 | non         | `1` = IA de démonstration (réponses scriptées, pour tester sans clé). Ignoré sur Vercel           |
 | `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET`                               | non         | Connexion Google (désactivée si vide)                                                             |
 | `APPLE_CLIENT_ID` / `APPLE_CLIENT_SECRET` / `APPLE_APP_BUNDLE_IDENTIFIER` | non         | Connexion Apple (désactivée si vide)                                                              |
 

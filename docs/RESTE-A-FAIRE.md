@@ -35,6 +35,17 @@ Liste tenue à jour à chaque jalon. Rien de ce qui est listé ici n'est caché 
 - [ ] Application mobile : la police dys n'est pas encore appliquée (jalon 9). Le coach est un symbole provisoire (✦) en attendant le personnage.
 - [ ] « Mes progrès » (carte des notions) côté enfant : arrive avec les sessions du jour (jalon 5).
 
+## Mode Devoirs (jalon 4)
+
+- [ ] **À VALIDER PAR TOI : le texte affiché en cas de détresse** et les libellés des numéros d'aide (`packages/shared/src/i18n/locales/fr.ts`, section `safety`). Idéalement relus par un professionnel.
+- [ ] **Évaluations avec le vrai modèle pas encore lancées** : ajouter le secret GitHub `ANTHROPIC_API_KEY` (Settings → Secrets and variables → Actions), puis lancer « Évaluations du coach IA » dans l'onglet Actions. Les prompts seront ajustés selon les résultats.
+- [ ] Dictée vocale de l'exercice : pas encore (reconnaissance vocale sur l'appareil prévue au jalon 9, accessibilité).
+- [ ] Réponses du coach affichées d'un coup (pas encore en flux continu) : « Ton coach réfléchit… » pendant quelques secondes.
+- [ ] XP gagnés en fin d'exercice : jalon 6 (gamification). Limite de l'offre gratuite (3 aides par semaine) : jalon 8.
+- [ ] Notification push au parent en cas de moment difficile : jalon 9 (aujourd'hui : bannière dans l'espace parent).
+- [ ] Masquage des informations personnelles par expressions régulières : imparfait par nature (ex. un nom de famille seul). Le classifieur IA complète, sans garantie.
+- [ ] Le parent ne voit pas encore l'historique des devoirs (jalon 7).
+
 ## Sécurité à compléter
 
 - [ ] `POST /api/parent/unlock` (mot de passe parent depuis l'espace enfant) n'a pas encore de limitation du nombre d'essais (le parent est déjà connecté sur l'appareil ; à durcir au jalon 10).

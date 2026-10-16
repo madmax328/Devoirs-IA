@@ -73,6 +73,13 @@ export default function ChildHome() {
           <Body>{t("diagnostic.subtitle")}</Body>
         )}
       </Coach>
+      <Card>
+        <Text style={{ color: c.text, fontSize: fontSize.lg, fontWeight: "800" }}>
+          📷 {t("homework.newHelp")}
+        </Text>
+        <Body muted>{t("homework.newHelpHint")}</Body>
+        <Button label={t("homework.title")} onPress={() => router.push("/enfant/devoirs")} />
+      </Card>
       <Title>{t("diagnostic.title")}</Title>
       {items.map((item) => (
         <Card key={item.subject}>

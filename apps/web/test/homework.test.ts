@@ -126,7 +126,8 @@ describe("mode Devoirs", () => {
     const json = JSON.stringify(hw);
     expect(json).not.toContain("expectedAnswer");
     expect(json).not.toContain("solutionSteps");
-    expect(json).not.toContain("21");
+    // La solution (21) n'apparaît nulle part dans ce que voit l'enfant (on ne regarde pas l'identifiant, aléatoire).
+    expect(JSON.stringify(hw.analysis)).not.toContain("21");
 
     const stored = await collections().homeworkPhotos.findOne({ childId });
     expect(Buffer.from(stored!.data.buffer).equals(Buffer.from(p.base64, "base64"))).toBe(false);

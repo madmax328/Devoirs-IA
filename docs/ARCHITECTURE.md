@@ -149,3 +149,36 @@ Accès : rôle `ADMIN` en base ou e-mail listé dans `ADMIN_EMAILS`.
 - Site et application : accueil enfant avec présentation du coach (première visite), cartes « Faisons le point » par matière, lecteur d'exercices (QCM, nombre, texte à trous, appariement par touches, remettre dans l'ordre par touches, vrai/faux), retour après chaque réponse, bilan.
 - La logique de saisie est partagée entre le site et l'application (`packages/shared/src/player.ts`).
 - Espace parent (site) : état du point de départ de chaque enfant par matière.
+
+## Mode Devoirs (jalon 4)
+
+### Parcours
+
+1. L'enfant envoie 1 à 3 photos (compressées sur l'appareil, sans métadonnées) et/ou tape l'énoncé.
+2. **Lecture** par l'IA (modèle fort, vision) : transcription, matière, classe, notions du référentiel, découpage en questions **avec la solution de chaque question, gardée côté serveur et jamais envoyée à l'enfant**. Résultat mis en cache (empreinte des photos/texte, 30 jours).
+3. L'enfant **confirme** l'énoncé ou le corrige (nouvelle lecture à partir de son texte). Photo illisible → il la reprend ; ce n'est pas un exercice → message ; niveau lycée → avertissement, on peut essayer quand même.
+4. **Coaching socratique** : à chaque message (réponse, « Un indice », « Je n'y arrive vraiment pas »), le coach reçoit le contexte confidentiel + toute la conversation et répond en JSON structuré (message, niveau d'indice, question en cours, réponse juste ou non, fin, drapeaux de sécurité).
+5. **Fin** : récapitulatif « ce que tu as appris », maîtrise des notions mise à jour (poids 0,5, réduit encore par les indices), notions à retravailler programmées pour révision.
+
+### Sécurité (dans cet ordre, à chaque message de l'enfant)
+
+1. **Masquage** déterministe des informations personnelles (e-mail, téléphone, adresse, code postal + ville, pseudo @, nom après « je m'appelle », nom d'établissement) **avant** l'IA et **avant** l'enregistrement.
+2. **Classifieur** (modèle rapide) + **mots-clés de détresse** (filet qui fonctionne même sans IA) : détresse, information personnelle, contenu inapproprié, hors-sujet.
+3. **Détresse** (classifieur, mots-clés ou drapeau du coach) : l'exercice s'arrête, message bienveillant + boutons d'appel 3018 / 119 (et 112), événement de sécurité (type + date, sans contenu), bannière côté parent « un moment difficile a été signalé », sans le contenu.
+4. **Contenu inapproprié** : réponse fixe qui recentre, événement de sécurité.
+5. **Anti-fuite** : si le message du coach contient la réponse numérique attendue alors que l'élève ne l'a pas trouvée, il est remplacé par une relance (et l'événement est journalisé).
+6. **Limites** : 10 aides par jour et par enfant, 60 messages par exercice (`LIMIT_HOMEWORK_PER_DAY`, `LIMIT_MESSAGES_PER_HOMEWORK`), plus le budget IA quotidien global.
+
+### Photos
+
+Chiffrées en AES-256-GCM (clé dérivée de `BETTER_AUTH_SECRET` ou `PHOTO_ENCRYPTION_KEY`), stockées dans MongoDB et **supprimées automatiquement par MongoDB** après `PHOTO_RETENTION_DAYS` jours (30 par défaut, index TTL). Déchiffrées à la demande pour l'historique de l'enfant uniquement.
+
+### Évaluations du coach (`packages/ai/evals`)
+
+- 15 cas de coaching (dont 9 critiques : insistance pour la réponse ×4, rédaction complète, traduction complète, informations personnelles, détresse ×2) et 3 cas de lecture (photo illisible, niveau lycée, exercice de 6e).
+- Vérifications par le code (réponse non donnée, drapeau de détresse) + **juge IA** pour le comportement attendu.
+- `pnpm --filter @devoirs/ai evals` (clé requise) ; en CI : workflow « Évaluations du coach IA » à chaque modification de `packages/ai`, et à la demande (onglet Actions). Échec si un cas critique échoue.
+
+### IA de démonstration
+
+`AI_FAKE=1` remplace l'IA par des réponses scriptées (tests de bout en bout, démonstration sans clé). **Ignoré sur Vercel.**
